@@ -10,9 +10,18 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	private Animator animator;
 
+	public Transform groundChecker;
+	public float groundCheckerWidth;
+	public LayerMask theGround;
+	private bool grounded;
+
 	void Start() {
 		animator = GetComponent<Animator> ();
 		moveSpeedDef = moveSpeed;
+	}
+
+	void FixedUpdate() {
+		grounded = Physics2D.OverlapCircle (groundChecker.position, groundCheckerWidth, theGround);
 	}
 
 	void Update() {
@@ -28,15 +37,21 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Method for checking keyboard input
 	void keyBoardInput() {
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		// check keyboard presses
+		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jumpHeight);
 		}
+
+		// check if keys are down
 		if (Input.GetKey (KeyCode.A)) {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		}
 		if (Input.GetKey (KeyCode.D)) {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		}
+
+		// check keys released
+
 	}
 	// Method for making the player sprint
 	void sprint() {
