@@ -15,6 +15,8 @@ public class PlayerMoveScript : MonoBehaviour {
 	public LayerMask theGround;
 	private bool grounded;
 
+	public Transform cameraWall;
+
 	void Start() {
 		animator = GetComponent<Animator> ();
 		moveSpeedDef = moveSpeed;
@@ -32,7 +34,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		float dirX = Input.GetAxis ("Horizontal");
 		animatePlayer(dirX);
-
+		cameraBorder ();
 	}
 
 	// Method for checking keyboard input
@@ -45,20 +47,32 @@ public class PlayerMoveScript : MonoBehaviour {
 		// check if keys are down
 		if (Input.GetKey (KeyCode.A)) {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-		}
-		if (Input.GetKey (KeyCode.D)) {
+		} else if (Input.GetKey (KeyCode.D)) {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		}
 
 		// check keys released
 
 	}
+
+	// method for restricting player movement to the left
+	void cameraBorder() {
+		if (GetComponent<Rigidbody2D> ().position.x < cameraWall.position.x + .2f) {
+			GetComponent<Rigidbody2D> ().transform.position = new Vector2(cameraWall.position.x + .2f, GetComponent<Rigidbody2D> ().transform.position.y);
+		}
+		if (GetComponent<Rigidbody2D> ().position.x >= cameraWall.position.x + 8) {
+			cameraWall.transform.position = new Vector3(GetComponent<Rigidbody2D> ().transform.position.x -8, 0, 0);
+			GetComponent<Rigidbody2D> ().transform.position = new Vector2(cameraWall.position.x + 8, GetComponent<Rigidbody2D> ().transform.position.y);
+		}
+	}
+
+
 	// Method for making the player sprint
 	void sprint() {
 		if (isSprinting ()) {
 			if(sprintDelay > 0)
 				sprintDelay--;
-			if(sprintDelay <= 0)
+			if(sprintDelay <= 0 && grounded)
 				moveSpeed = 10;
 		} else {
 			moveSpeed = moveSpeedDef;
