@@ -15,7 +15,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	public LayerMask theGround;
 	private bool grounded;
 
-	public Transform cameraWall;
+	private bool facingRight;
 
 	void Start() {
 		animator = GetComponent<Animator> ();
@@ -27,14 +27,13 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	void Update() {
-
 		sprint();
 	
 		keyBoardInput ();
 
 		float dirX = Input.GetAxis ("Horizontal");
 		animatePlayer(dirX);
-		cameraBorder ();
+
 	}
 
 	// Method for checking keyboard input
@@ -49,22 +48,22 @@ public class PlayerMoveScript : MonoBehaviour {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		} else if (Input.GetKey (KeyCode.D)) {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+			facingRight = true;
 		}
 
 		// check keys released
+		if (Input.GetKeyUp (KeyCode.A)) {
 
-	}
-
-	// method for restricting player movement to the left
-	void cameraBorder() {
-		if (GetComponent<Rigidbody2D> ().position.x < cameraWall.position.x + .2f) {
-			GetComponent<Rigidbody2D> ().transform.position = new Vector2(cameraWall.position.x + .2f, GetComponent<Rigidbody2D> ().transform.position.y);
-		}
-		if (GetComponent<Rigidbody2D> ().position.x >= cameraWall.position.x + 8) {
-			cameraWall.transform.position = new Vector3(GetComponent<Rigidbody2D> ().transform.position.x -8, 0, 0);
-			GetComponent<Rigidbody2D> ().transform.position = new Vector2(cameraWall.position.x + 8, GetComponent<Rigidbody2D> ().transform.position.y);
+		} 
+		if (Input.GetKeyUp (KeyCode.D)) {
+			facingRight = false;
+			if(grounded) {
+				GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, 0, 0);
+			}
 		}
 	}
+
+
 
 
 	// Method for making the player sprint
@@ -89,9 +88,9 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		// Checks the direction the player is moving and flips the player
 		if (dirX < 0) {
-			GetComponent<Rigidbody2D>().transform.localScale = new Vector3 (-6, 6, 0);
+			GetComponent<Rigidbody2D>().transform.localScale = new Vector3 (-5, 5, 0);
 		} else if (dirX > 0) {
-			GetComponent<Rigidbody2D>().transform.localScale = new Vector3 (6, 6, 0);
+			GetComponent<Rigidbody2D>().transform.localScale = new Vector3 (5, 5, 0);
 		}
 	}
 
