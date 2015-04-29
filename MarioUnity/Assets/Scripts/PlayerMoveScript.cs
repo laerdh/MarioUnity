@@ -22,19 +22,26 @@ public class PlayerMoveScript : MonoBehaviour {
 	public LayerMask theGround;
 	private bool grounded;
 
-	private bool facingRight;
+	private bool facingRight = true;
 
 	// Camera and "wall" objects
 	public GameObject cameraWall;
 	public Camera camera;
+	private bool moveTheCamera;
+	private const float DEADZONE = 0.1f;
 
 	void Start() {
 		animator = GetComponent<Animator> ();
 		moveSpeedDef = moveSpeed;
+		camera.transform.position = new Vector3 (GetComponent<Rigidbody2D> ().position.x, camera.transform.position.y, camera.transform.position.z);
 	}
 
 	void FixedUpdate() {
 		grounded = Physics2D.OverlapCircle (groundChecker.position, groundCheckerWidth, theGround);
+
+		if (moveTheCamera) {
+			camera.transform.position = new Vector3 (GetComponent<Rigidbody2D> ().position.x, camera.transform.position.y, camera.transform.position.z);
+		}
 	}
 
 	void Update() {
@@ -42,6 +49,10 @@ public class PlayerMoveScript : MonoBehaviour {
 		animatePlayer(dirX);
 		sprint();
 		keyBoardInput ();
+		moveCamera ();
+
+		if(GetComponent<Rigidbody2D> ().position.x < cameraWall.transform.position.x + DEADZONE)
+			GetComponent<Rigidbody2D> ().transform.position = new Vector2(cameraWall.transform.position.x + DEADZONE,GetComponent<Rigidbody2D> ().position.y);
 	}
 
 	// Method for checking keyboard input
@@ -52,13 +63,15 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 
 		// check if keys are down
-		if (Input.GetKey (KeyCode.A) && GetComponent<Rigidbody2D> ().position.x > cameraWall.transform.position.x + 1) {
+		if (Input.GetKey (KeyCode.A)) {
+			facingRight = false;
 			mario_state = RUNNING;
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+			if(GetComponent<Rigidbody2D> ().position.x > cameraWall.transform.position.x + DEADZONE)
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		} else if (Input.GetKey (KeyCode.D)) {
+			facingRight = true;
 			mario_state = RUNNING;
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-			facingRight = true;
 		}
 
 		// check keys released
@@ -71,7 +84,6 @@ public class PlayerMoveScript : MonoBehaviour {
 		} 
 		if (Input.GetKeyUp (KeyCode.D)) {
 			mario_state = IDLE;
-			facingRight = false;
 			animator.SetBool ("isRunning", false);
 			if(grounded) {
 				GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, 0, 0);
@@ -125,4 +137,11 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	// Move Camera
+	public void moveCamera() {
+		if (transform.position.x > cameraWall.transform.position.x + 8 && facingRight) {
+			moveTheCamera = true;
+		} else if (!facingRight) {
+			moveTheCamera = false;
+		}
+	}
 }
