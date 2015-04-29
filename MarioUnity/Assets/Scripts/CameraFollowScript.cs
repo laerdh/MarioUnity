@@ -17,6 +17,6 @@ public class CameraFollowScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = new Vector3 (target.GetComponent<Transform> ().position.x,OVERWORLD_Y, -5);
+		//transform.position = new Vector3 (target.GetComponent<Transform> ().position.x,OVERWORLD_Y, -5);
 	}
 }

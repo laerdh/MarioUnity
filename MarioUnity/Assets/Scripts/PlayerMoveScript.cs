@@ -3,6 +3,13 @@ using System.Collections;
 
 public class PlayerMoveScript : MonoBehaviour {
 
+	// Mario states
+	private int mario_state = 0;
+	private const int IDLE = 0;
+	private const int WALKING = 1;
+	private const int RUNNING = 2;
+	private const int DUCKING = 3;
+
 	public float moveSpeed;
 	public float jumpHeight;
 	private float moveSpeedDef;
@@ -17,6 +24,10 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	private bool facingRight;
 
+	// Camera and "wall" objects
+	public GameObject cameraWall;
+	public Camera camera;
+
 	void Start() {
 		animator = GetComponent<Animator> ();
 		moveSpeedDef = moveSpeed;
@@ -27,13 +38,10 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	void Update() {
-		sprint();
-	
-		keyBoardInput ();
-
 		float dirX = Input.GetAxis ("Horizontal");
 		animatePlayer(dirX);
-
+		sprint();
+		keyBoardInput ();
 	}
 
 	// Method for checking keyboard input
@@ -44,19 +52,27 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 
 		// check if keys are down
-		if (Input.GetKey (KeyCode.A)) {
+		if (Input.GetKey (KeyCode.A) && GetComponent<Rigidbody2D> ().position.x > cameraWall.transform.position.x + 1) {
+			mario_state = RUNNING;
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		} else if (Input.GetKey (KeyCode.D)) {
+			mario_state = RUNNING;
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 			facingRight = true;
 		}
 
 		// check keys released
 		if (Input.GetKeyUp (KeyCode.A)) {
-
+			mario_state = IDLE;
+			animator.SetBool ("isRunning", false);
+			if(grounded) {
+				GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, 0, 0);
+			}
 		} 
 		if (Input.GetKeyUp (KeyCode.D)) {
+			mario_state = IDLE;
 			facingRight = false;
+			animator.SetBool ("isRunning", false);
 			if(grounded) {
 				GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, 0, 0);
 			}
@@ -82,7 +98,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	// Animate the player 
 	void animatePlayer(float dirX) {
 		// Checks if the player is running
-		if (dirX != 0) {
+		if (mario_state == RUNNING) {
 			animator.SetBool ("isRunning", true);
 		} else animator.SetBool ("isRunning", false);
 
@@ -91,6 +107,13 @@ public class PlayerMoveScript : MonoBehaviour {
 			GetComponent<Rigidbody2D>().transform.localScale = new Vector3 (-5, 5, 0);
 		} else if (dirX > 0) {
 			GetComponent<Rigidbody2D>().transform.localScale = new Vector3 (5, 5, 0);
+		}
+
+		if(Input.GetKey(KeyCode.S)) {
+			animator.SetBool("isDucking", true);
+		}
+		if(Input.GetKeyUp(KeyCode.S)) {
+			animator.SetBool("isDucking", false);
 		}
 	}
 
@@ -101,4 +124,5 @@ public class PlayerMoveScript : MonoBehaviour {
 		} return false;
 	}
 
+	// Move Camera
 }
