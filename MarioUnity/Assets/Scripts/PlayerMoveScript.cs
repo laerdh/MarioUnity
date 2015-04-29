@@ -28,7 +28,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	public GameObject cameraWall;
 	public Camera camera;
 	private bool moveTheCamera;
-	private const float DEADZONE = 0.1f;
+	private const float DEADZONE = 0.1f; // The distance mario is allowed to walk before the screen stops 
 
 	void Start() {
 		animator = GetComponent<Animator> ();
@@ -46,9 +46,9 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	void Update() {
 		float dirX = Input.GetAxis ("Horizontal");
+		keyBoardInput ();
 		animatePlayer(dirX);
 		sprint();
-		keyBoardInput ();
 		moveCamera ();
 
 		if(GetComponent<Rigidbody2D> ().position.x < cameraWall.transform.position.x + DEADZONE)
@@ -68,7 +68,8 @@ public class PlayerMoveScript : MonoBehaviour {
 			mario_state = RUNNING;
 			if(GetComponent<Rigidbody2D> ().position.x > cameraWall.transform.position.x + DEADZONE)
 				GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-		} else if (Input.GetKey (KeyCode.D)) {
+		}
+		if (Input.GetKey (KeyCode.D)) {
 			facingRight = true;
 			mario_state = RUNNING;
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
@@ -143,5 +144,9 @@ public class PlayerMoveScript : MonoBehaviour {
 		} else if (!facingRight) {
 			moveTheCamera = false;
 		}
+	}
+
+	void OnGUI() {
+		GUI.Box (new Rect(20,20, 80,80),""+grounded);
 	}
 }
