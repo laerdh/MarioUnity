@@ -9,6 +9,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	private const int WALKING = 1;
 	private const int RUNNING = 2;
 	private const int DUCKING = 3;
+	private const int JUMPING = 4;
 
 	public float moveSpeed;
 	public float jumpHeight;
@@ -38,6 +39,10 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	void FixedUpdate() {
 		grounded = Physics2D.OverlapCircle (groundChecker.position, groundCheckerWidth, theGround);
+		if (!grounded) {
+			mario_state = JUMPING;
+		} else
+			mario_state = IDLE;
 
 		if (moveTheCamera) {
 			camera.transform.position = new Vector3 (GetComponent<Rigidbody2D> ().position.x, camera.transform.position.y, camera.transform.position.z);
@@ -63,13 +68,13 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 
 		// check if keys are down
-		if (Input.GetKey (KeyCode.A)) {
+		if (Input.GetKey (KeyCode.A) && mario_state != JUMPING) {
 			facingRight = false;
 			mario_state = RUNNING;
 			if(GetComponent<Rigidbody2D> ().position.x > cameraWall.transform.position.x + DEADZONE)
 				GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		}
-		if (Input.GetKey (KeyCode.D)) {
+		if (Input.GetKey (KeyCode.D) && mario_state != JUMPING) {
 			facingRight = true;
 			mario_state = RUNNING;
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
@@ -123,6 +128,12 @@ public class PlayerMoveScript : MonoBehaviour {
 		} else if (dirX > 0) {
 			GetComponent<Rigidbody2D>().transform.localScale = new Vector3 (5, 5, 0);
 		}
+
+		// Check if the player is in the air
+		if (!grounded) {
+			animator.SetBool ("isJumping", true);
+		} else
+			animator.SetBool ("isJumping", false);
 	}
 
 	// Returns true if player is sprinting 
