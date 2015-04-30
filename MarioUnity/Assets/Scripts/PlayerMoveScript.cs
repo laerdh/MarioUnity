@@ -74,26 +74,28 @@ public class PlayerMoveScript : MonoBehaviour {
 			mario_state = RUNNING;
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		}
+		if(Input.GetKey(KeyCode.S)) {
+			animator.SetBool("isDucking", true);
+		}
+
 
 		// check keys released
 		if (Input.GetKeyUp (KeyCode.A)) {
 			mario_state = IDLE;
-			animator.SetBool ("isRunning", false);
 			if(grounded) {
 				GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, 0, 0);
 			}
 		} 
 		if (Input.GetKeyUp (KeyCode.D)) {
 			mario_state = IDLE;
-			animator.SetBool ("isRunning", false);
 			if(grounded) {
 				GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, 0, 0);
 			}
 		}
+		if(Input.GetKeyUp(KeyCode.S)) {
+			animator.SetBool("isDucking", false);
+		}
 	}
-
-
-
 
 	// Method for making the player sprint
 	void sprint() {
@@ -120,13 +122,6 @@ public class PlayerMoveScript : MonoBehaviour {
 			GetComponent<Rigidbody2D>().transform.localScale = new Vector3 (-5, 5, 0);
 		} else if (dirX > 0) {
 			GetComponent<Rigidbody2D>().transform.localScale = new Vector3 (5, 5, 0);
-		}
-
-		if(Input.GetKey(KeyCode.S)) {
-			animator.SetBool("isDucking", true);
-		}
-		if(Input.GetKeyUp(KeyCode.S)) {
-			animator.SetBool("isDucking", false);
 		}
 	}
 
