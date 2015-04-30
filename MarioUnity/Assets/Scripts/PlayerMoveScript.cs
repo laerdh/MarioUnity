@@ -68,15 +68,17 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 
 		// check if keys are down
-		if (Input.GetKey (KeyCode.A) && mario_state != JUMPING) {
+		if (Input.GetKey (KeyCode.A)) {
 			facingRight = false;
-			mario_state = RUNNING;
+			if(mario_state != JUMPING)
+				mario_state = RUNNING;
 			if(GetComponent<Rigidbody2D> ().position.x > cameraWall.transform.position.x + DEADZONE)
 				GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		}
-		if (Input.GetKey (KeyCode.D) && mario_state != JUMPING) {
+		if (Input.GetKey (KeyCode.D)) {
 			facingRight = true;
-			mario_state = RUNNING;
+			if(mario_state != JUMPING)
+				mario_state = RUNNING;
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 		}
 		if(Input.GetKey(KeyCode.S)) {
