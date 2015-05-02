@@ -2,7 +2,15 @@
 using System.Collections;
 
 public class breakBlockScript : MonoBehaviour {
-	void onTriggerEnter(Collider other) {
-		print ("fest");
+
+	private bool isHit;
+
+	void Update() {
+
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+
+		//Destroy (this.gameObject);
 	}
 }
