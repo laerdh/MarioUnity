@@ -18,6 +18,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	private Animator animator;
 
+	// variables for ground checking
 	public Transform groundChecker;
 	public float groundCheckerWidth;
 	public LayerMask theGround;
@@ -39,6 +40,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	void FixedUpdate() {
 		grounded = Physics2D.OverlapCircle (groundChecker.position, groundCheckerWidth, theGround);
+
 		if (!grounded) {
 			mario_state = JUMPING;
 		} else
