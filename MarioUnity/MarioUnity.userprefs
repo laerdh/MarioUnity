@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../PlayerMovement/PlayerMovement/Assets/Scripts/MarioControllerScript2.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\breakBlockScript.cs">
     <Files>
-      <File FileName="../../PlayerMovement/PlayerMovement/Assets/Scripts/MarioControllerScript2.cs" Line="13" Column="36" />
+      <File FileName="Assets\Scripts\changeBlockMaterial.cs" Line="6" Column="2" />
+      <File FileName="Assets\Scripts\breakBlockScript.cs" Line="7" Column="97" />
+      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="56" Column="20" />
+      <File FileName="Assets\Scripts\cameraWall.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

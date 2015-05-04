@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Dritt : MonoBehaviour {
+public class cameraWall : MonoBehaviour {
 
-	//Stein er ful
+	public Transform wallPosition;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -11,6 +12,6 @@ public class Dritt : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		wallPosition.transform.position = new Vector3(transform.position.x - 8,0f,0f);
 	}
 }
