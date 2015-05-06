@@ -113,7 +113,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "BreakableBlock") {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, 0);
-			other.GetComponent<breakBlockScript>().setHit(true, 1);
+			other.GetComponent<breakBlockScript>().setHit(true, 2);
 		}
 	}
 

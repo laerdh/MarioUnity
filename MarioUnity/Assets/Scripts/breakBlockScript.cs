@@ -29,9 +29,12 @@ public class breakBlockScript : MonoBehaviour {
 	}
 	public BoxTypes boxTypes;
 
-	void Start() {
+	private Animator animator;
 
+	void Start() {
+		animator = GetComponent<Animator> ();
 		boxtype = (int)boxTypes;
+		setAnimation (boxtype);
 		bumpBox = false;
 		isHit = false;
 		canBeHit = true;
@@ -54,6 +57,9 @@ public class breakBlockScript : MonoBehaviour {
 				}
 				break;
 			case QUESTIONBLOCK:
+				bumpBox = true;
+				animator.SetBool("isEmpty", true);
+				canBeHit = false;
 				break;
 			case HARDBLOCK:
 				break;
@@ -98,5 +104,10 @@ public class breakBlockScript : MonoBehaviour {
 			this.isHit = isHit;
 			this.playerLives = playerLives;
 		}
+	}
+
+	void setAnimation(int i) {
+		if(i == 1)
+			animator.SetBool("isCoinBox", true);
 	}
 }
