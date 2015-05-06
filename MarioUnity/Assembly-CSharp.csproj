@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\blockBreakEffect.cs" />
      <Compile Include="Assets\Scripts\breakBlockScript.cs" />
      <Compile Include="Assets\Scripts\cameraWall.cs" />
+     <Compile Include="Assets\Scripts\changeBlockMaterial.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
