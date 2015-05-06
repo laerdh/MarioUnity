@@ -79,7 +79,7 @@ public class PlayerMoveScript : MonoBehaviour {
 				mario_state = RUNNING;
 			if(GetComponent<Rigidbody2D> ().position.x > cameraWall.transform.position.x + DEADZONE)
 				GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-		}
+		} else 
 		if (Input.GetKey (KeyCode.D)) {
 			facingRight = true;
 			if(mario_state != JUMPING)

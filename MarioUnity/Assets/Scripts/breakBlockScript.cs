@@ -20,12 +20,12 @@ public class breakBlockScript : MonoBehaviour {
 	private int boxtype;
 	private const int NORMALBLOCK = 0;
 	private const int QUESTIONBLOCK = 1;
-	private const int HARDBLOCK = 2;
+	private const int SOLIDBLOCK = 2;
 	private const int HIDDENBLOCK = 3;
 	private const int MULTICOIN = 4;
 	public GameObject breakBlockPrefab;
 	public enum BoxTypes {
-		NORMALBLOCK, QUIESTIONBLOCK, HARDBLOCK, HIDDENBLOCK
+		NORMALBLOCK, QUIESTIONBLOCK, SOLIDBLOCK, HIDDENBLOCK, MULTICOIN
 	}
 	public BoxTypes boxTypes;
 
@@ -61,7 +61,8 @@ public class breakBlockScript : MonoBehaviour {
 				animator.SetBool("isEmpty", true);
 				canBeHit = false;
 				break;
-			case HARDBLOCK:
+			case SOLIDBLOCK:
+				canBeHit = false;
 				break;
 			case HIDDENBLOCK:
 				bumpBox = true;
@@ -118,6 +119,9 @@ public class breakBlockScript : MonoBehaviour {
 			animator.SetBool ("isInvisBox", true);
 			SpriteRenderer sp = GetComponent<SpriteRenderer>();
 			sp.enabled = false;
+		}
+		else if (i == SOLIDBLOCK) {
+			animator.SetBool ("isSolid", true);
 		}
 	}
 }
