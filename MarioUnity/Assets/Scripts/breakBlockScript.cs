@@ -64,6 +64,11 @@ public class breakBlockScript : MonoBehaviour {
 			case HARDBLOCK:
 				break;
 			case HIDDENBLOCK:
+				bumpBox = true;
+				animator.SetBool("isEmpty", true);
+				SpriteRenderer sp = GetComponent<SpriteRenderer>();
+				sp.enabled = true;
+				canBeHit = false;
 				break;
 			case MULTICOIN:
 				break;
@@ -107,7 +112,12 @@ public class breakBlockScript : MonoBehaviour {
 	}
 
 	void setAnimation(int i) {
-		if(i == 1)
-			animator.SetBool("isCoinBox", true);
+		if (i == QUESTIONBLOCK)
+			animator.SetBool ("isCoinBox", true);
+		else if (i == HIDDENBLOCK) {
+			animator.SetBool ("isInvisBox", true);
+			SpriteRenderer sp = GetComponent<SpriteRenderer>();
+			sp.enabled = false;
+		}
 	}
 }
