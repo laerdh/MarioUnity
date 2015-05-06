@@ -25,7 +25,7 @@ public class breakBlockScript : MonoBehaviour {
 	private const int MULTICOIN = 4;
 	public GameObject breakBlockPrefab;
 	public enum BoxTypes {
-		NORMALBLOCK, QUIESTIONBLOCK, SOLIDBLOCK, HIDDENBLOCK, MULTICOIN
+		NORMALBLOCK, QUESTIONBLOCK, SOLIDBLOCK, HIDDENBLOCK, MULTICOIN
 	}
 	public BoxTypes boxTypes;
 
@@ -43,7 +43,7 @@ public class breakBlockScript : MonoBehaviour {
 	}
 
 	void Update() {
-		BumpBox ();
+
 
 		if(isHit) {
 			switch(boxtype) {
@@ -75,19 +75,25 @@ public class breakBlockScript : MonoBehaviour {
 				break;
 			}
 		}
+		BumpBox ();
 	}
 
 	// Method for bouncing the box if mario hits when small
 	void BumpBox() {
 		if (bumpBox) {
+			// Move box up towards higher position
 			if((Vector2)transform.position != pos2 && isHit) {
 				transform.position = new Vector2(transform.position.x, transform.position.y +0.1f);
-			} else if((Vector2)transform.position == pos2) {
+			}
+			// If higher position is reached set isHit to false
+			else if((Vector2)transform.position == pos2) {
 				isHit = false;
 			}
+			// If it is not at original position and isHit is false, move back down
 			if((Vector2)transform.position != pos && !isHit) {
 				transform.position = new Vector2(transform.position.x, transform.position.y -0.1f);
 			}
+			// If the position is the same as the original position, box is hittable and animation stops
 			if((Vector2)transform.position == pos) {
 				canBeHit = true;
 				bumpBox = false;
