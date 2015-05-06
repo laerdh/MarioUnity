@@ -12,6 +12,7 @@ public class blockBreakEffect : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		transform.Rotate (new Vector3(0,0,-5f));
 		if (obj.position.y < -20) {
 			Destroy(this.gameObject);
 		}
