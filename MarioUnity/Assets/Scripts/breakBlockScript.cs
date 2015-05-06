@@ -9,19 +9,35 @@ public class breakBlockScript : MonoBehaviour {
 
 	private bool isHit;
 	private Vector2 pos;
-	public LayerMask playerLayer;
-	private Rigidbody2D player;
+	
+	public GameObject content;
+	private int boxtype;
+	private const int NORMALBLOCK = 0;
+	private const int QUESTIONBLOCK = 1;
+	private const int HARDBLOCK = 2;
+	private const int HIDDENBLOCK = 3;
+	private const int MULTICOIN = 4;
+
+
+	public enum BoxTypes {
+		NORMALBLOCK, QUIESTIONBLOCK, HARDBLOCK, HIDDENBLOCK
+	}
+	public BoxTypes boxTypes;
 
 	void Start() {
+		boxtype = (int)boxTypes;
+		isHit = false;
 		pos = new Vector2 (transform.position.x, transform.position.y -0.2f);
-		player = GameObject.Find ("Player").GetComponent<Rigidbody2D>();
 	}
 
 	void Update() {
-		isHit = Physics2D.OverlapCircle (pos, 0.2f, playerLayer);
 		if(isHit) {
-			player.velocity = new Vector2(player.velocity.x, 0f);
+			print ("hit");
 			Destroy(this.gameObject);
 		}
+	}
+
+	public void setHit(bool isHit) {
+		this.isHit = isHit;
 	}
 }

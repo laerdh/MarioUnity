@@ -32,6 +32,9 @@ public class PlayerMoveScript : MonoBehaviour {
 	private bool moveTheCamera;
 	private const float DEADZONE = 0.1f; // The distance mario is allowed to walk before the screen stops 
 
+	// BLOCKS
+	public breakBlockScript breakBlock;
+
 	void Start() {
 		animator = GetComponent<Animator> ();
 		moveSpeedDef = moveSpeed;
@@ -92,19 +95,28 @@ public class PlayerMoveScript : MonoBehaviour {
 		if (Input.GetKeyUp (KeyCode.A)) {
 			mario_state = IDLE;
 			if(grounded) {
-				GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, 0, 0);
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
 			}
 		} 
 		if (Input.GetKeyUp (KeyCode.D)) {
 			mario_state = IDLE;
 			if(grounded) {
-				GetComponent<Rigidbody2D> ().velocity = new Vector3 (0, 0, 0);
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
 			}
 		}
 		if(Input.GetKeyUp(KeyCode.S)) {
 			animator.SetBool("isDucking", false);
 		}
 	}
+
+	// Break block
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.tag == "BreakableBlock") {
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, 0);
+			other.GetComponent<breakBlockScript>().setHit(true);
+		}
+	}
+
 
 	// Method for making the player sprint
 	void sprint() {
