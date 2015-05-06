@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
+     <Compile Include="Assets\Scripts\blockBreakEffect.cs" />
      <Compile Include="Assets\Scripts\breakBlockScript.cs" />
      <Compile Include="Assets\Scripts\cameraWall.cs" />
  <Reference Include="UnityEngine.UI">
