@@ -18,6 +18,7 @@ public class breakBlockScript : MonoBehaviour {
 	private const int HIDDENBLOCK = 3;
 	private const int MULTICOIN = 4;
 
+	public GameObject breakBlockPrefab;
 
 	public enum BoxTypes {
 		NORMALBLOCK, QUIESTIONBLOCK, HARDBLOCK, HIDDENBLOCK
@@ -33,8 +34,15 @@ public class breakBlockScript : MonoBehaviour {
 	void Update() {
 		if(isHit) {
 			print ("hit");
+			SpawnExplosion();
 			Destroy(this.gameObject);
+
 		}
+	}
+
+	void SpawnExplosion() {
+		GameObject e1 = GameObject.Instantiate (breakBlockPrefab);
+		e1.transform.position = transform.position;
 	}
 
 	public void setHit(bool isHit) {
