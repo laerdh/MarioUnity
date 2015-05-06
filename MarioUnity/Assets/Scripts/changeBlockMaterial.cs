@@ -23,7 +23,7 @@ public class changeBlockMaterial : MonoBehaviour {
 	}
 	
 	void Update() {
-		isHit = Physics2D.OverlapCircle (pos, 0.2f, playerLayer);
+		isHit = Physics2D.OverlapCircle (pos, 0.3f, playerLayer);
 		if (isHit) {
 			coll.sharedMaterial = null;
 		} else coll.sharedMaterial = mat;
