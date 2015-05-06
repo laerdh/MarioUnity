@@ -1,5 +1,7 @@
 ﻿<Properties>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/changeBlockMaterial.cs">
     <Files>
@@ -11,15 +13,21 @@
     <Files>
       <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="81" Column="5" />
 =======
+>>>>>>> 3f92c26212413ea3b5d7618d1d4673d184302b2d
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\breakBlockScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerMoveScript.cs">
     <Files>
+<<<<<<< HEAD
+      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="116" Column="56" />
+      <File FileName="Assets\Scripts\breakBlockScript.cs" Line="22" Column="29" />
+=======
       <File FileName="Assets\Scripts\changeBlockMaterial.cs" Line="6" Column="2" />
       <File FileName="Assets\Scripts\breakBlockScript.cs" Line="7" Column="97" />
       <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="56" Column="20" />
 >>>>>>> 4f7db7327b5a38348286040670338f59706708a2
       <File FileName="Assets\Scripts\cameraWall.cs" Line="1" Column="1" />
 >>>>>>> 2a5954dac8e485d7d73aea25bbafdbc57f852f79
+>>>>>>> 3f92c26212413ea3b5d7618d1d4673d184302b2d
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
