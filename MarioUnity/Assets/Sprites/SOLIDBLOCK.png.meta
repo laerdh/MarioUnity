@@ -1,13 +1,9 @@
 fileFormatVersion: 2
-guid: e434025b1ba074104aff46a399590127
-timeCreated: 1430909198
+guid: 2c87c1b28c81c3d4ca06c95c9f5beb8c
+timeCreated: 1430927608
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Coins_0
-    21300002: Coins_1
-    21300004: Coins_2
-    21300006: Coins_3
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -41,7 +37,7 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,47 +48,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: Coins_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 10
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Coins_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 10
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Coins_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 10
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Coins_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 10
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
