@@ -1,17 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMoveScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemy.cs" Line="19" Column="19" />
-      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="118" Column="3" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerMoveScript.cs">
-    <Files>
-      <File FileName="Assets\Scripts\blockBreakEffect.cs" Line="15" Column="38" />
-      <File FileName="Assets\Scripts\breakBlockScript.cs" Line="87" Column="5" />
-      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="153" Column="10" />
->>>>>>> e350c7f920eb309914e577e0c7e40674bad38517
+      <File FileName="Assets/Scripts/Enemy.cs" Line="19" Column="39" />
+      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="114" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
