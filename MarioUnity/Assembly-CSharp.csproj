@@ -48,9 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
-     <Compile Include="Assets\Scripts\MarioStartScreen.cs" />
      <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
-     <Compile Include="Assets\Scripts\ScoreText.cs" />
+     <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\blockBreakEffect.cs" />
      <Compile Include="Assets\Scripts\breakBlockScript.cs" />
      <Compile Include="Assets\Scripts\cameraWall.cs" />
