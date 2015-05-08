@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PlayerMoveScript : MonoBehaviour {
 
+	// Player RigidBody
+	private Rigidbody2D player;
+
 	// Mario states
 	private int mario_state = 0;
 	private const int IDLE = 0;
@@ -11,11 +14,13 @@ public class PlayerMoveScript : MonoBehaviour {
 	private const int DUCKING = 3;
 	private const int JUMPING = 4;
 
+	// Move variables
 	public float moveSpeed;
 	public float jumpHeight;
 	private float moveSpeedDef;
 	private int sprintDelay = 10;
 
+	// Animator
 	private Animator animator;
 
 	// variables for ground checking
@@ -24,6 +29,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	public LayerMask theGround;
 	private bool grounded;
 
+	// Direction boolean, used to check if player is facing right and move the camera
 	private bool facingRight = true;
 
 	// Camera and "wall" objects
@@ -36,9 +42,10 @@ public class PlayerMoveScript : MonoBehaviour {
 	public breakBlockScript breakBlock;
 
 	void Start() {
+		player = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
 		moveSpeedDef = moveSpeed;
-		camera.transform.position = new Vector3 (GetComponent<Rigidbody2D> ().position.x, camera.transform.position.y, camera.transform.position.z);
+		camera.transform.position = new Vector3 (player.position.x, camera.transform.position.y, camera.transform.position.z);
 	}
 
 	void FixedUpdate() {
@@ -50,7 +57,7 @@ public class PlayerMoveScript : MonoBehaviour {
 			mario_state = IDLE;
 
 		if (moveTheCamera) {
-			camera.transform.position = new Vector3 (GetComponent<Rigidbody2D> ().position.x, camera.transform.position.y, camera.transform.position.z);
+			camera.transform.position = new Vector3 (player.position.x, camera.transform.position.y, camera.transform.position.z);
 		}
 	}
 
@@ -61,15 +68,16 @@ public class PlayerMoveScript : MonoBehaviour {
 		sprint();
 		moveCamera ();
 
-		if(GetComponent<Rigidbody2D> ().position.x < cameraWall.transform.position.x + DEADZONE)
-			GetComponent<Rigidbody2D> ().transform.position = new Vector2(cameraWall.transform.position.x + DEADZONE,GetComponent<Rigidbody2D> ().position.y);
+		// Stop the player if he walks to the left of the screen
+		if(player.position.x < cameraWall.transform.position.x + DEADZONE)
+			player.transform.position = new Vector2(cameraWall.transform.position.x + DEADZONE,player.position.y);
 	}
 
 	// Method for checking keyboard input
 	void keyBoardInput() {
 		// check keyboard presses
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jumpHeight);
+			player.velocity = new Vector2 (player.velocity.x, jumpHeight);
 		}
 
 		// check if keys are down
@@ -77,14 +85,14 @@ public class PlayerMoveScript : MonoBehaviour {
 			facingRight = false;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
-			if(GetComponent<Rigidbody2D> ().position.x > cameraWall.transform.position.x + DEADZONE)
-				GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-		}
+			if(player.position.x > cameraWall.transform.position.x + DEADZONE)
+				player.velocity = new Vector2 (-moveSpeed, player.velocity.y);
+		} else 
 		if (Input.GetKey (KeyCode.D)) {
 			facingRight = true;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+			player.velocity = new Vector2 (moveSpeed, player.velocity.y);
 		}
 		if(Input.GetKey(KeyCode.S)) {
 			animator.SetBool("isDucking", true);
@@ -95,13 +103,13 @@ public class PlayerMoveScript : MonoBehaviour {
 		if (Input.GetKeyUp (KeyCode.A)) {
 			mario_state = IDLE;
 			if(grounded) {
-				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
+				player.velocity = new Vector2 (0, 0);
 			}
 		} 
 		if (Input.GetKeyUp (KeyCode.D)) {
 			mario_state = IDLE;
 			if(grounded) {
-				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
+				player.velocity = new Vector2 (0, 0);
 			}
 		}
 		if(Input.GetKeyUp(KeyCode.S)) {
@@ -112,8 +120,8 @@ public class PlayerMoveScript : MonoBehaviour {
 	// Break block
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "BreakableBlock") {
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, 0);
-			other.GetComponent<breakBlockScript>().setHit(true);
+			player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y/4));
+			other.GetComponent<breakBlockScript>().setHit(true, 2);
 		}
 	}
 
@@ -140,9 +148,9 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		// Checks the direction the player is moving and flips the player
 		if (dirX < 0) {
-			GetComponent<Rigidbody2D>().transform.localScale = new Vector3 (-5, 5, 0);
+			player.transform.localScale = new Vector3 (-5, 5, 0);
 		} else if (dirX > 0) {
-			GetComponent<Rigidbody2D>().transform.localScale = new Vector3 (5, 5, 0);
+			player.transform.localScale = new Vector3 (5, 5, 0);
 		}
 
 		// Check if the player is in the air
@@ -170,5 +178,6 @@ public class PlayerMoveScript : MonoBehaviour {
 	
 	void OnGUI() {
 		GUI.Box (new Rect(20,20, 80,80),""+grounded);
-	}
+	}	
+	
 }
