@@ -47,10 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\MarioStartScreen.cs" />
      <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
+     <Compile Include="Assets\Scripts\ScoreText.cs" />
      <Compile Include="Assets\Scripts\blockBreakEffect.cs" />
      <Compile Include="Assets\Scripts\breakBlockScript.cs" />
      <Compile Include="Assets\Scripts\cameraWall.cs" />
+     <Compile Include="Assets\Scripts\startScreen.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
