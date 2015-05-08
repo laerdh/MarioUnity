@@ -9,8 +9,6 @@ public class EnemyMove : MonoBehaviour {
 	public bool colliding;
 	public LayerMask detectObject;
 	public Transform weakness;
-	private bool sweepMode;
-	private bool normalMode;
 	private int hit = 0;
 	public Animator animator;
 
@@ -42,17 +40,13 @@ public class EnemyMove : MonoBehaviour {
 		if (other.gameObject.name == "Player") {
 			if (this.gameObject.tag == "EnemyTurtle") {
 				hit++;
-				if (normalMode) {
-				
-				}
-
 				animator.SetBool ("isHit", true);
 
-				// More speed when hitted the second time.
-				if (sweepMode) {
-					velocity = 10;
+				// If Mario hits enemy for the 2nd time, it starts sweeping
+				if (hit % 2 == 0 && hit != 0) {
+					velocity = 8f;
 				} else {
-					velocity = 0;
+					velocity = 0f;
 				}
 			}
 
