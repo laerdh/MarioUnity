@@ -41,9 +41,6 @@ public class PlayerMoveScript : MonoBehaviour {
 	// BLOCKS
 	public breakBlockScript breakBlock;
 
-	//Score
-	public ScoreManager Instance;
-
 	void Start() {
 		player = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
@@ -125,10 +122,6 @@ public class PlayerMoveScript : MonoBehaviour {
 		if (other.gameObject.tag == "BreakableBlock") {
 			player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y / 4));
 			other.GetComponent<breakBlockScript> ().setHit (true, 2);
-		}
-		if (other.gameObject.tag == "Coin") {
-			DestroyObject(other.gameObject);
-			other.GetComponent<ScoreManager>().Coin();
 		}
 	}
 
