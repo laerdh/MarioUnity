@@ -1,11 +1,33 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/breakBlockScript.cs">
     <Files>
       <File FileName="Assets/Scripts/Enemy.cs" Line="16" Column="3" />
       <File FileName="Assets/Scripts/blockBreakEffect.cs" Line="15" Column="27" />
       <File FileName="Assets/Scripts/breakBlockScript.cs" Line="108" Column="56" />
       <File FileName="Assets/EnemyMove.cs" Line="17" Column="3" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ScoreManager.cs">
+    <Files>
+<<<<<<< HEAD
+      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="131" Column="46" />
+      <File FileName="Assets/Scripts/startScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="72" Column="1" />
+      <File FileName="Assets/Scripts/ScoreManager.cs" Line="20" Column="1" />
+      <File FileName="Assets/Scripts/breakBlockScript.cs" Line="1" Column="1" />
+=======
+<<<<<<< HEAD
+      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="132" Column="22" />
+      <File FileName="Assets/Scripts/startScreen.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets/Scripts/Enemy.cs" Line="11" Column="28" />
+      <File FileName="Assets/Scripts/blockBreakEffect.cs" Line="15" Column="27" />
+      <File FileName="Assets/Scripts/breakBlockScript.cs" Line="111" Column="3" />
+>>>>>>> 3e0d38d198741e8e7ba733b409ec3afa8b5a07ed
+>>>>>>> 4170b78a7ee60f1f2293f41d5bd251bf9d90dd75
+>>>>>>> e7cf5d69f06dab5e2c77674b0bd65e30990805b8
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
