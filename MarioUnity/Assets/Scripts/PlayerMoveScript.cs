@@ -41,6 +41,9 @@ public class PlayerMoveScript : MonoBehaviour {
 	// BLOCKS
 	public breakBlockScript breakBlock;
 
+	//Score
+	public ScoreManager Instance;
+
 	void Start() {
 		player = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
@@ -120,11 +123,14 @@ public class PlayerMoveScript : MonoBehaviour {
 	// Break block
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "BreakableBlock") {
-			player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y/4));
-			other.GetComponent<breakBlockScript>().setHit(true, 2);
+			player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y / 4));
+			other.GetComponent<breakBlockScript> ().setHit (true, 2);
+		}
+		if (other.gameObject.tag == "Coin") {
+			DestroyObject(other.gameObject);
+			other.GetComponent<ScoreManager>().Coin();
 		}
 	}
-
 
 	// Method for making the player sprint
 	void sprint() {
@@ -175,9 +181,8 @@ public class PlayerMoveScript : MonoBehaviour {
 			moveTheCamera = false;
 		}
 	}
-	
+
 	void OnGUI() {
 		GUI.Box (new Rect(20,20, 80,80),""+grounded);
-	}	
-	
+	}
 }
