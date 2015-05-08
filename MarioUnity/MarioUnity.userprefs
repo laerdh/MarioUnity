@@ -1,19 +1,8 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/ScoreText.cs">
-    <Files>
-      <File FileName="Assets/Scripts/startScreen.cs" Line="16" Column="30" />
-      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scenes/ScoreText.cs" Line="15" Column="1" />
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemy.cs" Line="36" Column="11" />
-      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="183" Column="1" />
-      <File FileName="Assets/Scripts/breakBlockScript.cs" Line="1" Column="1" />
->>>>>>> a6753040ea9cc466a49e956f251ab46b760488be
+      <File FileName="Assets/Scripts/Enemy.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
