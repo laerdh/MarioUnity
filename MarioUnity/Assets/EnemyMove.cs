@@ -10,10 +10,13 @@ public class EnemyMove : MonoBehaviour {
 	public LayerMask detectObject;
 	public Transform weakness;
 	private int hit = 0;
+	private bool dying;
 	public Animator animator;
+	public bool collision;
 
 	// Use this for initialization
 	void Start () {
+
 		enemy = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
 	}
@@ -28,6 +31,7 @@ public class EnemyMove : MonoBehaviour {
 			transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
 			velocity = velocity * -1;
 		}
+
 	}
 
 	void OnDrawGizmos() {
@@ -43,7 +47,7 @@ public class EnemyMove : MonoBehaviour {
 				animator.SetBool ("isHit", true);
 				velocity = 0;
 				if (hit == 2) {
-					Dies ();
+					enemy.AddForce (new Vector2(100, 600));
 				}
 			}
 
@@ -58,7 +62,7 @@ public class EnemyMove : MonoBehaviour {
 	}
 
 	void Dies() {
-
+		dying = true;
 		Destroy (this.gameObject);
 	}
 }
