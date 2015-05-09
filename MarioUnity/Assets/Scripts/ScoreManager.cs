@@ -11,16 +11,17 @@ public class ScoreManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Awake () {
-		Text text = GetComponent<Text>();
+		text = GetComponent<Text>();
 		currentScore = 000000;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = "Score " + currentScore;
+		//currentScore++; for å teste at score kan oppdateres på skjermen
+		text.text = "Score" + currentScore;
 	}
 	
-	public void Coin() {
+	public void addCoin() {
 		currentScore += coin;
 	}
 }
