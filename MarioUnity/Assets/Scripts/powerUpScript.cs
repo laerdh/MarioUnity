@@ -10,8 +10,8 @@ public class powerUpScript : MonoBehaviour {
 
 	private int moveSpeed = 3;
 	
-	public Transform sightStart;
-	public Transform sightEnd; 
+	//public Transform sightStart;
+	//public Transform sightEnd; 
 
 	// Use this for initialization
 	void Awake () {
@@ -23,7 +23,7 @@ public class powerUpScript : MonoBehaviour {
 	void Update () {
 		obj.velocity = new Vector2 (moveSpeed, obj.velocity.y);
 
-		RaycastHit2D hit = Physics2D.Raycast(sightStart.position, sightEnd.position, 0.2F);
+		/*RaycastHit2D hit = Physics2D.Raycast(sightStart.position, sightEnd.position, 0.2F);
 		
 		if (hit != null)
 		{
@@ -34,7 +34,7 @@ public class powerUpScript : MonoBehaviour {
 				//FlipSpeed();
 				print ("vi vinner ikke gull i år");
 			}
-		}
+		}*/
 
 	}
 	/*
@@ -54,7 +54,7 @@ public class powerUpScript : MonoBehaviour {
 	// Visualize LineCast on enemy
 	void OnDrawGizmos() {
 		Gizmos.color = Color.magenta;
-		Gizmos.DrawLine (sightStart.position, sightEnd.position);
+		//Gizmos.DrawLine (sightStart.position, sightEnd.position);
 		
 	}
 
