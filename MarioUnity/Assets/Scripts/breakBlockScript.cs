@@ -31,9 +31,6 @@ public class breakBlockScript : MonoBehaviour {
 
 	private Animator animator;
 
-	// The powerUp prefab to be spawned when hit
-	public GameObject poewrUpPrefab;
-
 	void Start() {
 		animator = GetComponent<Animator> ();
 		boxtype = (int)boxTypes;
