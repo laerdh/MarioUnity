@@ -11,10 +11,7 @@ public class ScoreManager : MonoBehaviour {
 	public int score = 100;
 
 	public Text Coin;
-<<<<<<< HEAD
-=======
 
->>>>>>> b2929c8e7cee0d0445bbd86dd72db197cf15bc9e
 	
 	// Use this for initialization
 	void Awake () {
