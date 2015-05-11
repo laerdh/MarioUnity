@@ -5,6 +5,7 @@ public class blockBreakEffect : MonoBehaviour {
 
 	private int direction;
 	private Rigidbody2D obj;
+
 	
 	void Awake() {
 		obj = GetComponent<Rigidbody2D> ();
