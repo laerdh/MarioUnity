@@ -123,8 +123,9 @@ public class breakBlockScript : MonoBehaviour {
 			re.velocity = new Vector2(0,8);
 		} else if (content.tag == "powerUp") {
 			GameObject e = GameObject.Instantiate (content);
-			if(content.GetComponent<powerUpScript>() != null) {
-				content.GetComponent<powerUpScript>().setState(1);
+			powerUpScript ps = e.GetComponent<powerUpScript>();
+			if(ps != null) {
+				ps.setState(playerLives);
 			}
 			print(content.gameObject.tag);
 			Rigidbody2D re= e.GetComponent<Rigidbody2D>();

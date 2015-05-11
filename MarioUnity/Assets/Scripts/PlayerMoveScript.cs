@@ -28,6 +28,9 @@ public class PlayerMoveScript : MonoBehaviour {
 	public float groundCheckerWidth;
 	public LayerMask theGround;
 	private bool grounded;
+	public bool onPipe = false;
+	public LayerMask thePipe;
+
 
 	// Direction boolean, used to check if player is facing right and move the camera
 	private bool facingRight = true;
@@ -36,7 +39,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	public GameObject cameraWall;
 	public Camera camera;
 	private bool moveTheCamera;
-	private const float DEADZONE = 0.1f; // The distance mario is allowed to walk before the screen stops 
+	private const float DEADZONE = 2.1f; // The distance mario is allowed to walk before the screen stops 
 
 	// BLOCKS
 	public breakBlockScript breakBlock;
@@ -49,7 +52,26 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+
 		grounded = Physics2D.OverlapCircle (groundChecker.position, groundCheckerWidth, theGround);
+		
+		
+		if (!grounded) 
+		grounded = Physics2D.OverlapCircle (groundChecker.position, groundCheckerWidth, thePipe);
+		if (grounded) {
+			onPipe = Physics2D.OverlapCircle (groundChecker.position, groundCheckerWidth, thePipe);
+		}
+
+
+
+		/*
+		Debug.DrawLine (this.transform.position, groundedEnd.position, Color.green);
+		//onPipe = Physics2D.Linecast (this.transform.position, groundedEnd.position, 1 << LayerMask.NameToLayer ("Pipe"));
+		RaycastHit2D h = Physics2D.Raycast(this.transform.position, groundedEnd.position);
+		if(h.collider.tag == "pipe"){
+			onPipe = true;
+		}
+		*/
 
 		if (!grounded) {
 			mario_state = JUMPING;
@@ -68,6 +90,8 @@ public class PlayerMoveScript : MonoBehaviour {
 		sprint();
 		moveCamera ();
 
+
+
 		// Stop the player if he walks to the left of the screen
 		if(player.position.x < cameraWall.transform.position.x + DEADZONE)
 			player.transform.position = new Vector2(cameraWall.transform.position.x + DEADZONE,player.position.y);
@@ -81,14 +105,14 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 
 		// check if keys are down
-		if (Input.GetKey (KeyCode.A)) {
+		if (Input.GetKey (KeyCode.A) && !Input.GetKey(KeyCode.S)) {
 			facingRight = false;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
 			if(player.position.x > cameraWall.transform.position.x + DEADZONE)
 				player.velocity = new Vector2 (-moveSpeed, player.velocity.y);
 		} else 
-		if (Input.GetKey (KeyCode.D)) {
+		if (Input.GetKey (KeyCode.D)&& !Input.GetKey(KeyCode.S)) {
 			facingRight = true;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
@@ -115,7 +139,19 @@ public class PlayerMoveScript : MonoBehaviour {
 		if(Input.GetKeyUp(KeyCode.S)) {
 			animator.SetBool("isDucking", false);
 		}
+
+		if (onPipe && Input.GetKey (KeyCode.S)) {
+			Debug.Log ("On pipe!");
+			player.transform.position = new Vector2(-48,-12);
+
+		
+		
+			//animator.SetBool("isOnPipe", true);
+
+		
 	}
+
+}
 
 	// Break block
 	void OnTriggerEnter2D(Collider2D other) {
@@ -174,9 +210,4 @@ public class PlayerMoveScript : MonoBehaviour {
 			moveTheCamera = false;
 		}
 	}
-
-	/*void OnGUI() {
-		GUI.Box (new Rect(20,20, 80,80),""+grounded);
-	}
-	*/
 }
