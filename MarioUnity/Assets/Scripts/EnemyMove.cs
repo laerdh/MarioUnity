@@ -10,6 +10,7 @@ public class EnemyMove : MonoBehaviour {
 	public LayerMask detectObject;
 	public Transform weakness;
 	private int hit = 0;
+	private bool sweepMode;
 	public Animator animator;
 
 	// Use this for initialization
@@ -36,27 +37,42 @@ public class EnemyMove : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter2D(Collision2D other) {
+	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "Player") {
 			if (this.gameObject.tag == "EnemyTurtle") {
 				hit++;
 				animator.SetBool ("isHit", true);
 
 				// If Mario hits enemy for the 2nd time, it starts sweeping
-				if (hit % 2 == 0 && hit != 0) {
-					velocity = 8f;
+				if (hit > 1) {
+					sweepMode = true;
 				} else {
-					velocity = 0f;
+					velocity = 0;
 				}
 			}
 
 			if (this.gameObject.tag == "EnemyGoomba") {
 				animator.SetBool ("isHit", true);
 				Dies ();
+
+				Rigidbody2D other1 = other.GetComponent<Rigidbody2D>();
+				//other.GetComponent<Rigidbody2D>
+				//other1.velocity = new Vector2 (other.transform.position.x, 2);
+				other1.AddForce(new Vector2(0,1300));
 			}
 			//float height = other.contacts[0].point.y - weakness.position.y;
 
-			other.rigidbody.AddForce(new Vector2(0, 300));
+			//other.rigidbody.AddForce(new Vector2(0, 300));
+
+	
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D other){
+		Debug.Log ("" + other.gameObject.tag);
+		if (other.gameObject.tag == ("Untagged")) {
+			Debug.Log("Funker");
+		
 		}
 	}
 
