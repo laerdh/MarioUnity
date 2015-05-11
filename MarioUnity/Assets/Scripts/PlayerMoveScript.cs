@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerMoveScript : MonoBehaviour {
 
 	// Player RigidBody
-	private Rigidbody2D player;
+	public Rigidbody2D player;
 
 	// Mario states
 	private int mario_state = 0;
@@ -28,7 +28,6 @@ public class PlayerMoveScript : MonoBehaviour {
 	public float groundCheckerWidth;
 	public LayerMask theGround;
 	private bool grounded;
-	public Transform groundedEnd;
 	public bool onPipe = false;
 	public LayerMask thePipe;
 
@@ -40,7 +39,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	public GameObject cameraWall;
 	public Camera camera;
 	private bool moveTheCamera;
-	private const float DEADZONE = 0.1f; // The distance mario is allowed to walk before the screen stops 
+	private const float DEADZONE = 2.1f; // The distance mario is allowed to walk before the screen stops 
 
 	// BLOCKS
 	public breakBlockScript breakBlock;
@@ -65,14 +64,14 @@ public class PlayerMoveScript : MonoBehaviour {
 
 
 
-
+		/*
 		Debug.DrawLine (this.transform.position, groundedEnd.position, Color.green);
 		//onPipe = Physics2D.Linecast (this.transform.position, groundedEnd.position, 1 << LayerMask.NameToLayer ("Pipe"));
 		RaycastHit2D h = Physics2D.Raycast(this.transform.position, groundedEnd.position);
 		if(h.collider.tag == "pipe"){
 			onPipe = true;
 		}
-
+		*/
 
 		if (!grounded) {
 			mario_state = JUMPING;

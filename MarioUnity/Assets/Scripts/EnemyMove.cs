@@ -8,10 +8,15 @@ public class EnemyMove : MonoBehaviour {
 	public Transform sightEnd;
 	public bool colliding;
 	public LayerMask detectObject;
+<<<<<<< HEAD
 
 	public Animator animator;
+=======
+>>>>>>> 64e746b9f10e1e46c48e1150deb08eae31aa9dec
 
+	public Animator animator;
 	public Transform groundedEnd;
+<<<<<<< HEAD
 
 
 	private Rigidbody2D enemy;
@@ -23,6 +28,11 @@ public class EnemyMove : MonoBehaviour {
 	//public Animator animator;
 
 
+=======
+	
+	private int hit = 0;
+	
+>>>>>>> 64e746b9f10e1e46c48e1150deb08eae31aa9dec
 	// Koopa Troopa sweep mode
 	private bool sweep = false;
 	private bool stop = false;
@@ -32,8 +42,11 @@ public class EnemyMove : MonoBehaviour {
 	private bool timeDelay;
 	private int time = 50;
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 64e746b9f10e1e46c48e1150deb08eae31aa9dec
 	// Use this for initialization
 	void Start () {
 		enemy = GetComponent<Rigidbody2D> ();
@@ -42,7 +55,12 @@ public class EnemyMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		enemy.velocity = new Vector2 (velocity, 0);
+		// If sweep mode activated, add speed. Stop = stop sweeping, else walk;
+		if (sweep || stop) {
+			enemy.velocity = new Vector2 (velocity * speed, 0);
+		} else {
+			enemy.velocity = new Vector2 (velocity, 0);
+		}
 
 		colliding = Physics2D.Linecast (sightStart.position, sightEnd.position, detectObject);
 
@@ -50,8 +68,18 @@ public class EnemyMove : MonoBehaviour {
 			transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
 			velocity *= -1;
 		}
+
+		// Destroys object after time delay (=100 frames)
+		if (timeDelay) {
+			time--;
+			if (time == 0) {
+				Destroy (this.gameObject);
+			}
+		}
+
 	}
 
+	// Visualize LineCast on enemy
 	void OnDrawGizmos() {
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawLine (sightStart.position, sightEnd.position);
@@ -59,36 +87,38 @@ public class EnemyMove : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
+		Rigidbody2D player = other.GetComponent<Rigidbody2D>();
+
 		if (other.gameObject.name == "Player") {
 			if (this.gameObject.tag == "EnemyTurtle") {
 				hit++;
-				animator.SetBool ("isHit", true);
 
-				// If Mario hits enemy for the 2nd time, it starts sweeping
-				if (hit > 1) {
-					sweepMode = true;
+				animator.SetBool ("isHit", true);
+				
+				// Add force to Mario if he jumps on a Koopa
+				player.AddForce (new Vector2 (0, 800));
+
+				// If Mario hits enemy every 2nd time, it starts sweeping
+				if (hit % 2 == 0) {
+					sweep = true;
+					stop = false;
+					speed = 5;
 				} else {
-					velocity = 0;
+					sweep = false;
+					stop = true;
+					speed = 0;
 				}
 			}
-
 			if (this.gameObject.tag == "EnemyGoomba") {
 				animator.SetBool ("isHit", true);
-				Dies ();
-
-				Rigidbody2D other1 = other.GetComponent<Rigidbody2D>();
-				//other.GetComponent<Rigidbody2D>
-				//other1.velocity = new Vector2 (other.transform.position.x, 2);
-				other1.AddForce(new Vector2(0,1300));
+				velocity = 0;
+				timeDelay = true;
+				player.AddForce (new Vector2 (0, 800));
 			}
-			//float height = other.contacts[0].point.y - weakness.position.y;
-
-			//other.rigidbody.AddForce(new Vector2(0, 300));
-
-	
 		}
 	}
 
+<<<<<<< HEAD
 	void OnCollisionEnter2D(Collision2D other){
 		//Debug.Log ("" + other.gameObject.tag);
 		if (other.gameObject.tag == ("Untagged")) {
@@ -98,6 +128,19 @@ public class EnemyMove : MonoBehaviour {
 					Destroy (other.gameObject);
 				}
 			}
+=======
+	void OnCollisionEnter2D (Collision2D other){
+		if (other.gameObject.tag == ("Player")) {
+			if (!stop) {
+				Destroy (this.gameObject);
+			}
+
+		}
+
+		// Destroy other enemies if sweeping Koopa collides with them
+		if (sweep && other.gameObject.tag == this.gameObject.tag) {
+
+>>>>>>> 64e746b9f10e1e46c48e1150deb08eae31aa9dec
 		}
 	}
 
