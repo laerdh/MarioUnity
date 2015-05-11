@@ -6,11 +6,13 @@ public class coinScript : MonoBehaviour {
 	// To decide if the coin is static or not. 1 is static, 0 is not.s
 	public bool isMovable;
 
+	public ScoreManager scoreManager;
+
 	private int timer = 50;
 
 	// Use this for initialization
 	void Start () {
-	
+		scoreManager.addCoin ();
 	}
 	
 	// Update is called once per frame
