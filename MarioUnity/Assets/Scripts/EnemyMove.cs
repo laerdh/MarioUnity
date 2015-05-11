@@ -8,15 +8,22 @@ public class EnemyMove : MonoBehaviour {
 	public bool colliding;
 	public LayerMask detectObject;
 	public Animator animator;
+<<<<<<< HEAD
+	public Transform groundedEnd;
+
+=======
 	private Rigidbody2D enemy;
 	private int hit = 0;
 
 	// Koopa Troopa sweep mode
 	private bool sweep = false;
+	private bool stop = false;
+	private int speed;
 
-	// Timedelay when Goomba dies
+	// Delay before Goomba dies
 	private bool timeDelay;
-	private int time = 100;
+	private int time = 50;
+>>>>>>> 98e943ab4626fb60365de0d6816dc23d30fed0a9
 
 	// Use this for initialization
 	void Start () {
@@ -26,8 +33,14 @@ public class EnemyMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		enemy.velocity = new Vector2 (velocity, 0);
+		// If sweep mode activated, add speed. Stop = stop sweeping, else walk
+		if (sweep || stop) {
+			enemy.velocity = new Vector2 (velocity * speed, 0);
+		} else {
+			enemy.velocity = new Vector2 (velocity, 0);
+		}
 
+		// Raycast. Makes enemy detect walls/obstacles.
 		colliding = Physics2D.Linecast (sightStart.position, sightEnd.position, detectObject);
 
 		if (colliding) {
@@ -35,12 +48,6 @@ public class EnemyMove : MonoBehaviour {
 			velocity *= -1;
 		}
 
-		if (sweep) {
-			velocity = -velocity * 1;
-			//Debug.Log ("Sweep activated");
-		} else {
-			//Debug.Log ("Sweep deactivated");
-		}
 
 		// Destroys object after time delay (=100 frames)
 		if (timeDelay) {
@@ -55,7 +62,6 @@ public class EnemyMove : MonoBehaviour {
 	void OnDrawGizmos() {
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawLine (sightStart.position, sightEnd.position);
-	
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
@@ -64,6 +70,7 @@ public class EnemyMove : MonoBehaviour {
 		if (other.gameObject.name == "Player") {
 			if (this.gameObject.tag == "EnemyTurtle") {
 				hit++;
+				Debug.Log (hit);
 				animator.SetBool ("isHit", true);
 
 				// Add force to Mario if he jumps on a Koopa
@@ -72,8 +79,12 @@ public class EnemyMove : MonoBehaviour {
 				// If Mario hits enemy every 2nd time, it starts sweeping
 				if (hit % 2 == 0) {
 					sweep = true;
+					stop = false;
+					speed = 5;
 				} else {
 					sweep = false;
+					stop = true;
+					speed = 0;
 				}
 			}
 
@@ -89,9 +100,17 @@ public class EnemyMove : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
-		Debug.Log ("" + other.gameObject.tag);
+<<<<<<< HEAD
+		//Debug.Log ("" + other.gameObject.tag);
 		if (other.gameObject.tag == ("Untagged")) {
-			Debug.Log("Funker");
+			//Debug.Log("Funker");
+		
+=======
+		if (other.gameObject.tag == ("Player")) {
+			if (!stop) {
+				Destroy (other.gameObject);
+			}
+>>>>>>> 98e943ab4626fb60365de0d6816dc23d30fed0a9
 		}
 	}
 
