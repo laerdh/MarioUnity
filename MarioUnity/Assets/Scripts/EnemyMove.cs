@@ -23,7 +23,7 @@ public class EnemyMove : MonoBehaviour {
 	void Update () {
 		enemy.velocity = new Vector2 (velocity, 0);
 
-		//colliding = Physics2D.Linecast (sightStart.position, sightEnd.position, detectObject);
+		colliding = Physics2D.Linecast (sightStart.position, sightEnd.position, detectObject);
 
 		if (colliding) {
 			transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
@@ -31,11 +31,11 @@ public class EnemyMove : MonoBehaviour {
 		}
 	}
 
-	/*void OnDrawGizmos() {
+	void OnDrawGizmos() {
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawLine (sightStart.position, sightEnd.position);
 	
-	}*/
+	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "Player") {
