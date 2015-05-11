@@ -3,26 +3,26 @@ using System.Collections;
 
 public class EnemyMove : MonoBehaviour {
 	public float velocity = -1f;
-	private Rigidbody2D enemy;
+	//private Rigidbody2D enemy;
 	public Transform sightStart;
 	public Transform sightEnd;
 	public bool colliding;
 	public LayerMask detectObject;
-<<<<<<< HEAD
+
 	public Animator animator;
 
 	public Transform groundedEnd;
 
 
 	private Rigidbody2D enemy;
-=======
+
 	public Transform weakness;
->>>>>>> 0670135d9fff654d039e3a9ca9547bf06863095c
+
 	private int hit = 0;
 	private bool sweepMode;
-	public Animator animator;
+	//public Animator animator;
 
-<<<<<<< HEAD
+
 	// Koopa Troopa sweep mode
 	private bool sweep = false;
 	private bool stop = false;
@@ -32,8 +32,7 @@ public class EnemyMove : MonoBehaviour {
 	private bool timeDelay;
 	private int time = 50;
 
-=======
->>>>>>> 0670135d9fff654d039e3a9ca9547bf06863095c
+
 
 	// Use this for initialization
 	void Start () {
@@ -91,24 +90,14 @@ public class EnemyMove : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
-<<<<<<< HEAD
-
-=======
->>>>>>> 0670135d9fff654d039e3a9ca9547bf06863095c
 		//Debug.Log ("" + other.gameObject.tag);
 		if (other.gameObject.tag == ("Untagged")) {
 			//Debug.Log("Funker");
-		
-<<<<<<< HEAD
-
 			if (other.gameObject.tag == ("Player")) {
 				if (!stop) {
 					Destroy (other.gameObject);
 				}
-
 			}
-=======
->>>>>>> 0670135d9fff654d039e3a9ca9547bf06863095c
 		}
 	}
 
