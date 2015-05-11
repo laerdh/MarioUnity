@@ -6,22 +6,28 @@ public class ScoreManager : MonoBehaviour {
 
 
 	public int currentScore;
-	public int coin = 100;
-	Text text;
+	public int currentCoin;
+	public int coin = 1;
+	public int score = 100;
+
+	public GUIText Coin;
 	
 	// Use this for initialization
 	void Awake () {
-		text = GetComponent<Text>();
-		currentScore = 000000;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//currentScore++; for å teste at score kan oppdateres på skjermen
-		text.text = "" + currentScore.ToString("000000");
+		Coin.text = "" + currentCoin.ToString ("00");
 	}
 	
 	public void addCoin() {
-		currentScore += coin;
+		currentCoin++;
+	}
+
+	public void addScore(int score) {
+		currentScore += score;
 	}
 }
