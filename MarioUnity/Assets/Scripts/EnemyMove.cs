@@ -90,8 +90,5 @@ public class EnemyMove : MonoBehaviour {
 		
 		}
 	}
-
-	void OnGUI() {
-		GUI.Box (new Rect(50,50, 100,100),""+sweepMode);
-	}
+	
 }
