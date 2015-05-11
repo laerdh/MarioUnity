@@ -10,6 +10,7 @@ public class EnemyMove : MonoBehaviour {
 	public LayerMask detectObject;
 	public Transform weakness;
 	private int hit = 0;
+	private bool sweepMode;
 	public Animator animator;
 
 	// Use this for initialization
@@ -43,10 +44,10 @@ public class EnemyMove : MonoBehaviour {
 				animator.SetBool ("isHit", true);
 
 				// If Mario hits enemy for the 2nd time, it starts sweeping
-				if (hit % 2 == 0 && hit != 0) {
-					velocity = 8f;
+				if (hit > 1) {
+					sweepMode = true;
 				} else {
-					velocity = 0f;
+					velocity = 0;
 				}
 			}
 
