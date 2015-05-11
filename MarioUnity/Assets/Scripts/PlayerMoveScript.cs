@@ -211,8 +211,8 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 	}
 
-	void OnGUI() {
+	/*void OnGUI() {
 		GUI.Box (new Rect(20,20, 80,80),""+grounded);
 	}
-	
+	*/
 }

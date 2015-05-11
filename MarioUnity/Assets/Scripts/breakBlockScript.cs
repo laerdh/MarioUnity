@@ -31,9 +31,6 @@ public class breakBlockScript : MonoBehaviour {
 
 	private Animator animator;
 
-	// The powerUp prefab to be spawned when hit
-	public GameObject poewrUpPrefab;
-
 	void Start() {
 		animator = GetComponent<Animator> ();
 		boxtype = (int)boxTypes;
@@ -60,7 +57,11 @@ public class breakBlockScript : MonoBehaviour {
 				}
 				break;
 			case QUESTIONBLOCK:
-				bumpBox = true;
+
+
+				// Only let the box "bump" first time it is hit 
+				if(canBeHit) bumpBox = true;
+
 				animator.SetBool("isEmpty", true);
 				canBeHit = false;
 				break;
@@ -113,7 +114,34 @@ public class breakBlockScript : MonoBehaviour {
 		}
 	}
 
+	// Method for spawning content
+	void SpawnContent() {
+		if (content.tag == "coin") {
+			GameObject e = GameObject.Instantiate (content);
+			Rigidbody2D re= e.GetComponent<Rigidbody2D>();
+			re.transform.position = new Vector3(transform.position.x, transform.position.y, 1);
+			re.velocity = new Vector2(0,8);
+		} else if (content.tag == "powerUp") {
+			GameObject e = GameObject.Instantiate (content);
+			if(content.GetComponent<powerUpScript>() != null) {
+				content.GetComponent<powerUpScript>().setState(1);
+			}
+			print(content.gameObject.tag);
+			Rigidbody2D re= e.GetComponent<Rigidbody2D>();
+			re.transform.position = new Vector3(transform.position.x, transform.position.y+1, 1);
+			//re.velocity = new Vector2(0,8);
+		}
+	}
+
 	public void setHit(bool isHit, int playerLives) {
+
+		if(content != null) { 
+			bumpBox = true;
+			print("Spawn"); 
+			SpawnContent(); 
+			content = null;
+		}
+
 		if (canBeHit) {
 			canBeHit = false;
 			this.isHit = isHit;
