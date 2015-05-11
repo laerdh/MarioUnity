@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//currentScore++; for å teste at score kan oppdateres på skjermen
-		text.text = "Score" + currentScore;
+		text.text = "" + currentScore.ToString("000000");
 	}
 	
 	public void addCoin() {
