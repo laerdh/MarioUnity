@@ -3,36 +3,23 @@ using System.Collections;
 
 public class EnemyMove : MonoBehaviour {
 	public float velocity = -1f;
-	//private Rigidbody2D enemy;
+	private Rigidbody2D enemy;
 	public Transform sightStart;
 	public Transform sightEnd;
 	public bool colliding;
 	public LayerMask detectObject;
-<<<<<<< HEAD
 
-	public Animator animator;
-=======
->>>>>>> 64e746b9f10e1e46c48e1150deb08eae31aa9dec
 
 	public Animator animator;
 	public Transform groundedEnd;
-<<<<<<< HEAD
 
-
-	private Rigidbody2D enemy;
 
 	public Transform weakness;
 
 	private int hit = 0;
 	private bool sweepMode;
-	//public Animator animator;
 
 
-=======
-	
-	private int hit = 0;
-	
->>>>>>> 64e746b9f10e1e46c48e1150deb08eae31aa9dec
 	// Koopa Troopa sweep mode
 	private bool sweep = false;
 	private bool stop = false;
@@ -42,11 +29,7 @@ public class EnemyMove : MonoBehaviour {
 	private bool timeDelay;
 	private int time = 50;
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 64e746b9f10e1e46c48e1150deb08eae31aa9dec
 	// Use this for initialization
 	void Start () {
 		enemy = GetComponent<Rigidbody2D> ();
@@ -118,17 +101,7 @@ public class EnemyMove : MonoBehaviour {
 		}
 	}
 
-<<<<<<< HEAD
-	void OnCollisionEnter2D(Collision2D other){
-		//Debug.Log ("" + other.gameObject.tag);
-		if (other.gameObject.tag == ("Untagged")) {
-			//Debug.Log("Funker");
-			if (other.gameObject.tag == ("Player")) {
-				if (!stop) {
-					Destroy (other.gameObject);
-				}
-			}
-=======
+
 	void OnCollisionEnter2D (Collision2D other){
 		if (other.gameObject.tag == ("Player")) {
 			if (!stop) {
@@ -140,7 +113,6 @@ public class EnemyMove : MonoBehaviour {
 		// Destroy other enemies if sweeping Koopa collides with them
 		if (sweep && other.gameObject.tag == this.gameObject.tag) {
 
->>>>>>> 64e746b9f10e1e46c48e1150deb08eae31aa9dec
 		}
 	}
 
