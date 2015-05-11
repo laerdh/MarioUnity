@@ -22,7 +22,7 @@ public class EnemyMove : MonoBehaviour {
 	void Update () {
 		enemy.velocity = new Vector2 (velocity, 0);
 
-		colliding = Physics2D.Linecast (sightStart.position, sightEnd.position, detectObject);
+		//colliding = Physics2D.Linecast (sightStart.position, sightEnd.position, detectObject);
 
 		if (colliding) {
 			transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
@@ -30,13 +30,13 @@ public class EnemyMove : MonoBehaviour {
 		}
 	}
 
-	void OnDrawGizmos() {
+	/*void OnDrawGizmos() {
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawLine (sightStart.position, sightEnd.position);
 	
-	}
+	}*/
 
-	void OnCollisionEnter2D(Collision2D other) {
+	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "Player") {
 			if (this.gameObject.tag == "EnemyTurtle") {
 				hit++;
@@ -53,10 +53,25 @@ public class EnemyMove : MonoBehaviour {
 			if (this.gameObject.tag == "EnemyGoomba") {
 				animator.SetBool ("isHit", true);
 				Dies ();
+
+				Rigidbody2D other1 = other.GetComponent<Rigidbody2D>();
+				//other.GetComponent<Rigidbody2D>
+				//other1.velocity = new Vector2 (other.transform.position.x, 2);
+				other1.AddForce(new Vector2(0,1300));
 			}
 			//float height = other.contacts[0].point.y - weakness.position.y;
 
-			other.rigidbody.AddForce(new Vector2(0, 300));
+			//other.rigidbody.AddForce(new Vector2(0, 300));
+
+	
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D other){
+		Debug.Log ("" + other.gameObject.tag);
+		if (other.gameObject.tag == ("Untagged")) {
+			Debug.Log("Funker");
+		
 		}
 	}
 
