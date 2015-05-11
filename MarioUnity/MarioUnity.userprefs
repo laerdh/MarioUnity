@@ -1,42 +1,10 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyMove.cs">
-    <Files>
-      <File FileName="Assets/Scripts/EnemyMove.cs" Line="63" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyMove.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\Scripts\blockBreakEffect.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\breakBlockScript.cs" Line="124" Column="35" />
-      <File FileName="Assets\Scripts\collectCoin.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ScoreManager.cs" Line="28" Column="1" />
-      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="1" Column="1" />
-=======
-      <File FileName="Assets/Scripts/EnemyMove.cs" Line="89" Column="19" />
+      <File FileName="Assets/Scripts/EnemyMove.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ScoreManager.cs">
-    <Files>
-      <File FileName="Assets/Scripts/ScoreManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/collectCoin.cs" Line="1" Column="1" />
->>>>>>> 4aae92bcec6da6aca7d8bac250398701204e95f7
-    </Files>
-  </MonoDevelop.Ide.Workbench>
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
->>>>>>> 3702bf8e8403d950afb648ce3ba683dd9fc07725
->>>>>>> 669388687113ee17fe7935e69d8ed95fbea45288
->>>>>>> 03993e3b56245929511e8fffbd624d04e76d6c83
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
