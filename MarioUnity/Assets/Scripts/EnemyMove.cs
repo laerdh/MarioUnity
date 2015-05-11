@@ -3,15 +3,18 @@ using System.Collections;
 
 public class EnemyMove : MonoBehaviour {
 	public float velocity = -1f;
-	private Rigidbody2D enemy;
 	public Transform sightStart;
 	public Transform sightEnd;
 	public bool colliding;
 	public LayerMask detectObject;
-	public Transform weakness;
-	private int hit = 0;
-	private bool sweepMode = false;
 	public Animator animator;
+	private Rigidbody2D enemy;
+	private int hit = 0;
+
+	// Koopa Troopa sweep mode
+	private bool sweep = false;
+
+	// Timedelay when Goomba dies
 	private bool timeDelay;
 	private int time = 100;
 
@@ -32,6 +35,13 @@ public class EnemyMove : MonoBehaviour {
 			velocity *= -1;
 		}
 
+		if (sweep) {
+			velocity = -velocity * 1;
+			//Debug.Log ("Sweep activated");
+		} else {
+			//Debug.Log ("Sweep deactivated");
+		}
+
 		// Destroys object after time delay (=100 frames)
 		if (timeDelay) {
 			time--;
@@ -41,6 +51,7 @@ public class EnemyMove : MonoBehaviour {
 		}
 	}
 
+	// Visualize LineCast on enemy
 	void OnDrawGizmos() {
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawLine (sightStart.position, sightEnd.position);
@@ -48,20 +59,22 @@ public class EnemyMove : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
+		Rigidbody2D player = other.GetComponent<Rigidbody2D>();
+
 		if (other.gameObject.name == "Player") {
 			if (this.gameObject.tag == "EnemyTurtle") {
 				hit++;
 				animator.SetBool ("isHit", true);
 
-				// If Mario hits enemy for the 2nd time, it starts sweeping
+				// Add force to Mario if he jumps on a Koopa
+				player.AddForce(new Vector2(0,800));
+
+				// If Mario hits enemy every 2nd time, it starts sweeping
 				if (hit % 2 == 0) {
-					sweepMode = true;
-					Debug.Log (hit);
+					sweep = true;
 				} else {
-					velocity = 0f;
-					sweepMode = false;
+					sweep = false;
 				}
-			
 			}
 
 			if (this.gameObject.tag == "EnemyGoomba") {
@@ -69,17 +82,9 @@ public class EnemyMove : MonoBehaviour {
 				velocity = 0;
 				timeDelay = true;
 
+				// Add force to Mario if he jumps on a Goomba
+				player.AddForce(new Vector2(0,800));
 			}
-
-			Rigidbody2D other1 = other.GetComponent<Rigidbody2D>();
-			//other.GetComponent<Rigidbody2D>
-			//other1.velocity = new Vector2 (other.transform.position.x, 2);
-			other1.AddForce(new Vector2(0,800));
-			//float height = other.contacts[0].point.y - weakness.position.y;
-
-			//other.rigidbody.AddForce(new Vector2(0, 300));
-
-	
 		}
 	}
 
@@ -87,8 +92,10 @@ public class EnemyMove : MonoBehaviour {
 		Debug.Log ("" + other.gameObject.tag);
 		if (other.gameObject.tag == ("Untagged")) {
 			Debug.Log("Funker");
-		
 		}
 	}
-	
+
+	void OnGUI() {
+		GUI.Box (new Rect(100,20, 50,50),"sweep\n"+sweep);
+	}
 }
