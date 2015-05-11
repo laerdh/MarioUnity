@@ -47,7 +47,6 @@ public class powerUpScript : MonoBehaviour {
 	}*/
 
 	void FlipSpeed() {
-		print ("VI FLIPPPPPEEEEEEEEEEEEEEEEEEEEEEEER");
 		moveSpeed = -moveSpeed;
 	}
 
