@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\blockBreakEffect.cs" />
      <Compile Include="Assets\Scripts\breakBlockScript.cs" />
      <Compile Include="Assets\Scripts\cameraWall.cs" />
+     <Compile Include="Assets\Scripts\coinScript.cs" />
      <Compile Include="Assets\Scripts\collectCoin.cs" />
      <Compile Include="Assets\Scripts\powerUpScript.cs" />
      <Compile Include="Assets\Scripts\startScreen.cs" />
