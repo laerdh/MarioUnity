@@ -2,8 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerMoveScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="219" Column="1" />
-      <File FileName="Assets\Scripts\EnemyMove.cs" Line="15" Column="1" />
+      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="17" Column="19" />
+      <File FileName="Assets\Scripts\EnemyMove.cs" Line="74" Column="46" />
+      <File FileName="Assets\Scripts\ScoreManager.cs" Line="13" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

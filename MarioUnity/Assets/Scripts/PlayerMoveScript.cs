@@ -143,6 +143,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		if (onPipe && Input.GetKey (KeyCode.S)) {
 			Debug.Log ("On pipe!");
+			player.transform.position = new Vector2(-48,-12);
 
 		
 		
