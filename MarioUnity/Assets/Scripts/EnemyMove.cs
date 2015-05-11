@@ -20,15 +20,22 @@ public class EnemyMove : MonoBehaviour {
 	private bool timeDelay;
 	private int time = 50;
 
+	public BoxCollider2D boxCol;
+	public CircleCollider2D cirCol;
+	public GameObject other;
+	private EnemyMove enemyScript;
+
+
 	// Use this for initialization
 	void Start () {
 		enemy = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
+		enemyScript = other.GetComponent<EnemyMove> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		// If sweep mode activated, add speed. Stop = stop sweeping, else walk
+		// If sweep mode activated, add speed. Stop = stop sweeping, else walk;
 		if (sweep || stop) {
 			enemy.velocity = new Vector2 (velocity * speed, 0);
 		} else {
@@ -99,6 +106,12 @@ public class EnemyMove : MonoBehaviour {
 			if (!stop) {
 				Destroy (other.gameObject);
 			}
+		}
+
+		// Destroy other enemies if sweeping Koopa collides with them
+		if (sweep && other.gameObject.tag == this.gameObject.tag) {
+			this.other.boxCol.enabled = false;
+			enemyScript.cirCol.enabled = false;
 		}
 	}
 

@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerMoveScript : MonoBehaviour {
 
 	// Player RigidBody
-	private Rigidbody2D player;
+	public Rigidbody2D player;
 
 	// Mario states
 	private int mario_state = 0;
