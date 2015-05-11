@@ -12,6 +12,8 @@ public class EnemyMove : MonoBehaviour {
 	private int hit = 0;
 	private bool sweepMode;
 	public Animator animator;
+	public Transform groundedEnd;
+
 
 	// Use this for initialization
 	void Start () {
@@ -69,9 +71,9 @@ public class EnemyMove : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
-		Debug.Log ("" + other.gameObject.tag);
+		//Debug.Log ("" + other.gameObject.tag);
 		if (other.gameObject.tag == ("Untagged")) {
-			Debug.Log("Funker");
+			//Debug.Log("Funker");
 		
 		}
 	}
