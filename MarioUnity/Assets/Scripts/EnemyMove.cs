@@ -8,10 +8,10 @@ public class EnemyMove : MonoBehaviour {
 	public bool colliding;
 	public LayerMask detectObject;
 	public Animator animator;
-<<<<<<< HEAD
+
 	public Transform groundedEnd;
 
-=======
+
 	private Rigidbody2D enemy;
 	private int hit = 0;
 
@@ -23,7 +23,7 @@ public class EnemyMove : MonoBehaviour {
 	// Delay before Goomba dies
 	private bool timeDelay;
 	private int time = 50;
->>>>>>> 98e943ab4626fb60365de0d6816dc23d30fed0a9
+
 
 	// Use this for initialization
 	void Start () {
@@ -100,17 +100,18 @@ public class EnemyMove : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
-<<<<<<< HEAD
+
 		//Debug.Log ("" + other.gameObject.tag);
 		if (other.gameObject.tag == ("Untagged")) {
 			//Debug.Log("Funker");
 		
-=======
-		if (other.gameObject.tag == ("Player")) {
-			if (!stop) {
-				Destroy (other.gameObject);
+
+			if (other.gameObject.tag == ("Player")) {
+				if (!stop) {
+					Destroy (other.gameObject);
+				}
+
 			}
->>>>>>> 98e943ab4626fb60365de0d6816dc23d30fed0a9
 		}
 	}
 
