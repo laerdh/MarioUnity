@@ -12,9 +12,6 @@ public class startScreen : MonoBehaviour {
 
 		if(Input.GetKey(KeyCode.DownArrow) && moveingBottom){
 			currentPosition = transform.position = (new Vector2(currentPosition.x, (currentPosition.y + -0.18f)));
-			if(Input.GetKey (KeyCode.Return)){
-				Application.LoadLevel(1);
-			}
 			moveingBottom = false;
 			moveingTop = true;
 		}
@@ -23,6 +20,10 @@ public class startScreen : MonoBehaviour {
 			currentPosition = transform.position = (new Vector2(currentPosition.x, (currentPosition.y + 0.18f)));
 			moveingTop = false;
 			moveingBottom = true;
+		}
+
+		if (Input.GetKey (KeyCode.Return)) {
+			Application.LoadLevel (1);
 		}
 	}
 }

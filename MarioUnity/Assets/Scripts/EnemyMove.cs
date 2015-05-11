@@ -3,20 +3,16 @@ using System.Collections;
 
 public class EnemyMove : MonoBehaviour {
 	public float velocity = -1f;
+	private Rigidbody2D enemy;
 	public Transform sightStart;
 	public Transform sightEnd;
 	public bool colliding;
 	public LayerMask detectObject;
-	public Animator animator;
-	private Rigidbody2D enemy;
+	public Transform weakness;
 	private int hit = 0;
+	private bool sweepMode;
+	public Animator animator;
 
-	// Koopa Troopa sweep mode
-	private bool sweep = false;
-
-	// Timedelay when Goomba dies
-	private bool timeDelay;
-	private int time = 100;
 
 	// Use this for initialization
 	void Start () {
@@ -34,24 +30,8 @@ public class EnemyMove : MonoBehaviour {
 			transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
 			velocity *= -1;
 		}
-
-		if (sweep) {
-			velocity = -velocity * 1;
-			//Debug.Log ("Sweep activated");
-		} else {
-			//Debug.Log ("Sweep deactivated");
-		}
-
-		// Destroys object after time delay (=100 frames)
-		if (timeDelay) {
-			time--;
-			if (time == 0) {
-				Destroy (this.gameObject);
-			}
-		}
 	}
 
-	// Visualize LineCast on enemy
 	void OnDrawGizmos() {
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawLine (sightStart.position, sightEnd.position);
@@ -59,43 +39,45 @@ public class EnemyMove : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Rigidbody2D player = other.GetComponent<Rigidbody2D>();
-
 		if (other.gameObject.name == "Player") {
 			if (this.gameObject.tag == "EnemyTurtle") {
 				hit++;
 				animator.SetBool ("isHit", true);
 
-				// Add force to Mario if he jumps on a Koopa
-				player.AddForce(new Vector2(0,800));
-
-				// If Mario hits enemy every 2nd time, it starts sweeping
-				if (hit % 2 == 0) {
-					sweep = true;
+				// If Mario hits enemy for the 2nd time, it starts sweeping
+				if (hit > 1) {
+					sweepMode = true;
 				} else {
-					sweep = false;
+					velocity = 0;
 				}
 			}
 
 			if (this.gameObject.tag == "EnemyGoomba") {
 				animator.SetBool ("isHit", true);
-				velocity = 0;
-				timeDelay = true;
+				Dies ();
 
-				// Add force to Mario if he jumps on a Goomba
-				player.AddForce(new Vector2(0,800));
+				Rigidbody2D other1 = other.GetComponent<Rigidbody2D>();
+				//other.GetComponent<Rigidbody2D>
+				//other1.velocity = new Vector2 (other.transform.position.x, 2);
+				other1.AddForce(new Vector2(0,1300));
 			}
+			//float height = other.contacts[0].point.y - weakness.position.y;
+
+			//other.rigidbody.AddForce(new Vector2(0, 300));
+
+	
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
-		Debug.Log ("" + other.gameObject.tag);
+		//Debug.Log ("" + other.gameObject.tag);
 		if (other.gameObject.tag == ("Untagged")) {
-			Debug.Log("Funker");
+			//Debug.Log("Funker");
+		
 		}
 	}
 
-	void OnGUI() {
-		GUI.Box (new Rect(100,20, 50,50),"sweep\n"+sweep);
+	void Dies() {
+		Destroy (this.gameObject);
 	}
 }
