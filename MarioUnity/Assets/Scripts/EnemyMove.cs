@@ -43,12 +43,6 @@ public class EnemyMove : MonoBehaviour {
 			velocity *= -1;
 		}
 
-		if (sweep) {
-			velocity = -velocity * 1;
-			//Debug.Log ("Sweep activated");
-		} else {
-			//Debug.Log ("Sweep deactivated");
-		}
 
 		// Destroys object after time delay (=100 frames)
 		if (timeDelay) {
