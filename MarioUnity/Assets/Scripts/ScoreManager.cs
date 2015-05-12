@@ -6,7 +6,7 @@ public class ScoreManager : MonoBehaviour {
 
 
 	public int currentScore;
-	public int currentCoin = 10;
+	public int currentCoin = 0;
 	public int coin = 0;
 	public int score = 100;
 

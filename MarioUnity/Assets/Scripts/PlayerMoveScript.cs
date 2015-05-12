@@ -16,6 +16,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Mario lives 
 	private int playerLives;
+	private int playerLivesCurrent;
 
 	// Move variables
 	public float moveSpeed;
@@ -47,10 +48,18 @@ public class PlayerMoveScript : MonoBehaviour {
 	// BLOCKS
 	public breakBlockScript breakBlock;
 
+	//AudioController
+	public AudioController audioController;
+
 	void Start() {
 		playerLives = 1;
+		playerLivesCurrent = playerLives;
+
+
+
 		player = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
+		animator.SetInteger ("MarioLives",	playerLives);
 		moveSpeedDef = moveSpeed;
 		camera.transform.position = new Vector3 (player.position.x, camera.transform.position.y, camera.transform.position.z);
 	}
@@ -88,7 +97,11 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	void Update() {
-		animator.SetInteger ("PlayerLives",	playerLives);
+		changeColliderSize (playerLives);
+
+		if(playerLivesCurrent != playerLives)
+			animator.SetInteger ("MarioLives",	playerLives);
+
 		float dirX = Input.GetAxis ("Horizontal");
 		keyBoardInput ();
 		animatePlayer(dirX);
@@ -100,6 +113,19 @@ public class PlayerMoveScript : MonoBehaviour {
 		// Stop the player if he walks to the left of the screen
 		if(player.position.x < cameraWall.transform.position.x + DEADZONE)
 			player.transform.position = new Vector2(cameraWall.transform.position.x + DEADZONE,player.position.y);
+	}
+
+	// Endre collider
+	public void changeColliderSize(int playerLives) {
+		BoxCollider2D b = GetComponent<BoxCollider2D> ();
+		if(b != null)
+		{
+			if(playerLives == 1) {
+				b.size =	new Vector2(0.16f,0.16f);
+			}
+			else if(playerLives >= 2)
+				b.size = new Vector2(0.16f, 0.32f);
+		}
 	}
 
 	// Method for checking keyboard input
@@ -154,15 +180,21 @@ public class PlayerMoveScript : MonoBehaviour {
 			//animator.SetBool("isOnPipe", true);
 
 		
-	}
+		}
 
-}
+	}
 
 	// Break block
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "BreakableBlock") {
 			player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y / 4));
 			other.GetComponent<breakBlockScript> ().setHit (true, 2);
+		}
+		if (other.gameObject.tag == "powerUp") {
+			powerUpScript e = other.GetComponent<powerUpScript>();
+			playerLives++;
+			animator.SetInteger("MarioLives", playerLives);
+
 		}
 	}
 
@@ -187,6 +219,8 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Animate the player 
 	void animatePlayer(float dirX) {
+
+
 		// Checks if the player is running
 		if (mario_state == RUNNING) {
 			animator.SetBool ("isRunning", true);
