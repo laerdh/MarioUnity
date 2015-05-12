@@ -28,7 +28,7 @@ public class powerUpScript : MonoBehaviour {
 
 
 
-		if (hit != null)
+	/*	if (hit != null)
 		{
 
 			print (hit.collider.gameObject.tag);
@@ -37,7 +37,7 @@ public class powerUpScript : MonoBehaviour {
 				FlipSpeed();
 				print ("vi vinner ikke gull i år");
 			}
-		}
+		}*/
 
 	}
 
