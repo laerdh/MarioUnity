@@ -222,6 +222,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
+			player.AddForce (new Vector2(0, 500));
 
 			if (playerLives == 1) {
 				mario_state = DEAD;
@@ -283,6 +284,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 	}
 
+	// Method for making Mario die
 	public void Dies() {
 		animator.SetBool ("isDead", true);
 
