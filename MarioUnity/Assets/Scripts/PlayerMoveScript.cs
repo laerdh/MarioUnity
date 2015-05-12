@@ -126,8 +126,6 @@ public class PlayerMoveScript : MonoBehaviour {
 		if (player.position.y < -20) {
 			Destroy (this.gameObject);
 		}
-
-		Debug.Log (playerLivesCurrent);
 	}
 
 	// Endre collider
@@ -222,7 +220,9 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
-
+			if (mario_state != 5) {
+				player.velocity = new Vector2(player.velocity.x, 10);
+			}
 			if (playerLives == 1) {
 				mario_state = DEAD;
 			} else if (playerLives == 2) {
@@ -283,6 +283,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 	}
 
+	// Method for making Mario die
 	public void Dies() {
 		animator.SetBool ("isDead", true);
 

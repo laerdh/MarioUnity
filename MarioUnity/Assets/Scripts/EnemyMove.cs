@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemyMove : MonoBehaviour {
-	public float velocity = -1f;
+	public float velocity = 1f;
 	private Rigidbody2D enemy;
 	public Transform sightStart;
 	public Transform sightEnd;
