@@ -16,7 +16,9 @@ public class AudioManager : MonoBehaviour {
 		brickSmash = audios [2];
 		marioDie = audios [3];
 		backgroundMusic = audios [4];
-		backgroundMusic.Play ();
+
+
+		startBackgroundMusic ();
 	}
 
 	public void playSmallMarioJump(){
@@ -33,6 +35,10 @@ public class AudioManager : MonoBehaviour {
 
 	public void playMarioDie(){
 		marioDie.Play ();
+	}
+
+	public void startBackgroundMusic() {
+		backgroundMusic.Play ();
 	}
 
 	public void stopBackgroundMusic() {
