@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AudioController : MonoBehaviour {
+public class AudioManager : MonoBehaviour {
 
 	AudioSource smallJump;
 	AudioSource bigJump;
@@ -12,11 +12,11 @@ public class AudioController : MonoBehaviour {
 		bigJump = audios [1];
 	}
 
-	void playSmallMarioJump(){
+	public void playSmallMarioJump(){
 		smallJump.Play ();
 	}
 
-	void playBigMarioJump(){
+	public void playBigMarioJump(){
 		bigJump.Play ();
 	}
 }

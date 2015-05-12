@@ -50,19 +50,21 @@ public class PlayerMoveScript : MonoBehaviour {
 	public breakBlockScript breakBlock;
 
 	//AudioController
-	public AudioController audioController;
+	public AudioManager audioManager;
 
 	void Start() {
 		playerLives = 1;
 		playerLivesCurrent = playerLives;
-
-
-
+		
 		player = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
 		animator.SetInteger ("MarioLives",	playerLives);
 		moveSpeedDef = moveSpeed;
 		camera.transform.position = new Vector3 (player.position.x, camera.transform.position.y, camera.transform.position.z);
+
+		//Test
+		GameObject w = GameObject.Find("AudioController");
+		audioManager = w.GetComponent<AudioManager>();
 	}
 
 	void FixedUpdate() {
@@ -137,6 +139,12 @@ public class PlayerMoveScript : MonoBehaviour {
 	void keyBoardInput() {
 		// check keyboard presses
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
+			//Calls method in AudioManager
+			if(playerLives == 1){
+				audioManager.playSmallMarioJump();
+			}else{
+				audioManager.playBigMarioJump();
+			}
 			player.velocity = new Vector2 (player.velocity.x, jumpHeight);
 		}
 

@@ -10,8 +10,7 @@ public class powerUpScript : MonoBehaviour {
 
 	private int moveSpeed = 3;
 	
-	private Transform start;
-	private Transform end; 
+
 	public LayerMask theGround;
 
 	// Use this for initialization
@@ -19,18 +18,14 @@ public class powerUpScript : MonoBehaviour {
 		animator = GetComponent<Animator> ();
 		obj = GetComponent<Rigidbody2D> ();
 
-		start = new Vector2 (transform.position.x + 1, transform.position.y);
-		end = new Vector2 (transform.position.x + 1, transform.position.y);
+
 	}
 
 	// Update is called once per frame
 	void Update () {
 		obj.velocity = new Vector2 (moveSpeed, obj.velocity.y);
 
-		start.position = transform.position;
-		end.position = new Vector2 (transform.position.x + 1, transform.position.y);
-		RaycastHit2D hit = Physics2D.Raycast(start.position, end.position, theGround);
-		Debug.DrawRay(start.position, end.position, Color.red);
+
 
 
 		/*
@@ -47,13 +42,7 @@ public class powerUpScript : MonoBehaviour {
 
 	}
 
-	// Visualize LineCast on enemy
-	void OnDrawGizmos() {
-		Gizmos.color = Color.magenta;
-		if(start != null && end != null)
-		Gizmos.DrawLine (start.position, end.position);
-		
-	}
+
 
 	/*
 	void OnCollisionEnter2D(Collision2D other) {
