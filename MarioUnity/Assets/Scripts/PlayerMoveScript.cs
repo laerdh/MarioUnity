@@ -306,9 +306,9 @@ public class PlayerMoveScript : MonoBehaviour {
 		collider.enabled = false;
 	}
 
-
+	/*
 	void OnGUI() {
 		GUI.Box (new Rect(20, 20, 100, 100), "" + playerLives);
-	}
+	}*/
 
 }
