@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 12e2ed26fdced492ab8ead6d8c50c8a2
-timeCreated: 1430140711
+timeCreated: 1431426150
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -340,6 +340,28 @@ TextureImporter:
     21300666: NES - Super Mario Bros - Mario Luigi_333
     21300668: NES - Super Mario Bros - Mario Luigi_334
     21300670: NES - Super Mario Bros - Mario Luigi_335
+    21300672: NES - Super Mario Bros - Mario Luigi_336
+    21300674: NES - Super Mario Bros - Mario Luigi_337
+    21300676: NES - Super Mario Bros - Mario Luigi_338
+    21300678: NES - Super Mario Bros - Mario Luigi_339
+    21300680: NES - Super Mario Bros - Mario Luigi_340
+    21300682: NES - Super Mario Bros - Mario Luigi_341
+    21300684: NES - Super Mario Bros - Mario Luigi_342
+    21300686: NES - Super Mario Bros - Mario Luigi_343
+    21300688: NES - Super Mario Bros - Mario Luigi_344
+    21300690: NES - Super Mario Bros - Mario Luigi_345
+    21300692: NES - Super Mario Bros - Mario Luigi_346
+    21300694: NES - Super Mario Bros - Mario Luigi_347
+    21300696: NES - Super Mario Bros - Mario Luigi_348
+    21300698: NES - Super Mario Bros - Mario Luigi_349
+    21300700: NES - Super Mario Bros - Mario Luigi_350
+    21300702: NES - Super Mario Bros - Mario Luigi_351
+    21300704: NES - Super Mario Bros - Mario Luigi_352
+    21300706: NES - Super Mario Bros - Mario Luigi_353
+    21300708: NES - Super Mario Bros - Mario Luigi_354
+    21300710: NES - Super Mario Bros - Mario Luigi_355
+    21300712: NES - Super Mario Bros - Mario Luigi_356
+    21300714: NES - Super Mario Bros - Mario Luigi_357
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -393,7 +415,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_1
       rect:
@@ -403,7 +425,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_2
       rect:
@@ -413,7 +435,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_3
       rect:
@@ -423,7 +445,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_4
       rect:
@@ -433,7 +455,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_5
       rect:
@@ -443,7 +465,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_6
       rect:
@@ -453,7 +475,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_7
       rect:
@@ -463,7 +485,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_8
       rect:
@@ -473,7 +495,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_9
       rect:
@@ -483,7 +505,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_10
       rect:
@@ -493,7 +515,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_11
       rect:
@@ -503,7 +525,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_12
       rect:
@@ -513,7 +535,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_13
       rect:
@@ -523,7 +545,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_14
       rect:
@@ -533,7 +555,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_15
       rect:
@@ -543,7 +565,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_16
       rect:
@@ -553,7 +575,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_17
       rect:
@@ -563,7 +585,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_18
       rect:
@@ -573,7 +595,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_19
       rect:
@@ -583,7 +605,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_20
       rect:
@@ -593,147 +615,147 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_21
       rect:
         serializedVersion: 2
         x: 80
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_22
       rect:
         serializedVersion: 2
         x: 96
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_23
       rect:
         serializedVersion: 2
         x: 112
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_24
       rect:
         serializedVersion: 2
         x: 128
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_25
       rect:
         serializedVersion: 2
         x: 144
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_26
       rect:
         serializedVersion: 2
         x: 160
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_27
       rect:
         serializedVersion: 2
         x: 176
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_28
       rect:
         serializedVersion: 2
         x: 192
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_29
       rect:
         serializedVersion: 2
         x: 208
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_30
       rect:
         serializedVersion: 2
         x: 224
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_31
       rect:
         serializedVersion: 2
         x: 240
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_32
       rect:
         serializedVersion: 2
         x: 256
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_33
       rect:
         serializedVersion: 2
         x: 272
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_34
       rect:
         serializedVersion: 2
         x: 288
-        y: 464
+        y: 480
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_35
       rect:
@@ -743,7 +765,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_36
       rect:
@@ -753,7 +775,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_37
       rect:
@@ -763,7 +785,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_38
       rect:
@@ -773,7 +795,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_39
       rect:
@@ -783,7 +805,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_40
       rect:
@@ -793,7 +815,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_41
       rect:
@@ -803,7 +825,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_42
       rect:
@@ -813,7 +835,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_43
       rect:
@@ -823,7 +845,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_44
       rect:
@@ -833,7 +855,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_45
       rect:
@@ -843,7 +865,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_46
       rect:
@@ -853,7 +875,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_47
       rect:
@@ -863,7 +885,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_48
       rect:
@@ -873,7 +895,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_49
       rect:
@@ -883,7 +905,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_50
       rect:
@@ -893,7 +915,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_51
       rect:
@@ -903,7 +925,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_52
       rect:
@@ -913,7 +935,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_53
       rect:
@@ -923,7 +945,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_54
       rect:
@@ -933,7 +955,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_55
       rect:
@@ -943,7 +965,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_56
       rect:
@@ -953,7 +975,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_57
       rect:
@@ -963,7 +985,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_58
       rect:
@@ -973,7 +995,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_59
       rect:
@@ -983,7 +1005,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_60
       rect:
@@ -993,7 +1015,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_61
       rect:
@@ -1003,7 +1025,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_62
       rect:
@@ -1013,7 +1035,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_63
       rect:
@@ -1023,7 +1045,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_64
       rect:
@@ -1033,7 +1055,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_65
       rect:
@@ -1043,7 +1065,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_66
       rect:
@@ -1053,7 +1075,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_67
       rect:
@@ -1063,7 +1085,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_68
       rect:
@@ -1073,7 +1095,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_69
       rect:
@@ -1083,7 +1105,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_70
       rect:
@@ -1093,7 +1115,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_71
       rect:
@@ -1103,7 +1125,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_72
       rect:
@@ -1113,7 +1135,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_73
       rect:
@@ -1123,7 +1145,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_74
       rect:
@@ -1133,7 +1155,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_75
       rect:
@@ -1143,7 +1165,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_76
       rect:
@@ -1153,7 +1175,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_77
       rect:
@@ -1163,7 +1185,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_78
       rect:
@@ -1173,7 +1195,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_79
       rect:
@@ -1183,7 +1205,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_80
       rect:
@@ -1193,7 +1215,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_81
       rect:
@@ -1203,7 +1225,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_82
       rect:
@@ -1213,7 +1235,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_83
       rect:
@@ -1223,217 +1245,217 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_84
       rect:
         serializedVersion: 2
         x: 80
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_85
       rect:
         serializedVersion: 2
         x: 96
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_86
       rect:
         serializedVersion: 2
         x: 112
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_87
       rect:
         serializedVersion: 2
         x: 128
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_88
       rect:
         serializedVersion: 2
         x: 144
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_89
       rect:
         serializedVersion: 2
         x: 160
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_90
       rect:
         serializedVersion: 2
-        x: 176
-        y: 368
+        x: 177
+        y: 384
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_91
       rect:
         serializedVersion: 2
         x: 192
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_92
       rect:
         serializedVersion: 2
         x: 208
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_93
       rect:
         serializedVersion: 2
         x: 224
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_94
       rect:
         serializedVersion: 2
         x: 240
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_95
       rect:
         serializedVersion: 2
         x: 256
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_96
       rect:
         serializedVersion: 2
         x: 272
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_97
       rect:
         serializedVersion: 2
         x: 288
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_98
       rect:
         serializedVersion: 2
         x: 304
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_99
       rect:
         serializedVersion: 2
         x: 320
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_100
       rect:
         serializedVersion: 2
         x: 336
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_101
       rect:
         serializedVersion: 2
         x: 352
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_102
       rect:
         serializedVersion: 2
         x: 368
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_103
       rect:
         serializedVersion: 2
         x: 384
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_104
       rect:
         serializedVersion: 2
         x: 400
-        y: 368
+        y: 384
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_105
       rect:
@@ -1441,9 +1463,9 @@ TextureImporter:
         x: 80
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_106
       rect:
@@ -1451,9 +1473,9 @@ TextureImporter:
         x: 96
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_107
       rect:
@@ -1461,9 +1483,9 @@ TextureImporter:
         x: 112
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_108
       rect:
@@ -1471,9 +1493,9 @@ TextureImporter:
         x: 128
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_109
       rect:
@@ -1481,9 +1503,9 @@ TextureImporter:
         x: 144
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_110
       rect:
@@ -1491,9 +1513,9 @@ TextureImporter:
         x: 160
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_111
       rect:
@@ -1501,9 +1523,9 @@ TextureImporter:
         x: 176
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_112
       rect:
@@ -1511,9 +1533,9 @@ TextureImporter:
         x: 192
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_113
       rect:
@@ -1521,9 +1543,9 @@ TextureImporter:
         x: 208
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_114
       rect:
@@ -1531,9 +1553,9 @@ TextureImporter:
         x: 224
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_115
       rect:
@@ -1541,9 +1563,9 @@ TextureImporter:
         x: 240
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_116
       rect:
@@ -1551,9 +1573,9 @@ TextureImporter:
         x: 256
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_117
       rect:
@@ -1561,9 +1583,9 @@ TextureImporter:
         x: 272
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_118
       rect:
@@ -1571,9 +1593,9 @@ TextureImporter:
         x: 288
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_119
       rect:
@@ -1581,9 +1603,9 @@ TextureImporter:
         x: 304
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_120
       rect:
@@ -1591,9 +1613,9 @@ TextureImporter:
         x: 320
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_121
       rect:
@@ -1601,9 +1623,9 @@ TextureImporter:
         x: 336
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_122
       rect:
@@ -1611,9 +1633,9 @@ TextureImporter:
         x: 352
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_123
       rect:
@@ -1621,9 +1643,9 @@ TextureImporter:
         x: 368
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_124
       rect:
@@ -1631,9 +1653,9 @@ TextureImporter:
         x: 384
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_125
       rect:
@@ -1641,9 +1663,9 @@ TextureImporter:
         x: 400
         y: 336
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_126
       rect:
@@ -1653,7 +1675,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_127
       rect:
@@ -1663,7 +1685,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_128
       rect:
@@ -1673,7 +1695,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_129
       rect:
@@ -1683,7 +1705,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_130
       rect:
@@ -1693,7 +1715,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_131
       rect:
@@ -1703,7 +1725,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_132
       rect:
@@ -1713,7 +1735,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_133
       rect:
@@ -1723,7 +1745,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_134
       rect:
@@ -1733,7 +1755,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_135
       rect:
@@ -1743,7 +1765,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_136
       rect:
@@ -1753,7 +1775,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_137
       rect:
@@ -1763,7 +1785,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_138
       rect:
@@ -1773,7 +1795,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_139
       rect:
@@ -1783,7 +1805,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_140
       rect:
@@ -1793,7 +1815,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_141
       rect:
@@ -1803,7 +1825,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_142
       rect:
@@ -1813,7 +1835,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_143
       rect:
@@ -1823,7 +1845,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_144
       rect:
@@ -1833,7 +1855,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_145
       rect:
@@ -1843,7 +1865,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_146
       rect:
@@ -1853,247 +1875,247 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_147
       rect:
         serializedVersion: 2
         x: 80
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_148
       rect:
         serializedVersion: 2
         x: 96
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_149
       rect:
         serializedVersion: 2
         x: 112
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_150
       rect:
         serializedVersion: 2
         x: 128
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_151
       rect:
         serializedVersion: 2
         x: 144
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_152
       rect:
         serializedVersion: 2
         x: 160
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_153
       rect:
         serializedVersion: 2
         x: 176
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_154
       rect:
         serializedVersion: 2
         x: 192
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_155
       rect:
         serializedVersion: 2
         x: 208
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_156
       rect:
         serializedVersion: 2
         x: 224
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_157
       rect:
         serializedVersion: 2
         x: 240
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_158
       rect:
         serializedVersion: 2
         x: 256
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_159
       rect:
         serializedVersion: 2
         x: 272
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_160
       rect:
         serializedVersion: 2
         x: 288
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_161
       rect:
         serializedVersion: 2
         x: 304
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_162
       rect:
         serializedVersion: 2
         x: 320
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_163
       rect:
         serializedVersion: 2
         x: 336
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_164
       rect:
         serializedVersion: 2
         x: 352
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_165
       rect:
         serializedVersion: 2
         x: 368
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_166
       rect:
         serializedVersion: 2
         x: 384
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_167
       rect:
         serializedVersion: 2
         x: 400
-        y: 272
+        y: 288
         width: 16
-        height: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_168
       rect:
         serializedVersion: 2
         x: 80
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_169
       rect:
         serializedVersion: 2
         x: 96
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_170
       rect:
         serializedVersion: 2
         x: 112
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_171
       rect:
@@ -2103,177 +2125,177 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_172
       rect:
         serializedVersion: 2
         x: 144
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_173
       rect:
         serializedVersion: 2
         x: 160
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_174
       rect:
         serializedVersion: 2
         x: 176
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_175
       rect:
         serializedVersion: 2
         x: 192
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_176
       rect:
         serializedVersion: 2
         x: 208
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_177
       rect:
         serializedVersion: 2
         x: 224
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_178
       rect:
         serializedVersion: 2
         x: 240
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_179
       rect:
         serializedVersion: 2
         x: 256
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_180
       rect:
         serializedVersion: 2
         x: 272
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_181
       rect:
         serializedVersion: 2
         x: 288
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_182
       rect:
         serializedVersion: 2
         x: 304
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_183
       rect:
         serializedVersion: 2
         x: 320
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_184
       rect:
         serializedVersion: 2
         x: 336
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_185
       rect:
         serializedVersion: 2
         x: 352
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_186
       rect:
         serializedVersion: 2
         x: 368
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_187
       rect:
         serializedVersion: 2
         x: 384
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_188
       rect:
         serializedVersion: 2
         x: 400
-        y: 240
+        y: 256
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_189
       rect:
@@ -2283,7 +2305,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_190
       rect:
@@ -2293,7 +2315,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_191
       rect:
@@ -2303,7 +2325,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_192
       rect:
@@ -2313,7 +2335,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_193
       rect:
@@ -2323,7 +2345,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_194
       rect:
@@ -2333,7 +2355,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_195
       rect:
@@ -2343,7 +2365,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_196
       rect:
@@ -2353,7 +2375,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_197
       rect:
@@ -2363,7 +2385,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_198
       rect:
@@ -2373,7 +2395,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_199
       rect:
@@ -2383,7 +2405,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_200
       rect:
@@ -2393,7 +2415,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_201
       rect:
@@ -2403,7 +2425,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_202
       rect:
@@ -2413,7 +2435,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_203
       rect:
@@ -2423,7 +2445,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_204
       rect:
@@ -2433,7 +2455,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_205
       rect:
@@ -2443,7 +2465,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_206
       rect:
@@ -2453,7 +2475,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_207
       rect:
@@ -2463,7 +2485,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_208
       rect:
@@ -2473,7 +2495,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_209
       rect:
@@ -2483,7 +2505,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_210
       rect:
@@ -2493,7 +2515,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_211
       rect:
@@ -2503,7 +2525,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_212
       rect:
@@ -2513,7 +2535,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_213
       rect:
@@ -2523,7 +2545,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_214
       rect:
@@ -2533,7 +2555,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_215
       rect:
@@ -2543,7 +2565,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_216
       rect:
@@ -2553,7 +2575,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_217
       rect:
@@ -2563,7 +2585,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_218
       rect:
@@ -2573,7 +2595,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_219
       rect:
@@ -2583,7 +2605,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_220
       rect:
@@ -2593,7 +2615,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_221
       rect:
@@ -2603,7 +2625,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_222
       rect:
@@ -2613,7 +2635,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_223
       rect:
@@ -2623,7 +2645,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_224
       rect:
@@ -2633,7 +2655,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_225
       rect:
@@ -2643,7 +2665,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_226
       rect:
@@ -2653,7 +2675,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_227
       rect:
@@ -2663,7 +2685,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_228
       rect:
@@ -2673,7 +2695,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_229
       rect:
@@ -2683,7 +2705,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_230
       rect:
@@ -2693,7 +2715,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_231
       rect:
@@ -2703,7 +2725,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_232
       rect:
@@ -2713,7 +2735,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_233
       rect:
@@ -2723,7 +2745,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_234
       rect:
@@ -2733,7 +2755,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_235
       rect:
@@ -2743,7 +2765,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_236
       rect:
@@ -2753,7 +2775,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_237
       rect:
@@ -2763,7 +2785,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_238
       rect:
@@ -2773,7 +2795,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_239
       rect:
@@ -2783,7 +2805,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_240
       rect:
@@ -2793,7 +2815,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_241
       rect:
@@ -2803,7 +2825,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_242
       rect:
@@ -2813,7 +2835,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_243
       rect:
@@ -2823,7 +2845,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_244
       rect:
@@ -2833,7 +2855,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_245
       rect:
@@ -2843,7 +2865,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_246
       rect:
@@ -2853,7 +2875,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_247
       rect:
@@ -2863,7 +2885,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_248
       rect:
@@ -2873,7 +2895,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_249
       rect:
@@ -2883,7 +2905,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_250
       rect:
@@ -2893,7 +2915,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_251
       rect:
@@ -2903,7 +2925,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_252
       rect:
@@ -2913,7 +2935,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_253
       rect:
@@ -2923,7 +2945,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_254
       rect:
@@ -2933,7 +2955,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_255
       rect:
@@ -2943,7 +2965,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_256
       rect:
@@ -2953,7 +2975,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_257
       rect:
@@ -2963,7 +2985,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_258
       rect:
@@ -2973,7 +2995,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_259
       rect:
@@ -2983,7 +3005,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_260
       rect:
@@ -2993,7 +3015,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_261
       rect:
@@ -3003,7 +3025,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_262
       rect:
@@ -3013,7 +3035,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_263
       rect:
@@ -3023,7 +3045,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_264
       rect:
@@ -3033,7 +3055,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_265
       rect:
@@ -3043,7 +3065,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_266
       rect:
@@ -3053,7 +3075,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_267
       rect:
@@ -3063,7 +3085,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_268
       rect:
@@ -3073,7 +3095,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_269
       rect:
@@ -3083,7 +3105,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_270
       rect:
@@ -3093,7 +3115,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_271
       rect:
@@ -3103,7 +3125,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_272
       rect:
@@ -3113,7 +3135,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_273
       rect:
@@ -3123,7 +3145,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_274
       rect:
@@ -3133,7 +3155,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_275
       rect:
@@ -3143,7 +3165,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_276
       rect:
@@ -3153,7 +3175,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_277
       rect:
@@ -3163,7 +3185,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_278
       rect:
@@ -3173,7 +3195,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_279
       rect:
@@ -3183,7 +3205,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_280
       rect:
@@ -3193,7 +3215,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_281
       rect:
@@ -3203,7 +3225,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_282
       rect:
@@ -3213,7 +3235,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_283
       rect:
@@ -3223,7 +3245,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_284
       rect:
@@ -3233,7 +3255,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_285
       rect:
@@ -3243,7 +3265,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_286
       rect:
@@ -3253,7 +3275,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_287
       rect:
@@ -3263,7 +3285,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_288
       rect:
@@ -3273,7 +3295,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_289
       rect:
@@ -3283,7 +3305,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_290
       rect:
@@ -3293,7 +3315,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_291
       rect:
@@ -3303,7 +3325,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_292
       rect:
@@ -3313,7 +3335,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_293
       rect:
@@ -3323,7 +3345,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_294
       rect:
@@ -3333,7 +3355,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_295
       rect:
@@ -3343,7 +3365,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_296
       rect:
@@ -3353,7 +3375,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_297
       rect:
@@ -3363,7 +3385,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_298
       rect:
@@ -3373,7 +3395,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_299
       rect:
@@ -3383,7 +3405,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_300
       rect:
@@ -3393,7 +3415,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_301
       rect:
@@ -3403,7 +3425,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_302
       rect:
@@ -3413,7 +3435,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_303
       rect:
@@ -3423,7 +3445,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_304
       rect:
@@ -3433,7 +3455,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_305
       rect:
@@ -3443,7 +3465,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_306
       rect:
@@ -3453,7 +3475,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_307
       rect:
@@ -3463,7 +3485,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_308
       rect:
@@ -3473,7 +3495,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_309
       rect:
@@ -3483,7 +3505,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_310
       rect:
@@ -3493,7 +3515,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_311
       rect:
@@ -3503,7 +3525,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_312
       rect:
@@ -3513,7 +3535,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_313
       rect:
@@ -3523,7 +3545,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_314
       rect:
@@ -3533,7 +3555,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_315
       rect:
@@ -3543,7 +3565,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_316
       rect:
@@ -3553,7 +3575,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_317
       rect:
@@ -3563,7 +3585,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_318
       rect:
@@ -3573,7 +3595,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_319
       rect:
@@ -3583,7 +3605,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_320
       rect:
@@ -3593,7 +3615,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_321
       rect:
@@ -3603,7 +3625,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_322
       rect:
@@ -3613,7 +3635,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_323
       rect:
@@ -3623,7 +3645,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_324
       rect:
@@ -3633,7 +3655,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_325
       rect:
@@ -3643,7 +3665,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_326
       rect:
@@ -3653,7 +3675,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_327
       rect:
@@ -3663,7 +3685,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_328
       rect:
@@ -3673,7 +3695,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_329
       rect:
@@ -3683,7 +3705,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_330
       rect:
@@ -3693,7 +3715,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_331
       rect:
@@ -3703,7 +3725,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_332
       rect:
@@ -3713,7 +3735,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_333
       rect:
@@ -3723,7 +3745,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_334
       rect:
@@ -3733,7 +3755,7 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: NES - Super Mario Bros - Mario Luigi_335
       rect:
@@ -3743,7 +3765,227 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_336
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_337
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_338
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_339
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_340
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_341
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_342
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_343
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_344
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_345
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_346
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_347
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_348
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_349
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_350
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_351
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_352
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_353
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_354
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_355
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_356
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NES - Super Mario Bros - Mario Luigi_357
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 352
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
