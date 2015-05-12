@@ -239,15 +239,15 @@ public class PlayerMoveScript : MonoBehaviour {
 				// Mario small
 			}
 		}
-<<<<<<< HEAD
-		if (!grounded && other.gameObject.tag == "Flag") {
+
+		if (!grounded && other.gameObject.tag == "Flag") 
 			Debug.Log ("flag");
-=======
+
 		if (other.gameObject.tag == "powerUp") {
 			Destroy(other.gameObject);
 			if(playerLives < 3)
 				playerLives++;
->>>>>>> ae4bc54907fa1529b3bd8a8d07e7f8b892f5e8f2
+
 		}
 	}
 
