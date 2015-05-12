@@ -25,6 +25,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	public float jumpHeight;
 	private float moveSpeedDef;
 	private int sprintDelay = 10;
+	private int dir = 0;
 
 	// Animator
 	private Animator animator;
@@ -108,9 +109,9 @@ public class PlayerMoveScript : MonoBehaviour {
 			playerLivesCurrent = playerLives;
 		}
 
-		float dirX = Input.GetAxis ("Horizontal");
+		//float dirX = Input.GetAxis ("Horizontal");
 		keyBoardInput ();
-		animatePlayer(dirX);
+		//animatePlayer(dirX);
 		sprint();
 		moveCamera ();
 
@@ -145,6 +146,8 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Method for checking keyboard input
 	void keyBoardInput() {
+
+
 		// check keyboard presses
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
 			//Calls method in AudioManager
@@ -158,6 +161,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		// check if keys are down
 		if (Input.GetKey (KeyCode.A) && !Input.GetKey(KeyCode.S)) {
+			dir = -1;
 			facingRight = false;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
@@ -165,6 +169,7 @@ public class PlayerMoveScript : MonoBehaviour {
 				player.velocity = new Vector2 (-moveSpeed, player.velocity.y);
 		} else 
 		if (Input.GetKey (KeyCode.D)&& !Input.GetKey(KeyCode.S)) {
+			dir = 1;
 			facingRight = true;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
@@ -202,6 +207,8 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		
 		}
+
+		animatePlayer(dir);
 
 	}
 
@@ -304,6 +311,16 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		// Disable collider so Mario falls through the floor
 		collider.enabled = false;
+	}
+
+	// Return lives
+	public int getLives() {
+		return playerLives;
+	}
+
+	// Return direction
+	public int getDir() {
+		return dir;
 	}
 
 	/*
