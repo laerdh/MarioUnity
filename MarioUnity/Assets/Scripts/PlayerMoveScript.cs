@@ -13,6 +13,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	private const int RUNNING = 2;
 	private const int DUCKING = 3;
 	private const int JUMPING = 4;
+	private const int DEAD = 5;
 
 	// Mario lives 
 	private int playerLives;
@@ -113,6 +114,10 @@ public class PlayerMoveScript : MonoBehaviour {
 		// Stop the player if he walks to the left of the screen
 		if(player.position.x < cameraWall.transform.position.x + DEADZONE)
 			player.transform.position = new Vector2(cameraWall.transform.position.x + DEADZONE,player.position.y);
+
+		if (mario_state == 5) {
+			
+		}
 	}
 
 	// Endre collider
@@ -200,7 +205,12 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
-			Debug.Log ("Gjør mario liten hvis stor, eller aktivert dead animation");
+			if (playerLivesCurrent == 1) {
+				mario_state = DEAD;
+				animator.SetBool ("isDead", true);
+			} else if (playerLivesCurrent == 2) {
+				// Mario small
+			}
 		}
 	}
 
