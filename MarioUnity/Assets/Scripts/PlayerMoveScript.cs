@@ -287,6 +287,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		animator.SetBool ("isDead", true);
 
 		// Play Mario Die sound
+		audioManager.stopBackgroundMusic ();
 		audioManager.playMarioDie ();
 
 		// Make Mario jump out of the map

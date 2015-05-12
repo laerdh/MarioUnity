@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour {
 	AudioSource bigJump;
 	AudioSource brickSmash;
 	AudioSource marioDie;
+	AudioSource backgroundMusic;
 
 	void Start(){
 		AudioSource[] audios = GetComponents<AudioSource> ();
@@ -14,6 +15,8 @@ public class AudioManager : MonoBehaviour {
 		bigJump = audios [1];
 		brickSmash = audios [2];
 		marioDie = audios [3];
+		backgroundMusic = audios [4];
+		backgroundMusic.Play ();
 	}
 
 	public void playSmallMarioJump(){
@@ -31,4 +34,9 @@ public class AudioManager : MonoBehaviour {
 	public void playMarioDie(){
 		marioDie.Play ();
 	}
+
+	public void stopBackgroundMusic() {
+		backgroundMusic.Stop ();
+	}
+
 }
