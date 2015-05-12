@@ -286,9 +286,15 @@ public class PlayerMoveScript : MonoBehaviour {
 	public void Dies() {
 		animator.SetBool ("isDead", true);
 
+		// Play Mario Die sound
+		audioManager.playMarioDie ();
+
+		// Make Mario jump out of the map
 		player.velocity = new Vector2(player.velocity.x, 15);
 
 		// Disable collider so Mario falls through the floor
 		collider.enabled = false;
 	}
+
+
 }
