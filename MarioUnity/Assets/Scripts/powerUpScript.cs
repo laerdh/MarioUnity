@@ -33,7 +33,6 @@ public class powerUpScript : MonoBehaviour {
 		Debug.DrawRay(start.position, end.position, Color.red);
 
 
-		/*
 		if (hit != null)
 		{
 
@@ -43,7 +42,7 @@ public class powerUpScript : MonoBehaviour {
 				FlipSpeed();
 				print ("vi vinner ikke gull i år");
 			}
-		}*/
+		}
 
 	}
 
@@ -55,7 +54,6 @@ public class powerUpScript : MonoBehaviour {
 		
 	}
 
-	/*
 	void OnCollisionEnter2D(Collision2D other) {
 
 		print ("Collision!");
@@ -66,7 +64,7 @@ public class powerUpScript : MonoBehaviour {
 		if(other.gameObject.tag == "pipe")
 			FlipSpeed();
 	}
-	*/
+
 	void FlipSpeed() {
 		print ("test flip");
 		moveSpeed = -moveSpeed;
@@ -84,4 +82,4 @@ public class powerUpScript : MonoBehaviour {
 			obj.velocity = new Vector2(2, 0);
 		}
 	}
-}
+} 
