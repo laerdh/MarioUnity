@@ -10,51 +10,66 @@ public class powerUpScript : MonoBehaviour {
 
 	private int moveSpeed = 3;
 	
-	//public Transform sightStart;
-	//public Transform sightEnd; 
+	private Transform start;
+	private Transform end; 
+	public LayerMask theGround;
 
 	// Use this for initialization
-	void Awake () {
+	void Start() {
 		animator = GetComponent<Animator> ();
 		obj = GetComponent<Rigidbody2D> ();
+
+		start = new Vector2 (transform.position.x + 1, transform.position.y);
+		end = new Vector2 (transform.position.x + 1, transform.position.y);
 	}
 
 	// Update is called once per frame
 	void Update () {
 		obj.velocity = new Vector2 (moveSpeed, obj.velocity.y);
 
-		/*RaycastHit2D hit = Physics2D.Raycast(sightStart.position, sightEnd.position, 0.2F);
-		
+		start.position = transform.position;
+		end.position = new Vector2 (transform.position.x + 1, transform.position.y);
+		RaycastHit2D hit = Physics2D.Raycast(start.position, end.position, theGround);
+		Debug.DrawRay(start.position, end.position, Color.red);
+
+
+		/*
 		if (hit != null)
 		{
 
 			print (hit.collider.gameObject.tag);
 			if (hit.collider.gameObject.tag == "pipe")
 			{
-				//FlipSpeed();
+				FlipSpeed();
 				print ("vi vinner ikke gull i år");
 			}
 		}*/
 
 	}
+
+	// Visualize LineCast on enemy
+	void OnDrawGizmos() {
+		Gizmos.color = Color.magenta;
+		if(start != null && end != null)
+		Gizmos.DrawLine (start.position, end.position);
+		
+	}
+
 	/*
 	void OnCollisionEnter2D(Collision2D other) {
+
+		print ("Collision!");
+
 		if(other.gameObject.tag == "ground")
 			print ("tjolahopp");
 
 		if(other.gameObject.tag == "pipe")
 			FlipSpeed();
-	}*/
-
-	void FlipSpeed() {
-		moveSpeed = -moveSpeed;
 	}
-
-	// Visualize LineCast on enemy
-	void OnDrawGizmos() {
-		Gizmos.color = Color.magenta;
-		//Gizmos.DrawLine (sightStart.position, sightEnd.position);
-		
+	*/
+	void FlipSpeed() {
+		print ("test flip");
+		moveSpeed = -moveSpeed;
 	}
 
 	public void setState(int state) {
