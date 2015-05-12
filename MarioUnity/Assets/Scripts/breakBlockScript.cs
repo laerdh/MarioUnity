@@ -125,6 +125,7 @@ public class breakBlockScript : MonoBehaviour {
 			GameObject e = GameObject.Instantiate (content);
 			powerUpScript ps = e.GetComponent<powerUpScript>();
 			if(ps != null) {
+				print ("player state from Block: " + playerLives);
 				ps.setState(playerLives);
 			}
 			print(content.gameObject.tag);
@@ -135,7 +136,7 @@ public class breakBlockScript : MonoBehaviour {
 	}
 
 	public void setHit(bool isHit, int playerLives) {
-
+		this.playerLives = playerLives;
 		if(content != null) { 
 			bumpBox = true;
 			print("Spawn"); 

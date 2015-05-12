@@ -21,7 +21,11 @@ public class powerUpScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		obj.velocity = new Vector2 (moveSpeed, obj.velocity.y);
+		if (state == 1) {
+			obj.velocity = new Vector2 (moveSpeed, obj.velocity.y);
+		}else if(state == 2) {
+			obj.velocity = new Vector2 (0, 0);
+		}
 
 		RaycastHit2D hit = Physics2D.Raycast (transform.position, new Vector2(moveSpeed/3,0f), 1f, theGround);
 		Debug.DrawRay (transform.position, new Vector2(moveSpeed/3,0), Color.red);
@@ -46,6 +50,8 @@ public class powerUpScript : MonoBehaviour {
 
 	public void setState(int state) {
 		this.state = state;
+
+		print ("State from powerUp on spawn: " + state);
 		// If mario has more than 2 lives, this powerup will be a flower. This method is called on breakBlock.
 		if (state >= 2) { 
 			animator.SetBool("isFlower", true);
