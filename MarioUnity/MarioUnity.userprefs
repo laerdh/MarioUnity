@@ -1,45 +1,11 @@
 ﻿<Properties>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyMove.cs">
-    <Files>
-      <File FileName="Assets/Scripts/EnemyMove.cs" Line="115" Column="1" />
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TimeCounter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMoveScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/ScoreManager.cs" Line="30" Column="3" />
-      <File FileName="Assets/Scripts/coinScript.cs" Line="11" Column="25" />
-      <File FileName="Assets/Scripts/collectCoin.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/TimeCounter.cs" Line="26" Column="37" />
-      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="40" Column="1" />
-<<<<<<< HEAD
-=======
-=======
->>>>>>> faebee83f6f8f2ca6024a6f302bbe77e2d13c59d
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TimeCounter.cs">
-    <Files>
-<<<<<<< HEAD
       <File FileName="Assets/Scripts/TimeCounter.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ScoreManager.cs" Line="31" Column="3" />
       <File FileName="Assets/Scripts/coinScript.cs" Line="1" Column="1" />
-=======
-      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="143" Column="4" />
-      <File FileName="Assets\Scripts\powerUpScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\blockBreakEffect.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\breakBlockScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemyMove.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ScoreManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\coinScript.cs" Line="18" Column="27" />
->>>>>>> 2a21a095ef189ed76fd217d45b3162dab0e15f04
->>>>>>> 9546ca739460eb6e453cdeca97c8deff65d1d738
->>>>>>> 2f6f754a350f653695093f9f3bc6105cb3e4ffa6
->>>>>>> 33e11efcd928d4ec724575b2e6869df0947d4463
->>>>>>> 07915e40e76b18d8882c61c8c8cc4f9b8664d002
->>>>>>> faebee83f6f8f2ca6024a6f302bbe77e2d13c59d
+      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -47,6 +47,9 @@ public class PlayerMoveScript : MonoBehaviour {
 	// BLOCKS
 	public breakBlockScript breakBlock;
 
+	//AudioController
+	public AudioController audioController;
+
 	void Start() {
 		playerLives = 1;
 		player = GetComponent<Rigidbody2D> ();
