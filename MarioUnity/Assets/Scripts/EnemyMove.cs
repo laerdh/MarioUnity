@@ -13,13 +13,8 @@ public class EnemyMove : MonoBehaviour {
 	public Animator animator;
 	public Transform groundedEnd;
 
-
-	public Transform weakness;
-
 	private int hit = 0;
-	private bool sweepMode;
-
-
+	
 	// Koopa Troopa sweep mode
 	private bool sweep = false;
 	private bool stop = false;
@@ -70,16 +65,11 @@ public class EnemyMove : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Rigidbody2D player = other.GetComponent<Rigidbody2D>();
-
 		if (other.gameObject.name == "Player") {
 			if (this.gameObject.tag == "EnemyKoopa") {
 				hit++;
 
 				animator.SetBool ("isHit", true);
-				
-				// Add force to Mario if he jumps on a Koopa
-				player.AddForce (new Vector2 (0, 800));
 
 				// If Mario hits enemy every 2nd time, it starts sweeping
 				if (hit % 2 == 0) {
@@ -96,23 +86,12 @@ public class EnemyMove : MonoBehaviour {
 				animator.SetBool ("isHit", true);
 				velocity = 0;
 				timeDelay = true;
-				player.AddForce (new Vector2 (0, 800));
 			}
 		}
 	}
 
 
-	void OnCollisionEnter2D (Collision2D other){
-		if (other.gameObject.tag == ("Player")) {
-			if (sweep) {
-				Destroy (other.gameObject);
-			}
-		}
 
-		// Destroy other enemies if sweeping Koopa collides with them
-		if (sweep && other.gameObject.tag == ("EnemyGoomba") || sweep && other.gameObject.tag == ("EnemyKoopa")) {
-		}
-	}
 
 	void Dies() {
 		Destroy (this.gameObject);
