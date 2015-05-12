@@ -103,8 +103,10 @@ public class PlayerMoveScript : MonoBehaviour {
 	void Update() {
 		changeColliderSize (playerLives);
 
-		if(playerLivesCurrent != playerLives)
-			animator.SetInteger ("MarioLives",	playerLives);
+		if (playerLivesCurrent != playerLives) {
+			animator.SetInteger ("MarioLives", playerLives);
+			playerLivesCurrent = playerLives;
+		}
 
 		float dirX = Input.GetAxis ("Horizontal");
 		keyBoardInput ();
@@ -207,7 +209,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "BreakableBlock") {
 			player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y / 4));
-			other.GetComponent<breakBlockScript> ().setHit (true, 2);
+			other.GetComponent<breakBlockScript> ().setHit (true, playerLives);
 			audioManager.breakBlocks();
 		}
 		if (other.gameObject.tag == "powerUp") {
@@ -218,6 +220,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 	}
 
+	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
 			if (mario_state != 5) {
@@ -229,8 +232,15 @@ public class PlayerMoveScript : MonoBehaviour {
 				// Mario small
 			}
 		}
+<<<<<<< HEAD
 		if (!grounded && other.gameObject.tag == "Flag") {
 			Debug.Log ("flag");
+=======
+		if (other.gameObject.tag == "powerUp") {
+			Destroy(other.gameObject);
+			if(playerLives < 3)
+				playerLives++;
+>>>>>>> ae4bc54907fa1529b3bd8a8d07e7f8b892f5e8f2
 		}
 	}
 
@@ -301,5 +311,9 @@ public class PlayerMoveScript : MonoBehaviour {
 		collider.enabled = false;
 	}
 
+	/*
+	void OnGUI() {
+		GUI.Box (new Rect(20, 20, 100, 100), "" + playerLives);
+	}*/
 
 }
