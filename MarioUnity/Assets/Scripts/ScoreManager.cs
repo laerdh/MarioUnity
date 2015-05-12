@@ -6,7 +6,7 @@ public class ScoreManager : MonoBehaviour {
 
 
 	public int currentScore;
-	public int currentCoin;
+	public int currentCoin = 0;
 	public int coin = 1;
 	public int score = 100;
 
@@ -15,11 +15,12 @@ public class ScoreManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Awake () {
-
+		//currentCoin = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		//addCoin ();
 		//currentScore++; for å teste at score kan oppdateres på skjermen
 		Coin.text = "x" + currentCoin.ToString ("00");
 	}
@@ -28,7 +29,7 @@ public class ScoreManager : MonoBehaviour {
 		currentCoin++;
 	}
 
-	public void addScore(int score) {
+	public void addScore() {
 		currentScore += score;
 	}
 }
