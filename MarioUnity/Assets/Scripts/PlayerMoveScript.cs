@@ -103,8 +103,10 @@ public class PlayerMoveScript : MonoBehaviour {
 	void Update() {
 		changeColliderSize (playerLives);
 
-		if(playerLivesCurrent != playerLives)
-			animator.SetInteger ("MarioLives",	playerLives);
+		if (playerLivesCurrent != playerLives) {
+			animator.SetInteger ("MarioLives", playerLives);
+			playerLivesCurrent = playerLives;
+		}
 
 		float dirX = Input.GetAxis ("Horizontal");
 		keyBoardInput ();
@@ -218,6 +220,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 	}
 
+	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
 			if (mario_state != 5) {
@@ -228,6 +231,11 @@ public class PlayerMoveScript : MonoBehaviour {
 			} else if (playerLives == 2) {
 				// Mario small
 			}
+		}
+		if (other.gameObject.tag == "powerUp") {
+			Destroy(other.gameObject);
+			if(playerLives < 3)
+				playerLives++;
 		}
 	}
 
