@@ -229,6 +229,9 @@ public class PlayerMoveScript : MonoBehaviour {
 				// Mario small
 			}
 		}
+		if (!grounded && other.gameObject.tag == "Flag") {
+			Debug.Log ("flag");
+		}
 	}
 
 	// Method for making the player sprint
