@@ -5,6 +5,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Player RigidBody
 	public Rigidbody2D player;
+	public BoxCollider2D collider;
 
 	// Mario states
 	private int mario_state = 0;
@@ -117,8 +118,13 @@ public class PlayerMoveScript : MonoBehaviour {
 		if(player.position.x < cameraWall.transform.position.x + DEADZONE)
 			player.transform.position = new Vector2(cameraWall.transform.position.x + DEADZONE,player.position.y);
 
-		if (mario_state == 5) {
-			
+		// Check if Mario is dead
+		if (mario_state == DEAD) {
+			Dies ();
+		}
+
+		if (player.position.y < -20) {
+			Destroy (this.gameObject);
 		}
 	}
 
@@ -213,9 +219,9 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
+
 			if (playerLivesCurrent == 1) {
 				mario_state = DEAD;
-				animator.SetBool ("isDead", true);
 			} else if (playerLivesCurrent == 2) {
 				// Mario small
 			}
@@ -272,5 +278,14 @@ public class PlayerMoveScript : MonoBehaviour {
 		} else if (!facingRight) {
 			moveTheCamera = false;
 		}
+	}
+
+	void Dies() {
+		animator.SetBool ("isDead", true);
+
+		player.velocity = new Vector2(player.velocity.x, 15);
+
+		// Disable collider so Mario falls through the floor
+		collider.enabled = false;
 	}
 }
