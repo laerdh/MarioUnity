@@ -14,44 +14,29 @@ public class powerUpScript : MonoBehaviour {
 	public LayerMask theGround;
 
 	// Use this for initialization
-	void Start() {
+	void Awake() {
 		animator = GetComponent<Animator> ();
 		obj = GetComponent<Rigidbody2D> ();
-
-
 	}
 
 	// Update is called once per frame
 	void Update () {
 		obj.velocity = new Vector2 (moveSpeed, obj.velocity.y);
 
+		RaycastHit2D hit = Physics2D.Raycast (transform.position, new Vector2(moveSpeed/3,0f), 1f, theGround);
+		Debug.DrawRay (transform.position, new Vector2(moveSpeed/3,0), Color.red);
 
-
-
-	/*	if (hit != null)
-		{
-
-			print (hit.collider.gameObject.tag);
-			if (hit.collider.gameObject.tag == "pipe")
-			{
+		if (hit) {
+			print (hit.collider.tag);
+			if(hit.collider.tag == "Untagged") {
 				FlipSpeed();
-				print ("vi vinner ikke gull i år");
 			}
-		}*/
+			/*if(hit.collider.gameObject.tag == "untagged") {
+				FlipSpeed();
+			}*/
 
-	}
+		}
 
-
-
-	void OnCollisionEnter2D(Collision2D other) {
-
-		print ("Collision!");
-
-		if(other.gameObject.tag == "ground")
-			print ("tjolahopp");
-
-		if(other.gameObject.tag == "pipe")
-			FlipSpeed();
 	}
 
 	void FlipSpeed() {
