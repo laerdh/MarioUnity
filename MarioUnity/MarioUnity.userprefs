@@ -1,53 +1,13 @@
 ﻿<Properties>
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
-=======
->>>>>>> c12bcad2fccfbd40f29603c7987704f446b57484
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMoveScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/powerUpScript.cs">
     <Files>
       <File FileName="Assets/Scripts/EnemyMove.cs" Line="25" Column="24" />
-      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="218" Column="19" />
+      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="273" Column="3" />
       <File FileName="Assets/Scripts/breakBlockScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ScoreManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/startScreen.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/loadnewlvl.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/blockBreakEffect.cs" Line="1" Column="1" />
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AudioController.cs">
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\powerUpScript.cs">
-    <Files>
-      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="190" Column="33" />
-      <File FileName="Assets\Scripts\powerUpScript.cs" Line="22" Column="72" />
-      <File FileName="Assets\Scripts\EnemyMove.cs" Line="65" Column="2" />
-=======
-<<<<<<< HEAD
->>>>>>> efdd7b4c3337aa1c97c3e55920a6feae6e321294
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMoveScript.cs">
-    <Files>
-      <File FileName="Assets/Scripts/coinScript.cs" Line="17" Column="3" />
-      <File FileName="Assets/Scripts/TimeCounter.cs" Line="28" Column="1" />
-<<<<<<< HEAD
-      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="142" Column="27" />
-=======
-<<<<<<< HEAD
-      <File FileName="Assets/Scripts/AudioController.cs" Line="14" Column="3" />
-=======
->>>>>>> 3dc6ec41264a4b4c11a8d63840366b346bdd66a1
->>>>>>> 4749d0949729fefea977cdfac1c2ba03894ef738
->>>>>>> 664d4331198d08edc346032678bf70c447206578
->>>>>>> 648c123a84c2c90cf2b16217280999bf30ab94be
->>>>>>> efdd7b4c3337aa1c97c3e55920a6feae6e321294
->>>>>>> c12bcad2fccfbd40f29603c7987704f446b57484
+      <File FileName="Assets/Scripts/powerUpScript.cs" Line="71" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
