@@ -14,6 +14,9 @@ public class PlayerMoveScript : MonoBehaviour {
 	private const int DUCKING = 3;
 	private const int JUMPING = 4;
 
+	// Mario lives 
+	private int playerLives;
+
 	// Move variables
 	public float moveSpeed;
 	public float jumpHeight;
@@ -45,6 +48,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	public breakBlockScript breakBlock;
 
 	void Start() {
+		playerLives = 1;
 		player = GetComponent<Rigidbody2D> ();
 		animator = GetComponent<Animator> ();
 		moveSpeedDef = moveSpeed;
@@ -84,6 +88,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	void Update() {
+		animator.SetInteger ("PlayerLives",	playerLives);
 		float dirX = Input.GetAxis ("Horizontal");
 		keyBoardInput ();
 		animatePlayer(dirX);
