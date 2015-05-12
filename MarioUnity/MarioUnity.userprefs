@@ -1,5 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMoveScript.cs">
     <Files>
       <File FileName="Assets/Scripts/EnemyMove.cs" Line="114" Column="4" />
@@ -7,6 +8,13 @@
       <File FileName="Assets/Scripts/breakBlockScript.cs" Line="19" Column="30" />
       <File FileName="Assets/Scripts/ScoreManager.cs" Line="28" Column="25" />
       <File FileName="Assets/Scripts/TimeCounter.cs" Line="27" Column="25" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TimeCounter.cs">
+    <Files>
+      <File FileName="Assets/Scripts/coinScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/AudioController.cs" Line="5" Column="1" />
+      <File FileName="Assets/Scripts/TimeCounter.cs" Line="28" Column="1" />
+>>>>>>> 3dc6ec41264a4b4c11a8d63840366b346bdd66a1
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
