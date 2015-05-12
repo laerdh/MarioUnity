@@ -26,7 +26,6 @@ public class ScoreManager : MonoBehaviour {
 	}
 	
 	public void addCoin() {
-		Debug.Log (currentCoin);
 		currentCoin++;
 	}
 

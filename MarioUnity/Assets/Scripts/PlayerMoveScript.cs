@@ -166,6 +166,12 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 	}
 
+	void OnCollisionEnter2D(Collision2D other) {
+		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
+			Debug.Log ("Gjør mario liten hvis stor, eller aktivert dead animation");
+		}
+	}
+
 	// Method for making the player sprint
 	void sprint() {
 		if (isSprinting ()) {

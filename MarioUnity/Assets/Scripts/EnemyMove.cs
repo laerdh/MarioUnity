@@ -73,7 +73,7 @@ public class EnemyMove : MonoBehaviour {
 		Rigidbody2D player = other.GetComponent<Rigidbody2D>();
 
 		if (other.gameObject.name == "Player") {
-			if (this.gameObject.tag == "EnemyTurtle") {
+			if (this.gameObject.tag == "EnemyKoopa") {
 				hit++;
 
 				animator.SetBool ("isHit", true);
@@ -104,15 +104,13 @@ public class EnemyMove : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D other){
 		if (other.gameObject.tag == ("Player")) {
-			if (!stop) {
+			if (sweep) {
 				Destroy (other.gameObject);
 			}
-
 		}
 
 		// Destroy other enemies if sweeping Koopa collides with them
-		if (sweep && other.gameObject.tag == this.gameObject.tag) {
-
+		if (sweep && other.gameObject.tag == ("EnemyGoomba") || sweep && other.gameObject.tag == ("EnemyKoopa")) {
 		}
 	}
 

@@ -25,7 +25,6 @@ public class TimeCounter : MonoBehaviour {
 		while (timeUp) {
 			yield return new WaitForSeconds(1);
 			startTime -= decrese;
-			Debug.Log (startTime);
 			if (startTime == 0) {
 				timeUp = false;
 				Debug.Log ("TimesUp!");
