@@ -105,7 +105,7 @@ public class EnemyMove : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D other){
 		if (other.gameObject.tag == ("Player")) {
 			if (!stop) {
-				Destroy (this.gameObject);
+				Destroy (other.gameObject);
 			}
 
 		}
