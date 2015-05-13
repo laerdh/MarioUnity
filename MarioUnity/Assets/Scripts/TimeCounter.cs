@@ -20,6 +20,7 @@ public class TimeCounter : MonoBehaviour {
 
 	void Update (){
 		//Sends variable to ScoreManager
+		scoreManager.currentTime (startTime);
 	}
 
 	public void decreseTime(){
