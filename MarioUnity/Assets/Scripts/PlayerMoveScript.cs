@@ -227,6 +227,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
+<<<<<<< HEAD
 
 
 		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
@@ -240,6 +241,8 @@ public class PlayerMoveScript : MonoBehaviour {
 			}
 		}
 
+=======
+>>>>>>> 11933823a233ed693c14b7388a7203e545867b7d
 		if (!grounded && other.gameObject.tag == "Flag") {
 			Debug.Log ("flag");
 
