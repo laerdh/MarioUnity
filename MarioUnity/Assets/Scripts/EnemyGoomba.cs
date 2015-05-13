@@ -16,23 +16,35 @@ public class EnemyGoomba : MonoBehaviour {
 
 	private bool colliding;
 
+	private GameObject thePlayer;
+	private bool isAwake;
+
+
 	// Use this for initialization
 	void Start () 
 	{
 		enemy = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		thePlayer = GameObject.Find ("Player");
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		enemy.velocity = new Vector2 (velocity, enemy.velocity.y);
 
-		colliding = Physics2D.Linecast (sightStart.position, sightEnd.position, detectObject);
+		float distance = Vector2.Distance (thePlayer.transform.position, transform.position);
+		if (distance < 10)
+			isAwake = true;
 
-		if (colliding) {
-			transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-			velocity *= -1;
+		if (isAwake) {
+			enemy.velocity = new Vector2 (velocity, enemy.velocity.y);
+
+			colliding = Physics2D.Linecast (sightStart.position, sightEnd.position, detectObject);
+
+			if (colliding) {
+				transform.localScale = new Vector2 (transform.localScale.x * -1, transform.localScale.y);
+				velocity *= -1;
+			}
 		}
 	}
 
