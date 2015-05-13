@@ -217,7 +217,7 @@ public class PlayerMoveScript : MonoBehaviour {
 			powerUpScript e = other.GetComponent<powerUpScript>();
 			playerLives++;
 			animator.SetInteger("MarioLives", playerLives);
-			//PiPe
+			//PiPe test
 		}if(other.gameObject.tag == "DownPipe" && Input.GetKey(KeyCode.S)){
 			Debug.Log ("U HIT");
 			other.GetComponent<BoxCollider2D>().enabled = false;	
@@ -227,6 +227,24 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
+<<<<<<< HEAD
+
+		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
+			if (mario_state != 5) {
+				player.velocity = new Vector2 (player.velocity.x, 10);
+			}
+			if (playerLives == 1) {
+				mario_state = DEAD;
+			} else if (playerLives == 2) {
+				// Mario small
+			}
+		}
+	}
+
+
+
+=======
+>>>>>>> b6eaf1ac17c490f79fc4734b389779eb3f1abda4
 		if (!grounded && other.gameObject.tag == "Flag") {
 			Debug.Log ("flag");
 
