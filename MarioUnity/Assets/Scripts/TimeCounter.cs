@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class TimeCounter : MonoBehaviour {
 
-	public GameObject gameManager;
+	public ScoreManager scoreManager;
 
 	Text text;
 	int startTime;
@@ -19,8 +19,7 @@ public class TimeCounter : MonoBehaviour {
 	}
 
 	void Update (){
-		//Sends variable to GM
-		GameManager.coinManager (startTime);
+		//Sends variable to ScoreManager
 	}
 
 	public void decreseTime(){

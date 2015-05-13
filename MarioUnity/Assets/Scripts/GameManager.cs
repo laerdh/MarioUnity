@@ -9,6 +9,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public static void timeManager(int currentTime){
-		
+		//Skicka till annen scen
 	}
 }
