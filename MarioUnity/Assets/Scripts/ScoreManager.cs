@@ -27,8 +27,5 @@ public class ScoreManager : MonoBehaviour {
 	public void addCoin() {
 		currentCoin++;
 	}
-
-	public void addScore() {
-		currentScore += score;
-	}
+	
 }
