@@ -25,6 +25,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	public float jumpHeight;
 	private float moveSpeedDef;
 	private int sprintDelay = 10;
+	private int dir = 0;
 
 	// Animator
 	private Animator animator;
@@ -106,12 +107,14 @@ public class PlayerMoveScript : MonoBehaviour {
 	void Update() {
 		changeColliderSize (playerLives);
 
-		if(playerLivesCurrent != playerLives)
-			animator.SetInteger ("MarioLives",	playerLives);
+		if (playerLivesCurrent != playerLives) {
+			animator.SetInteger ("MarioLives", playerLives);
+			playerLivesCurrent = playerLives;
+		}
 
-		float dirX = Input.GetAxis ("Horizontal");
+		//float dirX = Input.GetAxis ("Horizontal");
 		keyBoardInput ();
-		animatePlayer(dirX);
+		//animatePlayer(dirX);
 		sprint();
 		moveCamera ();
 
@@ -146,6 +149,8 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Method for checking keyboard input
 	void keyBoardInput() {
+
+
 		// check keyboard presses
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
 			//Calls method in AudioManager
@@ -159,6 +164,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		// check if keys are down
 		if (Input.GetKey (KeyCode.A) && !Input.GetKey(KeyCode.S)) {
+			dir = -1;
 			facingRight = false;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
@@ -166,6 +172,7 @@ public class PlayerMoveScript : MonoBehaviour {
 				player.velocity = new Vector2 (-moveSpeed, player.velocity.y);
 		} else 
 		if (Input.GetKey (KeyCode.D)&& !Input.GetKey(KeyCode.S)) {
+			dir = 1;
 			facingRight = true;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
@@ -204,13 +211,15 @@ public class PlayerMoveScript : MonoBehaviour {
 		
 		}
 
+		animatePlayer(dir);
+
 	}
 
 	// Break block
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "BreakableBlock") {
 			player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y / 4));
-			other.GetComponent<breakBlockScript> ().setHit (true, 2);
+			other.GetComponent<breakBlockScript> ().setHit (true, playerLives);
 			audioManager.breakBlocks();
 		}
 		if (other.gameObject.tag == "powerUp") {
@@ -221,6 +230,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 	}
 
+	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
 			if (mario_state != 5) {
@@ -231,6 +241,16 @@ public class PlayerMoveScript : MonoBehaviour {
 			} else if (playerLives == 2) {
 				// Mario small
 			}
+		}
+
+		if (!grounded && other.gameObject.tag == "Flag") 
+			Debug.Log ("flag");
+
+		if (other.gameObject.tag == "powerUp") {
+			Destroy(other.gameObject);
+			if(playerLives < 3)
+				playerLives++;
+
 		}
 	}
 
@@ -302,5 +322,19 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 	
 
+	// Return lives
+	public int getLives() {
+		return playerLives;
+	}
+
+	// Return direction
+	public int getDir() {
+		return dir;
+	}
+
+	/*
+	void OnGUI() {
+		GUI.Box (new Rect(20, 20, 100, 100), "" + playerLives);
+	}*/
 
 }
