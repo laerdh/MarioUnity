@@ -227,7 +227,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
-<<<<<<< HEAD
+
 
 		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
 			if (mario_state != 5) {
@@ -239,12 +239,7 @@ public class PlayerMoveScript : MonoBehaviour {
 				// Mario small
 			}
 		}
-	}
 
-
-
-=======
->>>>>>> b6eaf1ac17c490f79fc4734b389779eb3f1abda4
 		if (!grounded && other.gameObject.tag == "Flag") {
 			Debug.Log ("flag");
 

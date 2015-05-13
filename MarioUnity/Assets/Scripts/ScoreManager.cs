@@ -4,8 +4,6 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
 
-	public GameObject GameManager;
-
 	public int currentScore;
 	public int currentCoin = 0;
 	public int coin = 0;
