@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class TimeCounter : MonoBehaviour {
 
+	public GameObject gameManager;
+
 	Text text;
 	int startTime;
 	bool timeUp = false;
@@ -14,6 +16,11 @@ public class TimeCounter : MonoBehaviour {
 		text = GetComponent<Text> ();
 		startTime = 400;
 		decreseTime ();
+	}
+
+	void Update (){
+		//Sends variable to GM
+		GameManager.coinManager (startTime);
 	}
 
 	public void decreseTime(){
