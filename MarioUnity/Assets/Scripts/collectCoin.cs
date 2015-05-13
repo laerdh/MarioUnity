@@ -14,7 +14,7 @@ public class collectCoin : MonoBehaviour {
 		if (other.tag == "coin") {
 			//print ("traff en mynt");
 			Destroy(other.gameObject);
-			scoreManager.addCoin();
+			//scoreManager.addCoin();
 		}
 	}
 

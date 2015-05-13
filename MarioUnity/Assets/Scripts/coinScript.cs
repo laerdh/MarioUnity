@@ -7,14 +7,14 @@ public class coinScript : MonoBehaviour {
 	public bool isMovable;
 	private bool hasCollected = false;
 
-	private ScoreManager scoreManager;
+	private Coins coin;
 
 	private int timer = 50;
 
 	// Use this for initialization
 	void Start () {
 		GameObject e = GameObject.Find("CoinsManager");
-		scoreManager = e.GetComponent<ScoreManager> ();
+		coin = e.GetComponent<Coins> ();
 
 		//if(isMovable) {
 		//	GetComponent<Rigidbody2D> ().isKinematic = true;
@@ -24,7 +24,7 @@ public class coinScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!hasCollected) {
-			scoreManager.addCoin();
+			coin.addCoin();
 			hasCollected = true;
 		}
 		if (!isMovable) {
