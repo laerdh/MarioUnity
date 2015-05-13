@@ -23,12 +23,16 @@ public class ScoreManager : MonoBehaviour {
 		//currentScore++; for å teste at score kan oppdateres på skjermen
 		text.text = "x" + currentCoin.ToString("00");
 	}
-	
+	//Coin
 	public void addCoin() {
 		currentCoin++;
 	}
-
+	//Score
 	public void addScore() {
 		currentScore += score;
+	}
+	//Time
+	public void currentTime(int time){
+
 	}
 }
