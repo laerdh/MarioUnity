@@ -63,4 +63,14 @@ public class EnemyKoopa : MonoBehaviour {
 		Destroy (this.gameObject, 0.5f);
 		gameObject.tag = "neutralized";
 	}
+
+	// Method if enemy is hit by fireBall
+	public void gotShot() {
+		//velocity = 0;
+		enemy.velocity = new Vector2(enemy.velocity.x, 5f);
+		enemy.transform.localScale = new Vector2 (enemy.transform.localScale.x, -enemy.transform.localScale.y);
+		
+		// Disable collider so Mario falls through the floor
+		this.GetComponent<Collider2D> ().enabled = false;
+	}
 }
