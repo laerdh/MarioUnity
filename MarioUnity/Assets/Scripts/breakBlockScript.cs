@@ -29,7 +29,7 @@ public class breakBlockScript : MonoBehaviour {
 	}
 	public BoxTypes boxTypes;
 
-	private Animator animator;
+	Animator animator;
 
 	void Start() {
 		animator = GetComponent<Animator> ();
