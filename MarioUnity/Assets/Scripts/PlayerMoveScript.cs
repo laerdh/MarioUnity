@@ -53,6 +53,9 @@ public class PlayerMoveScript : MonoBehaviour {
 	//AudioController
 	public AudioManager audioManager;
 
+	// Time Wait
+	private int waitTime;
+
 	void Start() {
 		playerLives = 1;
 		playerLivesCurrent = playerLives;
@@ -120,7 +123,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		// Check if Mario is dead
 		if (mario_state == DEAD) {
-			Dies ();
+
 		}
 
 		if (player.position.y < -20) {
@@ -284,7 +287,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	// Method for making Mario die
-	public void Dies() {
+	void Dies() {
 		animator.SetBool ("isDead", true);
 
 		// Play Mario Die sound
@@ -297,6 +300,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		// Disable collider so Mario falls through the floor
 		collider.enabled = false;
 	}
+	
 
 
 }
