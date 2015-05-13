@@ -56,6 +56,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Time Wait
 	private int waitTime;
+	
 
 	void Start() {
 		playerLives = 1;
@@ -198,12 +199,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		if (onPipe && Input.GetKey (KeyCode.S)) {
 			Debug.Log ("On pipe!");
 			player.transform.position = new Vector2(-48,-12);
-
-		
-		
 			//animator.SetBool("isOnPipe", true);
-
-		
 		}
 
 		animatePlayer(dir);
@@ -221,25 +217,50 @@ public class PlayerMoveScript : MonoBehaviour {
 			powerUpScript e = other.GetComponent<powerUpScript>();
 			playerLives++;
 			animator.SetInteger("MarioLives", playerLives);
-
+			//PiPe
+		}if(other.gameObject.tag == "DownPipe" && Input.GetKey(KeyCode.S)){
+			Debug.Log ("U HIT");
+			other.GetComponent<BoxCollider2D>().enabled = false;	
 		}
 
 	}
 
 	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
+<<<<<<< HEAD
+=======
+		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
+			if (mario_state != 5) {
+				player.velocity = new Vector2 (player.velocity.x, 10);
+			}
+			if (playerLives == 1) {
+				mario_state = DEAD;
+			} else if (playerLives == 2) {
+				// Mario small
+			}
+		}
+>>>>>>> 8b23ed6da7a38c9c9bce55d86fe391191968f812
 
-		if (!grounded && other.gameObject.tag == "Flag") 
+
+		if (!grounded && other.gameObject.tag == "Flag") {
 			Debug.Log ("flag");
 
-		if (other.gameObject.tag == "powerUp") {
-			Destroy(other.gameObject);
-			if(playerLives < 3)
-				playerLives++;
+			if (other.gameObject.tag == "powerUp") {
+				Destroy (other.gameObject);
+				if (playerLives < 3)
+					playerLives++;
+			}
 
+			if (!grounded && other.gameObject.tag == "Flag") 
+				Debug.Log ("flag");
+
+			if (other.gameObject.tag == "powerUp") {
+				Destroy (other.gameObject);
+				if (playerLives < 3)
+					playerLives++;
+			}
 		}
 	}
-
 	// Method for making the player sprint
 	void sprint() {
 		if (isSprinting ()) {
