@@ -70,7 +70,7 @@ public class EnemyKoopa : MonoBehaviour {
 		enemy.velocity = new Vector2(enemy.velocity.x, 5f);
 		enemy.transform.localScale = new Vector2 (enemy.transform.localScale.x, -enemy.transform.localScale.y);
 		
-		// Disable collider so Mario falls through the floor
+		// Disable collider so enemy falls through the floor
 		this.GetComponent<Collider2D> ().enabled = false;
 	}
 }

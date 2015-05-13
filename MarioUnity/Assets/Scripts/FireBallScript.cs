@@ -70,20 +70,16 @@ public class FireBallScript : MonoBehaviour {
 
 			// Put enemy death here
 			Rigidbody2D enemy = hitRight.collider.attachedRigidbody;
-			enemy.GetComponent<EnemyGoomba>().gotShot();
-			enemy.GetComponent<EnemyKoopa>().gotShot();
+			enemy.GetComponent<EnemyKill>().gotShot();
 
 			enemy = hitLeft.collider.attachedRigidbody;
-			enemy.GetComponent<EnemyGoomba>().gotShot();
-			enemy.GetComponent<EnemyKoopa>().gotShot();
+			enemy.GetComponent<EnemyKill>().gotShot();
 
 			enemy = hitUp.collider.attachedRigidbody;
-			enemy.GetComponent<EnemyGoomba>().gotShot();
-			enemy.GetComponent<EnemyKoopa>().gotShot();
+			enemy.GetComponent<EnemyKill>().gotShot();
 
 			enemy = hitDown.collider.attachedRigidbody;
-			enemy.GetComponent<EnemyGoomba>().gotShot();
-			enemy.GetComponent<EnemyKoopa>().gotShot();
+			enemy.GetComponent<EnemyKill>().gotShot();
 
 			destroy ();
 		}
