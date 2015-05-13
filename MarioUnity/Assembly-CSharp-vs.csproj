@@ -52,8 +52,10 @@
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\FinishLine.cs" />
      <Compile Include="Assets\Scripts\FireBallScript.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
      <Compile Include="Assets\Scripts\PlayerShotScript.cs" />
+     <Compile Include="Assets\Scripts\PointsManager.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\TimeCounter.cs" />
      <Compile Include="Assets\Scripts\blockBreakEffect.cs" />
