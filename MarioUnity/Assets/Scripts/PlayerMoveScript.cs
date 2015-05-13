@@ -56,6 +56,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Time Wait
 	private int waitTime;
+	
 
 	void Start() {
 		playerLives = 1;
@@ -221,7 +222,10 @@ public class PlayerMoveScript : MonoBehaviour {
 			powerUpScript e = other.GetComponent<powerUpScript>();
 			playerLives++;
 			animator.SetInteger("MarioLives", playerLives);
-
+			//PiPe
+		}if(other.gameObject.tag == "DownPipe" && Input.GetKey(KeyCode.S)){
+			Debug.Log ("U HIT");
+			other.GetComponent<BoxCollider2D>().enabled = false;	
 		}
 	}
 
@@ -255,8 +259,6 @@ public class PlayerMoveScript : MonoBehaviour {
 				Destroy (other.gameObject);
 				if (playerLives < 3)
 					playerLives++;
-
-
 			}
 		}
 	}
