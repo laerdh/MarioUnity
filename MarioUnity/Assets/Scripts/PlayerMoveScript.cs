@@ -5,7 +5,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Player RigidBody
 	public Rigidbody2D player;
-	public BoxCollider2D collider;
+	public BoxCollider2D marioCollider;
 
 	// Mario states
 	private int mario_state = 0;
@@ -125,11 +125,6 @@ public class PlayerMoveScript : MonoBehaviour {
 		if(player.position.x < cameraWall.transform.position.x + DEADZONE)
 			player.transform.position = new Vector2(cameraWall.transform.position.x + DEADZONE,player.position.y);
 
-		// Check if Mario is dead
-		if (mario_state == DEAD) {
-
-		}
-
 		if (player.position.y < -20) {
 			Destroy (this.gameObject);
 		}
@@ -227,10 +222,13 @@ public class PlayerMoveScript : MonoBehaviour {
 			Debug.Log ("U HIT");
 			other.GetComponent<BoxCollider2D>().enabled = false;	
 		}
+
 	}
 
 	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
+<<<<<<< HEAD
+=======
 		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
 			if (mario_state != 5) {
 				player.velocity = new Vector2 (player.velocity.x, 10);
@@ -241,6 +239,7 @@ public class PlayerMoveScript : MonoBehaviour {
 				// Mario small
 			}
 		}
+>>>>>>> 8b23ed6da7a38c9c9bce55d86fe391191968f812
 
 
 		if (!grounded && other.gameObject.tag == "Flag") {
@@ -315,7 +314,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	// Method for making Mario die
-	void Dies() {
+	public void Dies() {
 		animator.SetBool ("isDead", true);
 
 		// Play Mario Die sound
@@ -323,10 +322,10 @@ public class PlayerMoveScript : MonoBehaviour {
 		audioManager.playMarioDie ();
 
 		// Make Mario jump out of the map
-		player.velocity = new Vector2(player.velocity.x, 15);
+		player.velocity = new Vector2(player.velocity.x, 15f);
 
 		// Disable collider so Mario falls through the floor
-		collider.enabled = false;
+		marioCollider.enabled = false;
 	}
 	
 
