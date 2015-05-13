@@ -195,12 +195,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		if (onPipe && Input.GetKey (KeyCode.S)) {
 			Debug.Log ("On pipe!");
 			player.transform.position = new Vector2(-48,-12);
-
-		
-		
 			//animator.SetBool("isOnPipe", true);
-
-		
 		}
 
 	}
@@ -224,7 +219,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
 			if (mario_state != 5) {
-				player.velocity = new Vector2(player.velocity.x, 10);
+				player.velocity = new Vector2 (player.velocity.x, 10);
 			}
 			if (playerLives == 1) {
 				mario_state = DEAD;
@@ -232,18 +227,17 @@ public class PlayerMoveScript : MonoBehaviour {
 				// Mario small
 			}
 		}
-<<<<<<< HEAD
+
 		if (!grounded && other.gameObject.tag == "Flag") {
 			Debug.Log ("flag");
-=======
-		if (other.gameObject.tag == "powerUp") {
-			Destroy(other.gameObject);
-			if(playerLives < 3)
-				playerLives++;
->>>>>>> ae4bc54907fa1529b3bd8a8d07e7f8b892f5e8f2
+
+			if (other.gameObject.tag == "powerUp") {
+				Destroy (other.gameObject);
+				if (playerLives < 3)
+					playerLives++;
+			}
 		}
 	}
-
 	// Method for making the player sprint
 	void sprint() {
 		if (isSprinting ()) {
