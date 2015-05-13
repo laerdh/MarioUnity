@@ -27,6 +27,9 @@ public class ScoreManager : MonoBehaviour {
 	public void addCoin() {
 		currentCoin++;
 	}
+<<<<<<< HEAD
+	
+=======
 	//Score
 	public void addScore() {
 		currentScore += score;
@@ -35,4 +38,5 @@ public class ScoreManager : MonoBehaviour {
 	public void currentTime(int time){
 
 	}
+>>>>>>> 3a590827ac177e23f92f61e32569c64c82fbded2
 }

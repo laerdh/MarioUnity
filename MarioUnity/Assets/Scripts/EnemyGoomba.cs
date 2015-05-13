@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyGoomba : MonoBehaviour {
 	public PlayerMoveScript mario;
+	public Score score;
+
 	private Animator anim;
 	public Rigidbody2D enemy;
 	public float velocity = -1f;
@@ -49,6 +51,7 @@ public class EnemyGoomba : MonoBehaviour {
 			if (height > 0) 
 			{
 				Dies();
+				score.AddScore();
 				other.rigidbody.AddForce(new Vector2 (0, 300));
 			} else 
 			{
