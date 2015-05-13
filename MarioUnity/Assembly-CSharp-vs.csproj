@@ -46,13 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Score.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\EnemyGoomba.cs" />
      <Compile Include="Assets\Scripts\EnemyKoopa.cs" />
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\FinishLine.cs" />
      <Compile Include="Assets\Scripts\FireBallScript.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
      <Compile Include="Assets\Scripts\PlayerShotScript.cs" />
      <Compile Include="Assets\Scripts\PointsManager.cs" />
