@@ -238,7 +238,7 @@ public class PlayerMoveScript : MonoBehaviour {
 			}
 		}
 
-<<<<<<< HEAD
+
 		if (!grounded && other.gameObject.tag == "Flag") {
 			Debug.Log ("flag");
 
@@ -247,16 +247,17 @@ public class PlayerMoveScript : MonoBehaviour {
 				if (playerLives < 3)
 					playerLives++;
 			}
-=======
-		if (!grounded && other.gameObject.tag == "Flag") 
-			Debug.Log ("flag");
 
-		if (other.gameObject.tag == "powerUp") {
-			Destroy(other.gameObject);
-			if(playerLives < 3)
-				playerLives++;
+			if (!grounded && other.gameObject.tag == "Flag") 
+				Debug.Log ("flag");
 
->>>>>>> 53755e0de77ce3a5adbad930f8685bd91f48b906
+			if (other.gameObject.tag == "powerUp") {
+				Destroy (other.gameObject);
+				if (playerLives < 3)
+					playerLives++;
+
+
+			}
 		}
 	}
 	// Method for making the player sprint
