@@ -61,7 +61,7 @@ public class EnemyGoomba : MonoBehaviour {
 	{
 		velocity = 0;
 		anim.SetBool ("isHit", true);
-		Destroy (this.gameObject, 0.8f);
+		Destroy (this.gameObject, 0.5f);
 		gameObject.tag = "neutralized";
 	}
 }

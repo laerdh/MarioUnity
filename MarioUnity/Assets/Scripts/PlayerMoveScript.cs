@@ -227,21 +227,6 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
-<<<<<<< HEAD
-=======
-		if (other.gameObject.tag == "EnemyKoopa" || other.gameObject.tag == "EnemyGoomba") {
-			if (mario_state != 5) {
-				player.velocity = new Vector2 (player.velocity.x, 10);
-			}
-			if (playerLives == 1) {
-				mario_state = DEAD;
-			} else if (playerLives == 2) {
-				// Mario small
-			}
-		}
->>>>>>> 8b23ed6da7a38c9c9bce55d86fe391191968f812
-
-
 		if (!grounded && other.gameObject.tag == "Flag") {
 			Debug.Log ("flag");
 
