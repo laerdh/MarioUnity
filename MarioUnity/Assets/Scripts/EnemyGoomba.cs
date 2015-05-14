@@ -81,6 +81,8 @@ public class EnemyGoomba : MonoBehaviour {
 
 	void Dies() 
 	{
+		GetComponent<Collider2D>().enabled = false;
+
 		velocity = 0;
 		anim.SetBool ("isHit", true);
 		score.AddScore ();
