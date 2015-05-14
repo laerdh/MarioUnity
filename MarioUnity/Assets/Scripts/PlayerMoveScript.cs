@@ -65,9 +65,12 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Time Wait
 	private int waitTime;
+
+	private bool isDead = false;
 	
 
 	void Start() {
+
 		playerLives = 1;
 		playerLivesCurrent = playerLives;
 		
@@ -108,6 +111,11 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	void Update() {
+
+		// Load new level if dead
+		if (isDead && transform.position.y < -20)
+			Application.LoadLevel (3);
+
 		goDownPipeCountDown ();
 
 		changeColliderSize (playerLives);
@@ -245,6 +253,9 @@ public class PlayerMoveScript : MonoBehaviour {
 		if (other.gameObject.tag == "deathDetection") {
 			Dies ();	
 		}
+		if (other.gameObject.tag == "tagOfDeath") {
+			Dies ();
+		}
 	}
 
 	// If on a pipe
@@ -264,6 +275,12 @@ public class PlayerMoveScript : MonoBehaviour {
 	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "powerUp") {
+
+			if(playerLives == 1) {
+				animator.Play ("fromSmallToBig");
+			} else if(playerLives == 2) {
+				animator.Play ("fromBigToFire");
+			}
 			audioManager.MarioPwrUp();
 			Destroy (other.gameObject);
 			scores.AddScoreAmount(1000);
@@ -338,7 +355,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Method for making Mario die
 	public void Dies() {
-		animator.SetBool ("isDead", true);
+		animator.Play ("PlayerSmallDeadAnimation");
 
 		// Play Mario Die sound
 		audioManager.stopBackgroundMusic ();
@@ -350,9 +367,15 @@ public class PlayerMoveScript : MonoBehaviour {
 		// Disable collider so Mario falls through the floor
 		marioCollider.enabled = false;
 
-		Application.LoadLevel(3);
+		isDead = true;
 	}
-	
+
+	public void removeLife() {
+		playerLives--;
+		if (playerLives < 0) {
+			Dies();
+		}
+	}
 
 	// Return lives
 	public int getLives() {
