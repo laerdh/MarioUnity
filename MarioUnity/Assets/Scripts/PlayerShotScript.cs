@@ -25,6 +25,7 @@ public class PlayerShotScript : MonoBehaviour {
 	void Update () {
 		print ("fitttrtteeee");
 		if (Input.GetKeyDown (KeyCode.LeftControl) && player.getLives() > 2 && fireList.Count < 2) {
+			GetComponent<Animator>().Play("PlayerShotAnimation");
 			GameObject ball = GameObject.Instantiate(fireBall);
 			if(player.getDir()==1)
 				ball.transform.position = new Vector2(player.transform.position.x + 0.5f,player.transform.position.y);
