@@ -17,6 +17,8 @@ public class AudioManager : MonoBehaviour {
 	AudioSource MarioHitsPwrUp;
 
 	void Start(){
+		DontDestroyOnLoad (this.gameObject);
+
 		AudioSource[] audios = GetComponents<AudioSource> ();
 		smallJump = audios [0];
 		bigJump = audios [1];
@@ -31,7 +33,7 @@ public class AudioManager : MonoBehaviour {
 		PwrUpAppears = audios [10];
 		MarioHitsPwrUp = audios [11];
 
-		startBackgroundMusic ();
+		//startBackgroundMusic ();
 	}
 
 	public void playSmallMarioJump(){
