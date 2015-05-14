@@ -228,6 +228,7 @@ public class PlayerMoveScript : MonoBehaviour {
 				goDownPipe = true;	
 				animator.SetBool("isDucking", true);
 				cameraIsUnderGround = true;
+				player.velocity = new Vector2(0, player.velocity.y);
 				player.GetComponent<BoxCollider2D>().enabled = false;
 			}
 		}
