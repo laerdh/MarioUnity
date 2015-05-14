@@ -67,10 +67,14 @@ public class PlayerMoveScript : MonoBehaviour {
 	private int waitTime;
 
 	private bool isDead = false;
-	
+
+	// Boolean checking if mario has finished the level or not
+	private bool isFinished;
+	private int finishedCounter = 40;
+	public Transform finishPoint;
 
 	void Start() {
-
+		isFinished = false;
 		playerLives = 1;
 		playerLivesCurrent = playerLives;
 		
@@ -90,67 +94,70 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+		if (!isFinished) {
+			grounded = Physics2D.OverlapCircle (groundChecker.position, groundCheckerWidth, theGround);
 
-		grounded = Physics2D.OverlapCircle (groundChecker.position, groundCheckerWidth, theGround);
+			if (!grounded) {
+				mario_state = JUMPING;
+			} else
+				mario_state = IDLE;
 
-		if (!grounded) {
-			mario_state = JUMPING;
-		} else
-			mario_state = IDLE;
-
-		if (!cameraIsUnderGround) {
-			if (moveTheCamera) {
-				camera.transform.position = new Vector3 (player.position.x, defaultCameraPos, camera.transform.position.z);
+			if (!cameraIsUnderGround) {
+				if (moveTheCamera) {
+					camera.transform.position = new Vector3 (player.position.x, defaultCameraPos, camera.transform.position.z);
+				}
+			} else if (cameraIsUnderGround) {
+				if (cameraUnderGroundCountdownDelay > -1)
+					cameraUnderGroundCountdownDelay--;
+				if (cameraUnderGroundCountdownDelay < 0)
+					camera.transform.position = new Vector3 (underWorldCameraPosX, underWorldCameraPosY, camera.transform.position.z);
 			}
-		} else if (cameraIsUnderGround) {
-			if(cameraUnderGroundCountdownDelay > -1)
-				cameraUnderGroundCountdownDelay--;
-			if(cameraUnderGroundCountdownDelay < 0)
-				camera.transform.position = new Vector3 (underWorldCameraPosX, underWorldCameraPosY, camera.transform.position.z);
 		}
 	}
 
 	void Update() {
+		if (!isFinished) {
+			// Load new level if dead
+			if (isDead && transform.position.y < -20)
+				Application.LoadLevel (3);
 
-		// Load new level if dead
-		if (isDead && transform.position.y < -20)
-			Application.LoadLevel (3);
+			goDownPipeCountDown ();
 
-		goDownPipeCountDown ();
+			changeColliderSize (playerLives);
 
-		changeColliderSize (playerLives);
+			if (playerLivesCurrent != playerLives) {
+				animator.SetInteger ("MarioLives", playerLives);
+				playerLivesCurrent = playerLives;
+			}
 
-		if (playerLivesCurrent != playerLives) {
-			animator.SetInteger ("MarioLives", playerLives);
-			playerLivesCurrent = playerLives;
+			//float dirX = Input.GetAxis ("Horizontal");
+			keyBoardInput ();
+			//animatePlayer(dirX);
+			sprint ();
+			moveCamera ();
+
+			// Stop the player if he walks to the left of the screen
+			if (player.position.x < cameraWall.transform.position.x + DEADZONE)
+				player.transform.position = new Vector2 (cameraWall.transform.position.x + DEADZONE, player.position.y);
+		} else if (isFinished) {
+			animateOnComplete();
 		}
-
-		//float dirX = Input.GetAxis ("Horizontal");
-		keyBoardInput ();
-		//animatePlayer(dirX);
-		sprint();
-		moveCamera ();
-
-		// Stop the player if he walks to the left of the screen
-		if(player.position.x < cameraWall.transform.position.x + DEADZONE)
-			player.transform.position = new Vector2(cameraWall.transform.position.x + DEADZONE,player.position.y);
-
 	}
 
 	public void goDownPipeCountDown() {
-		Debug.Log (player.GetComponent<BoxCollider2D>().enabled);
-		if (goDownPipe) {
-			goDownPipeCounter--;
-			//Debug.Log (goDownPipeCounter);
+			Debug.Log (player.GetComponent<BoxCollider2D> ().enabled);
+			if (goDownPipe) {
+				goDownPipeCounter--;
+				//Debug.Log (goDownPipeCounter);
 
-			if(goDownPipeCounter < 5) {
-				audioManager.stopBackgroundMusic();
-				audioManager.UnderGroundMusic();
-				player.GetComponent<BoxCollider2D>().enabled = true;
-				if(player.GetComponent<BoxCollider2D>().enabled == true)
-				goDownPipe = false;
+				if (goDownPipeCounter < 5) {
+					audioManager.stopBackgroundMusic ();
+					audioManager.UnderGroundMusic ();
+					player.GetComponent<BoxCollider2D> ().enabled = true;
+					if (player.GetComponent<BoxCollider2D> ().enabled == true)
+						goDownPipe = false;
+				}
 			}
-		}
 	}
 
 	// Endre collider
@@ -233,73 +240,81 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Triger enter
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.gameObject.tag == "BreakableBlock") {
-			player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y / 4));
-			other.GetComponent<breakBlockScript> ().setHit (true, playerLives);
+		if (!isFinished) {
+			if (other.gameObject.tag == "BreakableBlock") {
+				player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y / 4));
+				other.GetComponent<breakBlockScript> ().setHit (true, playerLives);
 	
-		}
-		if (other.gameObject.tag == "upPipe") {
-			audioManager.playPipe();
-			audioManager.stopUnderGroundMusic();
-			audioManager.startBackgroundMusic();
-			player.transform.position = new Vector2(58.7f, 4.45f);
-			cameraIsUnderGround = false;
-		}
-		if (other.gameObject.tag == "coinUnderGround") {
-			collectCoin c = other.gameObject.GetComponent<collectCoin>();
-			c.addCoinUnderGround();
-			Destroy (other.gameObject);
-		}
-		if (other.gameObject.tag == "deathDetection") {
-			Dies ();	
-		}
-		if (other.gameObject.tag == "tagOfDeath") {
-			Dies ();
+			}
+			if (other.gameObject.tag == "upPipe") {
+				audioManager.playPipe ();
+				audioManager.stopUnderGroundMusic ();
+				audioManager.startBackgroundMusic ();
+				player.transform.position = new Vector2 (58.7f, 4.45f);
+				cameraIsUnderGround = false;
+			}
+			if (other.gameObject.tag == "coinUnderGround") {
+				collectCoin c = other.gameObject.GetComponent<collectCoin> ();
+				c.addCoinUnderGround ();
+				Destroy (other.gameObject);
+			}
+			if (other.gameObject.tag == "deathDetection") {
+				Dies ();	
+			}
+			if (other.gameObject.tag == "tagOfDeath") {
+				Dies ();
+			}
 		}
 	}
 
 	// If on a pipe
 	void OnTriggerStay2D(Collider2D other) {
-		if(other.gameObject.tag == "DownPipe"){
-			if(Input.GetKey(KeyCode.S)) {
-				audioManager.playPipe();
-				goDownPipe = true;	
-				animator.SetBool("isDucking", true);
-				cameraIsUnderGround = true;
-				player.velocity = new Vector2(0, player.velocity.y);
-				player.GetComponent<BoxCollider2D>().enabled = false;
+		if (!isFinished) {
+			if (other.gameObject.tag == "DownPipe") {
+				if (Input.GetKey (KeyCode.S)) {
+					audioManager.playPipe ();
+					goDownPipe = true;	
+					animator.SetBool ("isDucking", true);
+					cameraIsUnderGround = true;
+					player.velocity = new Vector2 (0, player.velocity.y);
+					player.GetComponent<BoxCollider2D> ().enabled = false;
+				}
 			}
 		}
 	}
 
 	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
-		if (other.gameObject.tag == "powerUp") {
+		if (!isFinished) {
+			if (other.gameObject.tag == "powerUp") {
 
-			if(playerLives == 1) {
-				animator.Play ("fromSmallToBig");
-			} else if(playerLives == 2) {
-				animator.Play ("fromBigToFire");
+				if (playerLives == 1) {
+					animator.Play ("fromSmallToBig");
+				} else if (playerLives == 2) {
+					animator.Play ("fromBigToFire");
+				}
+				audioManager.MarioPwrUp ();
+				Destroy (other.gameObject);
+				scores.AddScoreAmount (1000);
+				GameObject e = GameObject.Instantiate (scoreLable);
+				e.transform.position = new Vector3 (transform.position.x - 0.5f, transform.position.y + 1.5f, -8f);
+				sc = e.GetComponent<ScoreLableScript> ();
+				if (sc != null) {
+					sc.setScore (1000);
+				}
+				if (playerLives < 3)
+					playerLives++;
 			}
-			audioManager.MarioPwrUp();
-			Destroy (other.gameObject);
-			scores.AddScoreAmount(1000);
-			GameObject e = GameObject.Instantiate (scoreLable);
-			e.transform.position = new Vector3 (transform.position.x - 0.5f, transform.position.y + 1.5f, -8f);
-			sc = e.GetComponent<ScoreLableScript> ();
-			if (sc != null) {
-				sc.setScore (1000);
-			}
-			if (playerLives < 3)
-				playerLives++;
-		}
 
-		if (!grounded && other.gameObject.tag == "Flag") {
-			Debug.Log ("flag");
-			if (!grounded && other.gameObject.tag == "Flag") 
+			if (other.gameObject.tag == "Flag") {
 				Debug.Log ("flag");
+				isFinished = true;
+				other.collider.enabled = false;
+				player.isKinematic = true;
+				//if (!grounded && other.gameObject.tag == "Flag")  
+				//	Debug.Log ("flag");
+			}
 		}
-
 	}
 	// Method for making the player sprint
 	void sprint() {
@@ -316,8 +331,6 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Animate the player 
 	void animatePlayer(float dirX) {
-
-
 		// Checks if the player is running
 		if (mario_state == RUNNING) {
 			animator.SetBool ("isRunning", true);
@@ -368,6 +381,34 @@ public class PlayerMoveScript : MonoBehaviour {
 		marioCollider.enabled = false;
 
 		isDead = true;
+	}
+
+	void animateOnComplete() {
+		if (finishedCounter > 0) {
+			finishedCounter--;
+
+			switch (playerLives) {
+			case 1:
+				animator.Play ("MarioSmallOnPole");
+				break;
+			case 2:
+				animator.Play ("MarioBigOnPole");
+				break;
+			case 3:
+				animator.Play ("MarioFireOnPole");
+				break;
+			}
+		} else
+			animator.SetBool ("isFinished", true);
+
+		if (finishedCounter == 0) {
+			if(player.transform.position.x < finishPoint.transform.position.x) {
+				player.transform.position = new Vector2(player.transform.position.x + 0.05f,player.transform.position.y);
+			} else if(player.transform.position.x >= finishPoint.transform.position.x) {
+				GetComponent<SpriteRenderer>().enabled = false;
+			}
+		}
+
 	}
 
 	public void removeLife() {
