@@ -20,6 +20,8 @@ public class AudioManager : MonoBehaviour {
 	private bool startedMusicAfterBadTime = false;
 
 	void Start(){
+		DontDestroyOnLoad (this.gameObject);
+
 		AudioSource[] audios = GetComponents<AudioSource> ();
 		smallJump = audios [0];
 		bigJump = audios [1];
@@ -35,7 +37,7 @@ public class AudioManager : MonoBehaviour {
 		MarioHitsPwrUp = audios [11];
 		MarioHurryUp = audios [12];
 
-		startBackgroundMusic ();
+		//startBackgroundMusic ();
 	}
 
 	public void playSmallMarioJump(){
