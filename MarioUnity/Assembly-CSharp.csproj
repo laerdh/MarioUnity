@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\PlayerMoveScript.cs" />
      <Compile Include="Assets\Scripts\PlayerShotScript.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\ScoreLableScript.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\TimeCounter.cs" />
      <Compile Include="Assets\Scripts\backToMain.cs" />
