@@ -15,6 +15,9 @@ public class AudioManager : MonoBehaviour {
 	AudioSource EmptyBlock;
 	AudioSource PwrUpAppears;
 	AudioSource MarioHitsPwrUp;
+	AudioSource MarioHurryUp;
+
+	private bool startedMusicAfterBadTime = false;
 
 	void Start(){
 		DontDestroyOnLoad (this.gameObject);
@@ -32,6 +35,7 @@ public class AudioManager : MonoBehaviour {
 		EmptyBlock = audios [9];
 		PwrUpAppears = audios [10];
 		MarioHitsPwrUp = audios [11];
+		MarioHurryUp = audios [12];
 
 		//startBackgroundMusic ();
 	}
@@ -86,5 +90,19 @@ public class AudioManager : MonoBehaviour {
 
 	public void MarioPwrUp() {
 		MarioHitsPwrUp.Play ();
+	}
+
+	public void setHurryUp() {
+		stopBackgroundMusic ();
+		MarioHurryUp.Play ();
+	}
+	public void addPitch(){
+		if(!MarioHurryUp.isPlaying) {
+			if(!startedMusicAfterBadTime) {
+				startedMusicAfterBadTime = true;
+				backgroundMusic.pitch = 1.3f;
+				startBackgroundMusic();
+			}
+		}
 	}
 }
