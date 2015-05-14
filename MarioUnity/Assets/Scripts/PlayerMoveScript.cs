@@ -286,6 +286,8 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		// Disable collider so Mario falls through the floor
 		marioCollider.enabled = false;
+
+		Application.LoadLevel(3);
 	}
 	
 
