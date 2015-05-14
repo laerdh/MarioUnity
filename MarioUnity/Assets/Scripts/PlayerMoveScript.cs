@@ -84,17 +84,6 @@ public class PlayerMoveScript : MonoBehaviour {
 			onPipe = Physics2D.OverlapCircle (groundChecker.position, groundCheckerWidth, thePipe);
 		}
 
-
-
-		/*
-		Debug.DrawLine (this.transform.position, groundedEnd.position, Color.green);
-		//onPipe = Physics2D.Linecast (this.transform.position, groundedEnd.position, 1 << LayerMask.NameToLayer ("Pipe"));
-		RaycastHit2D h = Physics2D.Raycast(this.transform.position, groundedEnd.position);
-		if(h.collider.tag == "pipe"){
-			onPipe = true;
-		}
-		*/
-
 		if (!grounded) {
 			mario_state = JUMPING;
 		} else
@@ -118,8 +107,6 @@ public class PlayerMoveScript : MonoBehaviour {
 		//animatePlayer(dirX);
 		sprint();
 		moveCamera ();
-
-
 
 		// Stop the player if he walks to the left of the screen
 		if(player.position.x < cameraWall.transform.position.x + DEADZONE)
@@ -213,12 +200,7 @@ public class PlayerMoveScript : MonoBehaviour {
 			other.GetComponent<breakBlockScript> ().setHit (true, playerLives);
 			audioManager.breakBlocks();
 		}
-		if (other.gameObject.tag == "powerUp") {
-			powerUpScript e = other.GetComponent<powerUpScript>();
-			playerLives++;
-			animator.SetInteger("MarioLives", playerLives);
-			//PiPe test
-		}if(other.gameObject.tag == "DownPipe" && Input.GetKey(KeyCode.S)){
+		if(other.gameObject.tag == "DownPipe" && Input.GetKey(KeyCode.S)){
 			Debug.Log ("U HIT");
 			other.GetComponent<BoxCollider2D>().enabled = false;	
 		}
@@ -227,23 +209,16 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
+		if (other.gameObject.tag == "powerUp") {
+			Destroy (other.gameObject);
+			if (playerLives < 3)
+				playerLives++;
+		}
+
 		if (!grounded && other.gameObject.tag == "Flag") {
 			Debug.Log ("flag");
-
-			if (other.gameObject.tag == "powerUp") {
-				Destroy (other.gameObject);
-				if (playerLives < 3)
-					playerLives++;
-			}
-
 			if (!grounded && other.gameObject.tag == "Flag") 
 				Debug.Log ("flag");
-
-			if (other.gameObject.tag == "powerUp") {
-				Destroy (other.gameObject);
-				if (playerLives < 3)
-					playerLives++;
-			}
 		}
 	}
 	// Method for making the player sprint

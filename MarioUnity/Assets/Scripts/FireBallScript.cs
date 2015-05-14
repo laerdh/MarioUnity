@@ -41,13 +41,9 @@ public class FireBallScript : MonoBehaviour {
 		RaycastHit2D hitRight = Physics2D.Raycast (transform.position, new Vector2(0.5f, 0f) , 0.2f, theGround);
 		Debug.DrawRay (transform.position,  new Vector2(0.3f, 0f), Color.red);
 		
-		RaycastHit2D hitLeft = Physics2D.Raycast (transform.position, new Vector2(0.5f, 0f), 0.2f, theGround);
+		RaycastHit2D hitLeft = Physics2D.Raycast (transform.position, new Vector2(-0.5f, 0f), 0.2f, theGround);
 		Debug.DrawRay (transform.position,  new Vector2(-0.3f, 0f), Color.red);
 		if (hitRight || hitLeft) {
-			
-			// Put enemy death here
-			
-			
 			destroy ();
 		}
 	}
@@ -69,7 +65,17 @@ public class FireBallScript : MonoBehaviour {
 		if (hitRight || hitLeft || hitUp || hitDown) {
 
 			// Put enemy death here
+			Rigidbody2D enemy = hitRight.collider.attachedRigidbody;
+			enemy.GetComponent<EnemyKill>().gotShot();
 
+			enemy = hitLeft.collider.attachedRigidbody;
+			enemy.GetComponent<EnemyKill>().gotShot();
+
+			enemy = hitUp.collider.attachedRigidbody;
+			enemy.GetComponent<EnemyKill>().gotShot();
+
+			enemy = hitDown.collider.attachedRigidbody;
+			enemy.GetComponent<EnemyKill>().gotShot();
 
 			destroy ();
 		}
