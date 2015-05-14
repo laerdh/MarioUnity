@@ -75,6 +75,10 @@ public class PlayerMoveScript : MonoBehaviour {
 	private int finishedCounter = 40;
 	public Transform finishPoint;
 
+	// Variables for controlling superstar powerup
+	private bool hasSuperStar;
+	private int superStarCountDown;
+
 	void Start() {
 		isFinished = false;
 		playerLives = 1;
@@ -123,6 +127,14 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	void Update() {
 	if (!isFinished) {
+			if(hasSuperStar) {
+				superStarCountDown--;
+				if(superStarCountDown<0) {
+					hasSuperStar = false;
+					animator.SetBool("hasSuperStar", false);
+				}
+			}
+
 			//Blink mario if hurt
 			hurtMario();
 
@@ -336,6 +348,13 @@ public class PlayerMoveScript : MonoBehaviour {
 				//if (!grounded && other.gameObject.tag == "Flag")  
 				//	Debug.Log ("flag");
 			}
+
+			if (other.gameObject.tag == "SuperStarTag") {
+				Destroy(other.gameObject);
+				hasSuperStar = true;
+				superStarCountDown = 500;
+				animator.SetBool("hasSuperStar", true);
+			}
 		}
 	}
 	// Method for making the player sprint
@@ -459,6 +478,10 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	public Vector2 getPos() {
 		return transform.position;
+	}
+
+	public bool getHasSuperStar() {
+		return hasSuperStar;
 	}
 
 	/*

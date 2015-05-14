@@ -65,18 +65,23 @@ public class EnemyGoomba : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Player") 
 		{
-			float height = other.contacts[0].point.y - weakness.position.y;
+			bool isSuper = mario.getHasSuperStar();
+			if(!isSuper) {
+				float height = other.contacts[0].point.y - weakness.position.y;
 
-			if (height > 0) 
-			{
+				if (height > 0) 
+				{
 				if(this.gameObject.tag == "deadly"){
-				Dies();
-				score.AddScoreAmount(100);
-				other.rigidbody.AddForce(new Vector2 (0, 300));
+					Dies();
+					score.AddScoreAmount(100);
+					other.rigidbody.AddForce(new Vector2 (0, 300));
 				}
-			} else 
-			{
-				mario.removeLife();
+				} else 
+				{
+					mario.removeLife();
+				}
+			} else if(isSuper) {
+				Dies();
 			}
 		}
 	}

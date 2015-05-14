@@ -54,15 +54,21 @@ public class EnemyKoopa : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Player") 
 		{
-			float height = other.contacts[0].point.y - weakness.position.y;
+			bool isSuper = mario.getHasSuperStar();
+			if(!isSuper) {
+				float height = other.contacts[0].point.y - weakness.position.y;
 			
-			if (height > 0) 
-			{
+				if (height > 0) 
+				{
+					Dies();
+					other.rigidbody.AddForce(new Vector2 (0, 300));
+				} else 
+				{
+				mario.removeLife();
+				}
+			}	
+			else if(isSuper) {
 				Dies();
-				other.rigidbody.AddForce(new Vector2 (0, 300));
-			} else 
-			{
-			mario.removeLife();
 			}
 		}
 	}

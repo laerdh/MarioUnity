@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\ScoreLableScript.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
+     <Compile Include="Assets\Scripts\SuperStarScript.cs" />
      <Compile Include="Assets\Scripts\TimeCounter.cs" />
      <Compile Include="Assets\Scripts\backToMain.cs" />
      <Compile Include="Assets\Scripts\blockBreakEffect.cs" />

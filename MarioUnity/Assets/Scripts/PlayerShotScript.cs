@@ -24,7 +24,12 @@ public class PlayerShotScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.LeftControl) && player.getLives() > 2 && fireList.Count < 2) {
-			GetComponent<Animator>().Play("PlayerShotAnimation");
+			bool isSuper = player.getHasSuperStar();
+			if(!isSuper){
+				GetComponent<Animator>().Play("PlayerShotAnimation");
+			} else if(isSuper) {
+				GetComponent<Animator>().Play("SuperBigFire");
+			}
 			GameObject ball = GameObject.Instantiate(fireBall);
 			if(player.getDir()==1)
 				ball.transform.position = new Vector2(player.transform.position.x + 0.5f,player.transform.position.y);

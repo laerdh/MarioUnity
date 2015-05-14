@@ -145,7 +145,7 @@ public class breakBlockScript : MonoBehaviour {
 				}
 				
 			}
-		} else if (content.tag == "powerUp") {
+		} else if (content.tag == "powerUp" || content.tag == "SuperStarTag") {
 			GameObject e = GameObject.Instantiate (content);
 			powerUpScript ps = e.GetComponent<powerUpScript>();
 			if(ps != null) {
