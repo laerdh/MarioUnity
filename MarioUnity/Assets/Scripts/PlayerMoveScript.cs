@@ -175,15 +175,21 @@ public class PlayerMoveScript : MonoBehaviour {
 			facingRight = false;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
-			if(player.position.x > cameraWall.transform.position.x + DEADZONE)
+			if(player.position.x > cameraWall.transform.position.x + DEADZONE && grounded)
 				player.velocity = new Vector2 (-moveSpeed, player.velocity.y);
+			else if (player.position.x > cameraWall.transform.position.x + DEADZONE && !grounded)
+				player.velocity = new Vector2 (-(moveSpeed*0.8f), player.velocity.y);
 		} else 
 		if (Input.GetKey (KeyCode.D)&& !Input.GetKey(KeyCode.S)) {
 			dir = 1;
 			facingRight = true;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
-			player.velocity = new Vector2 (moveSpeed, player.velocity.y);
+
+			if(grounded)
+				player.velocity = new Vector2 (moveSpeed, player.velocity.y);
+			else if(!grounded)
+				player.velocity = new Vector2 ((moveSpeed/0.8f), player.velocity.y);
 		}
 		if(Input.GetKey(KeyCode.S)) {
 			animator.SetBool("isDucking", true);
@@ -269,7 +275,7 @@ public class PlayerMoveScript : MonoBehaviour {
 			if(sprintDelay > 0)
 				sprintDelay--;
 			if(sprintDelay <= 0 && grounded)
-				moveSpeed = 10;
+				moveSpeed = 8;
 		} else {
 			moveSpeed = moveSpeedDef;
 			sprintDelay = 10;
@@ -341,6 +347,15 @@ public class PlayerMoveScript : MonoBehaviour {
 	// Return direction
 	public int getDir() {
 		return dir;
+	}
+
+	// return grounded
+	public bool isGrounded() {
+		return grounded;
+	}
+
+	public Vector2 getPos() {
+		return transform.position;
 	}
 
 	/*
