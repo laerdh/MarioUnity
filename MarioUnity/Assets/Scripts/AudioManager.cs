@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour {
 	AudioSource aSindre;
 	AudioSource UnderGroundCoin;
 	AudioSource Pipe;
+	AudioSource UnderGroundLvl;
 
 	void Start(){
 		AudioSource[] audios = GetComponents<AudioSource> ();
@@ -22,6 +23,7 @@ public class AudioManager : MonoBehaviour {
 		aSindre = audios [5];
 		UnderGroundCoin = audios [6];
 		Pipe = audios [7];
+		UnderGroundLvl = audios [8];
 
 		startBackgroundMusic ();
 	}
@@ -59,5 +61,12 @@ public class AudioManager : MonoBehaviour {
 
 	public void playPipe(){
 		Pipe.Play ();
+	}
+
+	public void UnderGroundMusic() {
+		UnderGroundLvl.Play ();
+	}
+	public void stopUnderGroundMusic(){
+		UnderGroundLvl.Stop ();
 	}
 }
