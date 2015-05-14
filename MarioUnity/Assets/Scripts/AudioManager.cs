@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour {
 	AudioSource marioDie;
 	AudioSource backgroundMusic;
 	AudioSource aSindre;
+	AudioSource UnderGroundCoin;
 
 	void Start(){
 		AudioSource[] audios = GetComponents<AudioSource> ();
@@ -18,6 +19,7 @@ public class AudioManager : MonoBehaviour {
 		marioDie = audios [3];
 		backgroundMusic = audios [4];
 		aSindre = audios [5];
+		UnderGroundCoin = audios [6];
 
 		startBackgroundMusic ();
 	}
@@ -47,5 +49,9 @@ public class AudioManager : MonoBehaviour {
 	}
 	public void finishLvl(){
 		aSindre.Play ();
+	}
+
+	public void underGroundCoin(){
+		UnderGroundCoin.Play ();
 	}
 }

@@ -2,20 +2,15 @@
 using System.Collections;
 
 public class collectCoin : MonoBehaviour {
-
-	public ScoreManager scoreManager;
+	
+	public  AudioManager audioManager;
+	int coin = 1;
+	int collectedCoins = 0;
 
 	// Use this for initialization
-	void Start () {
-
-	}
-
-	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "coin") {
-			//print ("traff en mynt");
-			Destroy(other.gameObject);
-			//scoreManager.addCoin();
-		}
+	public void addCoinUnderGround () {
+		audioManager.underGroundCoin ();
+		collectedCoins += coin;
 	}
 
 	// Update is called once per frame
