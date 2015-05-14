@@ -6,6 +6,9 @@ public class EnemyGoomba : MonoBehaviour {
 	private PlayerMoveScript mario;
 	public Score score;
 
+	public GameObject scoreLable;
+	private ScoreLableScript sc;
+
 	private Animator anim;
 	public Rigidbody2D enemy;
 	public float velocity = -1f;
@@ -28,6 +31,7 @@ public class EnemyGoomba : MonoBehaviour {
 		enemy = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		thePlayer = GameObject.Find ("Player");
+		score = GameObject.Find ("Score").GetComponent<Score> ();
 		mario = thePlayer.GetComponent<PlayerMoveScript> ();
 	}
 	
@@ -80,9 +84,17 @@ public class EnemyGoomba : MonoBehaviour {
 		velocity = 0;
 		anim.SetBool ("isHit", true);
 		score.AddScore ();
+
+		GameObject e = GameObject.Instantiate (scoreLable);
+		e.transform.position = new Vector3(transform.position.x - 0.5f,transform.position.y + 1.5f, -8f);
+		sc = e.GetComponent<ScoreLableScript> ();
+		if (sc != null) {
+			sc.setScore(100);
+		}
+
+		//text.text = "100";
+		gameObject.tag = "neutralized";	
 		Destroy (this.gameObject, 0.5f);
-		text.text = "100";
-		gameObject.tag = "neutralized";
 	}
 
 }
