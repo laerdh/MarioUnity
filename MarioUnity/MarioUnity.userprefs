@@ -1,17 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FireBallScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyKoopa.cs">
     <Files>
       <File FileName="Assets\Scripts\powerUpScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ScoreManager.cs" Line="23" Column="1" />
+      <File FileName="Assets\Scripts\ScoreManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TimeCounter.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Score.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="288" Column="13" />
-      <File FileName="Assets\Scripts\PlayerShotScript.cs" Line="17" Column="2" />
-      <File FileName="Assets\Scripts\FireBallScript.cs" Line="82" Column="32" />
-      <File FileName="Assets\Scripts\EnemyMove.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemyGoomba.cs" Line="77" Column="31" />
-      <File FileName="Assets\Scripts\EnemyKoopa.cs" Line="73" Column="31" />
+      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerShotScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FireBallScript.cs" Line="47" Column="4" />
+      <File FileName="Assets\Scripts\EnemyMove.cs" Line="43" Column="3" />
+      <File FileName="Assets\Scripts\EnemyGoomba.cs" Line="35" Column="3" />
+      <File FileName="Assets\Scripts\EnemyKoopa.cs" Line="44" Column="4" />
+      <File FileName="Assets\Scripts\EnemyKill.cs" Line="21" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
