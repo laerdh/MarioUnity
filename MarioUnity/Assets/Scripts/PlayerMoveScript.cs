@@ -27,7 +27,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	private int sprintDelay = 10;
 	private int dir = 0;
 	private bool goDownPipe = false;
-	private int goDownPipeCounter = 70;
+	private int goDownPipeCounter = 50;
 
 	// Animator
 	private Animator animator;
@@ -46,7 +46,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	public GameObject cameraWall;
 	public Camera camera;
 	private bool moveTheCamera;
-	private const float DEADZONE = 2.1f; // The distance mario is allowed to walk before the screen stops 
+	private const float DEADZONE = 1.5f; // The distance mario is allowed to walk before the screen stops 
 	private bool cameraIsUnderGround;
 	private float defaultCameraPos;
 	private float underWorldCameraPosY;
@@ -64,7 +64,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	
 
 	void Start() {
-		playerLives = 2;
+		playerLives = 1;
 		playerLivesCurrent = playerLives;
 		
 		player = GetComponent<Rigidbody2D> ();
@@ -93,7 +93,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		if (!cameraIsUnderGround) {
 			if (moveTheCamera) {
-				camera.transform.position = new Vector3 (player.position.x, camera.transform.position.y, camera.transform.position.z);
+				camera.transform.position = new Vector3 (player.position.x, defaultCameraPos, camera.transform.position.z);
 			}
 		} else if (cameraIsUnderGround) {
 			if(cameraUnderGroundCountdownDelay > -1)
@@ -211,12 +211,16 @@ public class PlayerMoveScript : MonoBehaviour {
 		//Debug.Log (mario_state);
 	}
 
-	// Break block
+	// Triger enter
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "BreakableBlock") {
 			player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y / 4));
 			other.GetComponent<breakBlockScript> ().setHit (true, playerLives);
 			audioManager.breakBlocks();
+		}
+		if (other.gameObject.tag == "upPipe") {
+			player.transform.position = new Vector2(58.7f, 4.45f);
+			cameraIsUnderGround = false;
 		}
 	}
 
