@@ -50,7 +50,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	public GameObject cameraWall;
 	public Camera camera;
 	private bool moveTheCamera;
-	private const float DEADZONE = 1.5f; // The distance mario is allowed to walk before the screen stops 
+	private const float DEADZONE = 0.3f; // The distance mario is allowed to walk before the screen stops 
 	private bool cameraIsUnderGround;
 	private float defaultCameraPos;
 	private float underWorldCameraPosY;
@@ -67,6 +67,8 @@ public class PlayerMoveScript : MonoBehaviour {
 	private int waitTime;
 
 	private bool isDead = false;
+	private bool hurt = false;
+	private int hurtBlink = 10;
 
 	// Boolean checking if mario has finished the level or not
 	private bool isFinished;
@@ -93,6 +95,11 @@ public class PlayerMoveScript : MonoBehaviour {
 		audioManager = w.GetComponent<AudioManager>();
 	}
 
+	void OnDrawGizmos() {
+		Gizmos.color = Color.yellow;
+		Gizmos.DrawSphere(groundChecker.position, groundCheckerWidth);
+	}
+	
 	void FixedUpdate() {
 		if (!isFinished) {
 			grounded = Physics2D.OverlapCircle (groundChecker.position, groundCheckerWidth, theGround);
@@ -116,7 +123,10 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	void Update() {
-		if (!isFinished) {
+	if (!isFinished) {
+			//Blink mario if hurt
+			hurtMario();
+
 			// Load new level if dead
 			if (isDead && transform.position.y < -20)
 				Application.LoadLevel (3);
@@ -160,23 +170,35 @@ public class PlayerMoveScript : MonoBehaviour {
 			}
 	}
 
+	// Hurt, make mario blink on taking dama
+	void hurtMario() {
+		if (hurt) {
+			hurtBlink--;
+			if(hurtBlink % 2 != 0) {
+				GetComponent<SpriteRenderer>().enabled = false;
+			} else GetComponent<SpriteRenderer>().enabled = true;
+			if(hurtBlink == 0) {
+				hurt = false;
+				hurtBlink = 10;
+			}
+		}
+	}
+
 	// Endre collider
 	public void changeColliderSize(int playerLives) {
 		BoxCollider2D b = GetComponent<BoxCollider2D> ();
 		if(b != null)
 		{
 			if(playerLives == 1) {
-				b.size =	new Vector2(0.16f,0.16f);
+				b.size =	new Vector2(0.15f,0.16f);
 			}
 			else if(playerLives >= 2)
-				b.size = new Vector2(0.16f, 0.32f);
+				b.size = new Vector2(0.15f, 0.32f);
 		}
 	}
 
 	// Method for checking keyboard input
 	void keyBoardInput() {
-
-
 		// check keyboard presses
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
 			//Calls method in AudioManager
@@ -360,7 +382,8 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Move Camera
 	public void moveCamera() {
-		if (transform.position.x > cameraWall.transform.position.x + 8 && facingRight) {
+		print (transform.position.x - cameraWall.transform.position.x);
+		if (transform.position.x > cameraWall.transform.position.x + 12.79394f && facingRight) {
 			moveTheCamera = true;
 		} else if (!facingRight) {
 			moveTheCamera = false;
@@ -376,6 +399,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		audioManager.playMarioDie ();
 
 		// Make Mario jump out of the map
+		player.GetComponent<BoxCollider2D> ().enabled = false;
 		player.velocity = new Vector2(player.velocity.x, 15f);
 
 		// Disable collider so Mario falls through the floor
@@ -414,7 +438,8 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	public void removeLife() {
 		playerLives--;
-		if (playerLives < 0) {
+		hurt = true;
+		if (playerLives == 0) {
 			Dies();
 		}
 	}

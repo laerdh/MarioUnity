@@ -62,7 +62,7 @@ public class EnemyKoopa : MonoBehaviour {
 				other.rigidbody.AddForce(new Vector2 (0, 300));
 			} else 
 			{
-				mario.Dies ();
+			mario.removeLife();
 			}
 		}
 	}

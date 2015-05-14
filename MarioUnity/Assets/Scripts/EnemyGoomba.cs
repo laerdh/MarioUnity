@@ -76,7 +76,7 @@ public class EnemyGoomba : MonoBehaviour {
 				}
 			} else 
 			{
-				mario.Dies ();
+				mario.removeLife();
 			}
 		}
 	}
