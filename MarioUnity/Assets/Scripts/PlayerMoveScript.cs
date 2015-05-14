@@ -218,7 +218,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		if (other.gameObject.tag == "BreakableBlock") {
 			player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y / 4));
 			other.GetComponent<breakBlockScript> ().setHit (true, playerLives);
-			audioManager.breakBlocks();
+	
 		}
 		if (other.gameObject.tag == "upPipe") {
 			audioManager.playPipe();

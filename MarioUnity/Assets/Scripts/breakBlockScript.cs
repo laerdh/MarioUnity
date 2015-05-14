@@ -31,6 +31,9 @@ public class breakBlockScript : MonoBehaviour {
 
 	Animator animator;
 
+	//AudioManager
+	public AudioManager audioManager;
+
 	void Start() {
 		animator = GetComponent<Animator> ();
 		boxtype = (int)boxTypes;
@@ -52,6 +55,7 @@ public class breakBlockScript : MonoBehaviour {
 					bumpBox = true;
 				}
 				else if(playerLives >= 2) {
+					audioManager.breakBlocks();
 					SpawnExplosion();
 					Destroy(this.gameObject);
 				}

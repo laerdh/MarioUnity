@@ -69,9 +69,11 @@ public class EnemyGoomba : MonoBehaviour {
 
 			if (height > 0) 
 			{
+				if(this.gameObject.tag == "deadly"){
 				Dies();
 				score.AddScore();
 				other.rigidbody.AddForce(new Vector2 (0, 300));
+				}
 			} else 
 			{
 				mario.Dies ();
