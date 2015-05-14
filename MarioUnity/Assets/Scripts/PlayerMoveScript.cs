@@ -260,6 +260,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	// Hitting colliders
 	void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "powerUp") {
+			audioManager.MarioPwrUp();
 			Destroy (other.gameObject);
 			if (playerLives < 3)
 				playerLives++;

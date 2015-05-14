@@ -17,6 +17,7 @@ public class powerUpScript : MonoBehaviour {
 	void Awake() {
 		animator = GetComponent<Animator> ();
 		obj = GetComponent<Rigidbody2D> ();
+		GameObject.Find ("AudioController").GetComponent<AudioManager> ().pwrUpSpawn();
 	}
 
 	// Update is called once per frame
@@ -53,7 +54,7 @@ public class powerUpScript : MonoBehaviour {
 
 		print ("State from powerUp on spawn: " + state);
 		// If mario has more than 2 lives, this powerup will be a flower. This method is called on breakBlock.
-		if (state >= 2) { 
+		if (state >= 2) {
 			animator.SetBool("isFlower", true);
 			animator.SetBool("isMushroom", false);
 		} else if (state <= 1) {

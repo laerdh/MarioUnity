@@ -12,6 +12,9 @@ public class AudioManager : MonoBehaviour {
 	AudioSource UnderGroundCoin;
 	AudioSource Pipe;
 	AudioSource UnderGroundLvl;
+	AudioSource EmptyBlock;
+	AudioSource PwrUpAppears;
+	AudioSource MarioHitsPwrUp;
 
 	void Start(){
 		AudioSource[] audios = GetComponents<AudioSource> ();
@@ -24,6 +27,9 @@ public class AudioManager : MonoBehaviour {
 		UnderGroundCoin = audios [6];
 		Pipe = audios [7];
 		UnderGroundLvl = audios [8];
+		EmptyBlock = audios [9];
+		PwrUpAppears = audios [10];
+		MarioHitsPwrUp = audios [11];
 
 		startBackgroundMusic ();
 	}
@@ -56,7 +62,7 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void underGroundCoin(){
-		UnderGroundCoin.Play ();
+		UnderGroundCoin.Play();
 	}
 
 	public void playPipe(){
@@ -68,5 +74,15 @@ public class AudioManager : MonoBehaviour {
 	}
 	public void stopUnderGroundMusic(){
 		UnderGroundLvl.Stop ();
+	}
+	public void EmptyBlockSound(){
+		EmptyBlock.Play ();
+	}
+	public void pwrUpSpawn(){
+		PwrUpAppears.Play ();
+	}
+
+	public void MarioPwrUp() {
+		MarioHitsPwrUp.Play ();
 	}
 }
