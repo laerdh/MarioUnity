@@ -86,7 +86,6 @@ public class PlayerMoveScript : MonoBehaviour {
 		moveSpeedDef = moveSpeed;
 		camera.transform.position = new Vector3 (player.position.x, camera.transform.position.y, camera.transform.position.z);
 		defaultCameraPos = camera.transform.position.y;
-		print (defaultCameraPos);
 		underWorldCameraPosY = -8.3f;
 		underWorldCameraPosX = -42.42869f;
 		cameraIsUnderGround = false;
@@ -382,7 +381,6 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Move Camera
 	public void moveCamera() {
-		print (transform.position.x - cameraWall.transform.position.x);
 		if (transform.position.x > cameraWall.transform.position.x + 12.79394f && facingRight) {
 			moveTheCamera = true;
 		} else if (!facingRight) {

@@ -30,6 +30,8 @@ public class breakBlockScript : MonoBehaviour {
 	}
 	public BoxTypes boxTypes;
 
+	private int coinCounter = 12;
+
 	Animator animator;
 
 	//AudioManager
@@ -83,6 +85,12 @@ public class breakBlockScript : MonoBehaviour {
 				canBeHit = false;
 				break;
 			case MULTICOIN:
+				// Only let the box "bump" first time it is hit 
+				if(canBeHit){				
+					bumpBox = true;
+				}
+				canBeHit = true;
+				isHit = false;
 				break;
 			case EMPTYBLOCK:
 
@@ -127,10 +135,16 @@ public class breakBlockScript : MonoBehaviour {
 	// Method for spawning content
 	void SpawnContent() {
 		if (content.tag == "coin") {
-			GameObject e = GameObject.Instantiate (content);
-			Rigidbody2D re= e.GetComponent<Rigidbody2D>();
-			re.transform.position = new Vector3(transform.position.x, transform.position.y, 1);
-			re.velocity = new Vector2(0,8);
+			if(boxtype == QUESTIONBLOCK) {
+				spawnCoin ();
+				content = null;
+			} else if(boxtype == MULTICOIN) {
+				if(coinCounter > 0){
+					coinCounter--;
+					spawnCoin();
+				}
+				
+			}
 		} else if (content.tag == "powerUp") {
 			GameObject e = GameObject.Instantiate (content);
 			powerUpScript ps = e.GetComponent<powerUpScript>();
@@ -141,8 +155,17 @@ public class breakBlockScript : MonoBehaviour {
 			print(content.gameObject.tag);
 			Rigidbody2D re= e.GetComponent<Rigidbody2D>();
 			re.transform.position = new Vector3(transform.position.x, transform.position.y+1, 1);
+			content = null;
 			//re.velocity = new Vector2(0,8);
 		}
+	}
+
+	// Spawn a coin
+	void spawnCoin() {
+		GameObject e = GameObject.Instantiate (content);
+		Rigidbody2D re= e.GetComponent<Rigidbody2D>();
+		re.transform.position = new Vector3(transform.position.x, transform.position.y, 1);
+		re.velocity = new Vector2(0,8);
 	}
 
 	public void setHit(bool isHit, int playerLives) {
@@ -153,7 +176,7 @@ public class breakBlockScript : MonoBehaviour {
 		if(content != null) { 
 			bumpBox = true;
 			SpawnContent(); 
-			content = null;
+			//content = null;
 		}
 
 		if (canBeHit) {
