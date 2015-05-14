@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class EnemyGoomba : MonoBehaviour {
-	public PlayerMoveScript mario;
+	private PlayerMoveScript mario;
 	public Score score;
 
 	private Animator anim;
@@ -28,6 +28,7 @@ public class EnemyGoomba : MonoBehaviour {
 		enemy = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		thePlayer = GameObject.Find ("Player");
+		mario = thePlayer.GetComponent<PlayerMoveScript> ();
 	}
 	
 	// Update is called once per frame
