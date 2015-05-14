@@ -251,6 +251,11 @@ public class PlayerMoveScript : MonoBehaviour {
 			if (!grounded && other.gameObject.tag == "Flag") 
 				Debug.Log ("flag");
 		}
+		if (other.gameObject.tag == "coinUnderGround") {
+			collectCoin c = other.gameObject.GetComponent<collectCoin>();
+			c.addCoinUnderGround();
+			Destroy (other.gameObject);
+		}
 	}
 	// Method for making the player sprint
 	void sprint() {
