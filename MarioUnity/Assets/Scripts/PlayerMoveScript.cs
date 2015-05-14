@@ -249,6 +249,9 @@ public class PlayerMoveScript : MonoBehaviour {
 		if (other.gameObject.tag == "deathDetection") {
 			Dies ();	
 		}
+		if (other.gameObject.tag == "tagOfDeath") {
+			Dies ();
+		}
 	}
 
 	// If on a pipe
