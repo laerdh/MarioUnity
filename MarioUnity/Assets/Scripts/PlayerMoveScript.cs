@@ -219,16 +219,22 @@ public class PlayerMoveScript : MonoBehaviour {
 			audioManager.breakBlocks();
 		}
 		if (other.gameObject.tag == "upPipe") {
+			audioManager.playPipe();
 			player.transform.position = new Vector2(58.7f, 4.45f);
 			cameraIsUnderGround = false;
+		}
+		if (other.gameObject.tag == "coinUnderGround") {
+			collectCoin c = other.gameObject.GetComponent<collectCoin>();
+			c.addCoinUnderGround();
+			Destroy (other.gameObject);
 		}
 	}
 
 	// If on a pipe
 	void OnTriggerStay2D(Collider2D other) {
 		if(other.gameObject.tag == "DownPipe"){
-			//Debug.Log ("U HIT");
 			if(Input.GetKey(KeyCode.S)) {
+				audioManager.playPipe();
 				goDownPipe = true;	
 				animator.SetBool("isDucking", true);
 				cameraIsUnderGround = true;
@@ -251,11 +257,7 @@ public class PlayerMoveScript : MonoBehaviour {
 			if (!grounded && other.gameObject.tag == "Flag") 
 				Debug.Log ("flag");
 		}
-		if (other.gameObject.tag == "coinUnderGround") {
-			collectCoin c = other.gameObject.GetComponent<collectCoin>();
-			c.addCoinUnderGround();
-			Destroy (other.gameObject);
-		}
+
 	}
 	// Method for making the player sprint
 	void sprint() {
