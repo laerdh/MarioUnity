@@ -64,11 +64,13 @@ public class FireBallScript : MonoBehaviour {
 
 		if (hitRight || hitLeft || hitUp || hitDown) {
 
+			GetComponent<BoxCollider2D>().enabled=false;
 			// Put enemy death here
 			if(hitRight.collider != null) {
 				Rigidbody2D enemy = hitRight.collider.attachedRigidbody;
-				if(enemy != null)
-				enemy.GetComponent<EnemyKill>().gotShot();
+				if(enemy != null) {
+					enemy.GetComponent<EnemyKill>().gotShot();
+				}
 			}
 
 			if(hitLeft.collider != null) {
