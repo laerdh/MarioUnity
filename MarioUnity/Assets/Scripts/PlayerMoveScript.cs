@@ -6,6 +6,10 @@ public class PlayerMoveScript : MonoBehaviour {
 	// Player RigidBody
 	public Rigidbody2D player;
 	public BoxCollider2D marioCollider;
+	public Score scores;
+	private ScoreLableScript sc;
+	public GameObject scoreLable;
+
 
 	// Mario states
 	private int mario_state = 0;
@@ -262,6 +266,13 @@ public class PlayerMoveScript : MonoBehaviour {
 		if (other.gameObject.tag == "powerUp") {
 			audioManager.MarioPwrUp();
 			Destroy (other.gameObject);
+			scores.AddScoreAmount(1000);
+			GameObject e = GameObject.Instantiate (scoreLable);
+			e.transform.position = new Vector3 (transform.position.x - 0.5f, transform.position.y + 1.5f, -8f);
+			sc = e.GetComponent<ScoreLableScript> ();
+			if (sc != null) {
+				sc.setScore (1000);
+			}
 			if (playerLives < 3)
 				playerLives++;
 		}

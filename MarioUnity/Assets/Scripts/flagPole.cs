@@ -18,7 +18,7 @@ public class flagPole : MonoBehaviour {
 		Debug.Log ("flag");
 		if (other.gameObject.tag == "Player") {
 			if (player.transform.position.y > 2 && player.transform.position.y < 3) {
-				score.AddScoreFlag (100);
+				score.AddScoreAmount (100);
 				GameObject e = GameObject.Instantiate (scoreLable);
 				e.transform.position = new Vector3 (transform.position.x - 0.5f, transform.position.y + 1.5f, -8f);
 				sc = e.GetComponent<ScoreLableScript> ();
@@ -28,7 +28,7 @@ public class flagPole : MonoBehaviour {
 			}  
 			if (player.transform.position.y > 3 && player.transform.position.y < 5) {
 					
-				score.AddScoreFlag (400);
+				score.AddScoreAmount (400);
 				GameObject e = GameObject.Instantiate (scoreLable);
 				e.transform.position = new Vector3 (transform.position.x - 0.5f, transform.position.y + 1.5f, -8f);
 				sc = e.GetComponent<ScoreLableScript> ();
@@ -38,7 +38,7 @@ public class flagPole : MonoBehaviour {
 
 			}
 			if (player.transform.position.y > 5 && player.transform.position.y<7) {
-				score.AddScoreFlag (800);
+				score.AddScoreAmount (800);
 				GameObject e = GameObject.Instantiate (scoreLable);
 				e.transform.position = new Vector3 (transform.position.x - 0.5f, transform.position.y + 1.5f, -8f);
 				sc = e.GetComponent<ScoreLableScript> ();
@@ -48,7 +48,7 @@ public class flagPole : MonoBehaviour {
 
 			}
 			if (player.transform.position.y > 7 && player.transform.position.y<11) {
-				score.AddScoreFlag (2000);
+				score.AddScoreAmount (2000);
 				GameObject e = GameObject.Instantiate (scoreLable);
 				e.transform.position = new Vector3 (transform.position.x - 0.5f, transform.position.y + 1.5f, -8f);
 				sc = e.GetComponent<ScoreLableScript> ();
@@ -59,7 +59,7 @@ public class flagPole : MonoBehaviour {
 			}
 
 			if (player.transform.position.y > 11) {
-				score.AddScoreFlag (4000);
+				score.AddScoreAmount (4000);
 				GameObject e = GameObject.Instantiate (scoreLable);
 				e.transform.position = new Vector3 (transform.position.x - 0.5f, transform.position.y + 1.5f, -8f);
 				sc = e.GetComponent<ScoreLableScript> ();

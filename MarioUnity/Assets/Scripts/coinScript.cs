@@ -8,11 +8,13 @@ public class coinScript : MonoBehaviour {
 	private bool hasCollected = false;
 
 	private Coins coin;
+	public Score scores;
 	//private AudioManager audioManager;
 	private int timer = 50;
 
 	// Use this for initialization
 	void Start () {
+		scores = GameObject.Find ("Score").GetComponent<Score> ();
 		GameObject e = GameObject.Find("CoinsManager");
 		coin = e.GetComponent<Coins> ();
 
@@ -24,6 +26,7 @@ public class coinScript : MonoBehaviour {
 		if (!hasCollected) {
 			coin.addCoin();
 			hasCollected = true;
+			scores.AddScoreAmount(200);
 		}
 		if (!isMovable) {
 			timer--;

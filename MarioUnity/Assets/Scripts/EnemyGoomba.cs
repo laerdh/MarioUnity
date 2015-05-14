@@ -71,7 +71,7 @@ public class EnemyGoomba : MonoBehaviour {
 			{
 				if(this.gameObject.tag == "deadly"){
 				Dies();
-				score.AddScore();
+				score.AddScoreAmount(100);
 				other.rigidbody.AddForce(new Vector2 (0, 300));
 				}
 			} else 
@@ -87,7 +87,6 @@ public class EnemyGoomba : MonoBehaviour {
 
 		velocity = 0;
 		anim.SetBool ("isHit", true);
-		score.AddScore ();
 
 		GameObject e = GameObject.Instantiate (scoreLable);
 		e.transform.position = new Vector3(transform.position.x - 0.5f,transform.position.y + 1.5f, -8f);

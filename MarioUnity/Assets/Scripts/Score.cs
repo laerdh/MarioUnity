@@ -21,7 +21,7 @@ public class Score : MonoBehaviour {
 		currentScore += score;
 	}
 
-	public void AddScoreFlag(int scoreAmount){
+	public void AddScoreAmount(int scoreAmount){
 		currentScore += scoreAmount;
 	}
 }
