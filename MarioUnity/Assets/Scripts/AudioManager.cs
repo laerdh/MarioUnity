@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour {
 	AudioSource backgroundMusic;
 	AudioSource aSindre;
 	AudioSource UnderGroundCoin;
+	AudioSource Pipe;
 
 	void Start(){
 		AudioSource[] audios = GetComponents<AudioSource> ();
@@ -20,6 +21,7 @@ public class AudioManager : MonoBehaviour {
 		backgroundMusic = audios [4];
 		aSindre = audios [5];
 		UnderGroundCoin = audios [6];
+		Pipe = audios [7];
 
 		startBackgroundMusic ();
 	}
@@ -53,5 +55,9 @@ public class AudioManager : MonoBehaviour {
 
 	public void underGroundCoin(){
 		UnderGroundCoin.Play ();
+	}
+
+	public void playPipe(){
+		Pipe.Play ();
 	}
 }
