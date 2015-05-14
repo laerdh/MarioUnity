@@ -238,6 +238,9 @@ public class PlayerMoveScript : MonoBehaviour {
 			c.addCoinUnderGround();
 			Destroy (other.gameObject);
 		}
+		if (other.gameObject.tag == "deathDetection") {
+			Dies ();	
+		}
 	}
 
 	// If on a pipe
