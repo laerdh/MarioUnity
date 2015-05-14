@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\cameraWall.cs" />
      <Compile Include="Assets\Scripts\coinScript.cs" />
      <Compile Include="Assets\Scripts\collectCoin.cs" />
+     <Compile Include="Assets\Scripts\flagCompleteScript.cs" />
      <Compile Include="Assets\Scripts\flagPole.cs" />
      <Compile Include="Assets\Scripts\hiddenBlockScript.cs" />
      <Compile Include="Assets\Scripts\loadnewlvl.cs" />

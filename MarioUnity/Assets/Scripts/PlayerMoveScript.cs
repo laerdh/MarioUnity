@@ -311,6 +311,7 @@ public class PlayerMoveScript : MonoBehaviour {
 				isFinished = true;
 				other.collider.enabled = false;
 				player.isKinematic = true;
+				GameObject.Find ("FinishFlag").GetComponent<flagCompleteScript>().activate();
 				//if (!grounded && other.gameObject.tag == "Flag")  
 				//	Debug.Log ("flag");
 			}
