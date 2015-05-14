@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class EnemyGoomba : MonoBehaviour {
 	public PlayerMoveScript mario;
@@ -13,6 +14,7 @@ public class EnemyGoomba : MonoBehaviour {
 	public LayerMask detectObject;
 	public Transform weakness;
 
+	public Text text;
 
 	private bool colliding;
 
@@ -65,6 +67,7 @@ public class EnemyGoomba : MonoBehaviour {
 		velocity = 0;
 		anim.SetBool ("isHit", true);
 		Destroy (this.gameObject, 0.5f);
+		text.text = "100";
 		gameObject.tag = "neutralized";
 	}
 }
