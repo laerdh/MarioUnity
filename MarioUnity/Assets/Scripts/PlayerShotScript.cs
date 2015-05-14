@@ -23,7 +23,7 @@ public class PlayerShotScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		print ("fitttrtteeee");
 		if (Input.GetKeyDown (KeyCode.LeftControl) && player.getLives() > 2 && fireList.Count < 2) {
 			GameObject ball = GameObject.Instantiate(fireBall);
 			if(player.getDir()==1)

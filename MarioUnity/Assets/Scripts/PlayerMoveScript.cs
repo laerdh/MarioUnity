@@ -132,6 +132,8 @@ public class PlayerMoveScript : MonoBehaviour {
 			//Debug.Log (goDownPipeCounter);
 
 			if(goDownPipeCounter < 5) {
+				audioManager.stopBackgroundMusic();
+				audioManager.UnderGroundMusic();
 				player.GetComponent<BoxCollider2D>().enabled = true;
 				if(player.GetComponent<BoxCollider2D>().enabled == true)
 				goDownPipe = false;
@@ -173,15 +175,21 @@ public class PlayerMoveScript : MonoBehaviour {
 			facingRight = false;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
-			if(player.position.x > cameraWall.transform.position.x + DEADZONE)
+			if(player.position.x > cameraWall.transform.position.x + DEADZONE && grounded)
 				player.velocity = new Vector2 (-moveSpeed, player.velocity.y);
+			else if (player.position.x > cameraWall.transform.position.x + DEADZONE && !grounded)
+				player.velocity = new Vector2 (-(moveSpeed*0.8f), player.velocity.y);
 		} else 
 		if (Input.GetKey (KeyCode.D)&& !Input.GetKey(KeyCode.S)) {
 			dir = 1;
 			facingRight = true;
 			if(mario_state != JUMPING)
 				mario_state = RUNNING;
-			player.velocity = new Vector2 (moveSpeed, player.velocity.y);
+
+			if(grounded)
+				player.velocity = new Vector2 (moveSpeed, player.velocity.y);
+			else if(!grounded)
+				player.velocity = new Vector2 ((moveSpeed/0.8f), player.velocity.y);
 		}
 		if(Input.GetKey(KeyCode.S)) {
 			animator.SetBool("isDucking", true);
@@ -216,19 +224,27 @@ public class PlayerMoveScript : MonoBehaviour {
 		if (other.gameObject.tag == "BreakableBlock") {
 			player.velocity = new Vector2 (player.velocity.x, (-player.velocity.y / 4));
 			other.GetComponent<breakBlockScript> ().setHit (true, playerLives);
-			audioManager.breakBlocks();
+	
 		}
 		if (other.gameObject.tag == "upPipe") {
+			audioManager.playPipe();
+			audioManager.stopUnderGroundMusic();
+			audioManager.startBackgroundMusic();
 			player.transform.position = new Vector2(58.7f, 4.45f);
 			cameraIsUnderGround = false;
+		}
+		if (other.gameObject.tag == "coinUnderGround") {
+			collectCoin c = other.gameObject.GetComponent<collectCoin>();
+			c.addCoinUnderGround();
+			Destroy (other.gameObject);
 		}
 	}
 
 	// If on a pipe
 	void OnTriggerStay2D(Collider2D other) {
 		if(other.gameObject.tag == "DownPipe"){
-			//Debug.Log ("U HIT");
 			if(Input.GetKey(KeyCode.S)) {
+				audioManager.playPipe();
 				goDownPipe = true;	
 				animator.SetBool("isDucking", true);
 				cameraIsUnderGround = true;
@@ -251,11 +267,7 @@ public class PlayerMoveScript : MonoBehaviour {
 			if (!grounded && other.gameObject.tag == "Flag") 
 				Debug.Log ("flag");
 		}
-		if (other.gameObject.tag == "coinUnderGround") {
-			collectCoin c = other.gameObject.GetComponent<collectCoin>();
-			c.addCoinUnderGround();
-			Destroy (other.gameObject);
-		}
+
 	}
 	// Method for making the player sprint
 	void sprint() {
@@ -263,7 +275,7 @@ public class PlayerMoveScript : MonoBehaviour {
 			if(sprintDelay > 0)
 				sprintDelay--;
 			if(sprintDelay <= 0 && grounded)
-				moveSpeed = 10;
+				moveSpeed = 8;
 		} else {
 			moveSpeed = moveSpeedDef;
 			sprintDelay = 10;
@@ -335,6 +347,15 @@ public class PlayerMoveScript : MonoBehaviour {
 	// Return direction
 	public int getDir() {
 		return dir;
+	}
+
+	// return grounded
+	public bool isGrounded() {
+		return grounded;
+	}
+
+	public Vector2 getPos() {
+		return transform.position;
 	}
 
 	/*

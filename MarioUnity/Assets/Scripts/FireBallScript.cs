@@ -53,7 +53,7 @@ public class FireBallScript : MonoBehaviour {
 		RaycastHit2D hitRight = Physics2D.Raycast (transform.position, new Vector2(0.5f, 0f) , 0.2f, theEnemies);
 		Debug.DrawRay (transform.position,  new Vector2(0.3f, 0f), Color.red);
 
-		RaycastHit2D hitLeft = Physics2D.Raycast (transform.position, new Vector2(0.5f, 0f), 0.2f, theEnemies);
+		RaycastHit2D hitLeft = Physics2D.Raycast (transform.position, new Vector2(-0.5f, 0f), 0.2f, theEnemies);
 		Debug.DrawRay (transform.position,  new Vector2(-0.3f, 0f), Color.red);
 
 		RaycastHit2D hitUp = Physics2D.Raycast (transform.position, new Vector2(0f, 0.5f), 0.2f, theEnemies);
@@ -64,18 +64,32 @@ public class FireBallScript : MonoBehaviour {
 
 		if (hitRight || hitLeft || hitUp || hitDown) {
 
+			GetComponent<BoxCollider2D>().enabled=false;
 			// Put enemy death here
-			Rigidbody2D enemy = hitRight.collider.attachedRigidbody;
-			enemy.GetComponent<EnemyKill>().gotShot();
+			if(hitRight.collider != null) {
+				Rigidbody2D enemy = hitRight.collider.attachedRigidbody;
+				if(enemy != null) {
+					enemy.GetComponent<EnemyKill>().gotShot();
+				}
+			}
 
-			enemy = hitLeft.collider.attachedRigidbody;
-			enemy.GetComponent<EnemyKill>().gotShot();
+			if(hitLeft.collider != null) {
+				Rigidbody2D enemyLeft = hitLeft.collider.attachedRigidbody;
+				if(enemyLeft != null)
+				enemyLeft.GetComponent<EnemyKill>().gotShot();
+			}
 
-			enemy = hitUp.collider.attachedRigidbody;
-			enemy.GetComponent<EnemyKill>().gotShot();
+			if(hitUp.collider != null) {
+				Rigidbody2D enemyUp = hitUp.collider.attachedRigidbody;
+				if(enemyUp != null)
+					enemyUp.GetComponent<EnemyKill>().gotShot();
+			}
 
-			enemy = hitDown.collider.attachedRigidbody;
-			enemy.GetComponent<EnemyKill>().gotShot();
+			if(hitDown.collider != null) {
+				Rigidbody2D enemyDown = hitDown.collider.attachedRigidbody;
+				if(enemyDown != null)
+					enemyDown.GetComponent<EnemyKill>().gotShot();
+			}
 
 			destroy ();
 		}
