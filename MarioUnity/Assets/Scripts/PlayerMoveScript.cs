@@ -132,6 +132,8 @@ public class PlayerMoveScript : MonoBehaviour {
 			//Debug.Log (goDownPipeCounter);
 
 			if(goDownPipeCounter < 5) {
+				audioManager.stopBackgroundMusic();
+				audioManager.UnderGroundMusic();
 				player.GetComponent<BoxCollider2D>().enabled = true;
 				if(player.GetComponent<BoxCollider2D>().enabled == true)
 				goDownPipe = false;
@@ -220,6 +222,8 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 		if (other.gameObject.tag == "upPipe") {
 			audioManager.playPipe();
+			audioManager.stopUnderGroundMusic();
+			audioManager.startBackgroundMusic();
 			player.transform.position = new Vector2(58.7f, 4.45f);
 			cameraIsUnderGround = false;
 		}
