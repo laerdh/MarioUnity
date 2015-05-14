@@ -20,4 +20,8 @@ public class Score : MonoBehaviour {
 	{
 		currentScore += score;
 	}
+
+	public void AddScoreFlag(int scoreAmount){
+		currentScore += scoreAmount;
+	}
 }
