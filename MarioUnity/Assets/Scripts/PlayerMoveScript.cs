@@ -27,7 +27,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	private int sprintDelay = 10;
 	private int dir = 0;
 	private bool goDownPipe = false;
-	private int goDownPipeCounter = 50;
+	private int goDownPipeCounter = 70;
 
 	// Animator
 	private Animator animator;
@@ -47,6 +47,11 @@ public class PlayerMoveScript : MonoBehaviour {
 	public Camera camera;
 	private bool moveTheCamera;
 	private const float DEADZONE = 2.1f; // The distance mario is allowed to walk before the screen stops 
+	private bool cameraIsUnderGround;
+	private float defaultCameraPos;
+	private float underWorldCameraPosY;
+	private float underWorldCameraPosX;
+	private int cameraUnderGroundCountdownDelay = 20;
 
 	// BLOCKS
 	public breakBlockScript breakBlock;
@@ -59,7 +64,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	
 
 	void Start() {
-		playerLives = 1;
+		playerLives = 2;
 		playerLivesCurrent = playerLives;
 		
 		player = GetComponent<Rigidbody2D> ();
@@ -67,7 +72,11 @@ public class PlayerMoveScript : MonoBehaviour {
 		animator.SetInteger ("MarioLives",	playerLives);
 		moveSpeedDef = moveSpeed;
 		camera.transform.position = new Vector3 (player.position.x, camera.transform.position.y, camera.transform.position.z);
-
+		defaultCameraPos = camera.transform.position.y;
+		print (defaultCameraPos);
+		underWorldCameraPosY = -8.3f;
+		underWorldCameraPosX = -42.42869f;
+		cameraIsUnderGround = false;
 		//Test
 		GameObject w = GameObject.Find("AudioController");
 		audioManager = w.GetComponent<AudioManager>();
@@ -82,8 +91,15 @@ public class PlayerMoveScript : MonoBehaviour {
 		} else
 			mario_state = IDLE;
 
-		if (moveTheCamera) {
-			camera.transform.position = new Vector3 (player.position.x, camera.transform.position.y, camera.transform.position.z);
+		if (!cameraIsUnderGround) {
+			if (moveTheCamera) {
+				camera.transform.position = new Vector3 (player.position.x, camera.transform.position.y, camera.transform.position.z);
+			}
+		} else if (cameraIsUnderGround) {
+			if(cameraUnderGroundCountdownDelay > -1)
+				cameraUnderGroundCountdownDelay--;
+			if(cameraUnderGroundCountdownDelay < 0)
+				camera.transform.position = new Vector3 (underWorldCameraPosX, underWorldCameraPosY, camera.transform.position.z);
 		}
 	}
 
@@ -210,6 +226,8 @@ public class PlayerMoveScript : MonoBehaviour {
 			//Debug.Log ("U HIT");
 			if(Input.GetKey(KeyCode.S)) {
 				goDownPipe = true;	
+				animator.SetBool("isDucking", true);
+				cameraIsUnderGround = true;
 				player.GetComponent<BoxCollider2D>().enabled = false;
 			}
 		}
