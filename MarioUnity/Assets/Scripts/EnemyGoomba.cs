@@ -40,7 +40,7 @@ public class EnemyGoomba : MonoBehaviour {
 	{
 
 		float distance = Vector2.Distance (thePlayer.transform.position, transform.position);
-		if (distance < 10)
+		if (distance < 13)
 			isAwake = true;
 
 		if (isAwake) {
