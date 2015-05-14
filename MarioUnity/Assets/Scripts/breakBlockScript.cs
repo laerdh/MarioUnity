@@ -23,6 +23,7 @@ public class breakBlockScript : MonoBehaviour {
 	private const int SOLIDBLOCK = 2;
 	private const int HIDDENBLOCK = 3;
 	private const int MULTICOIN = 4;
+	private const int EMPTYBLOCK = 5;
 	public GameObject breakBlockPrefab;
 	public enum BoxTypes {
 		NORMALBLOCK, QUESTIONBLOCK, SOLIDBLOCK, HIDDENBLOCK, MULTICOIN
@@ -53,6 +54,7 @@ public class breakBlockScript : MonoBehaviour {
 			case NORMALBLOCK:
 				if(playerLives == 1) {
 					bumpBox = true;
+					//bump lyd
 				}
 				else if(playerLives >= 2) {
 					audioManager.breakBlocks();
@@ -61,11 +63,12 @@ public class breakBlockScript : MonoBehaviour {
 				}
 				break;
 			case QUESTIONBLOCK:
-
-
+				boxtype = EMPTYBLOCK;
 				// Only let the box "bump" first time it is hit 
-				if(canBeHit) bumpBox = true;
-
+				if(canBeHit){				
+					bumpBox = true;
+				}
+				isHit = false;
 				animator.SetBool("isEmpty", true);
 				canBeHit = false;
 				break;
@@ -80,6 +83,9 @@ public class breakBlockScript : MonoBehaviour {
 				canBeHit = false;
 				break;
 			case MULTICOIN:
+				break;
+			case EMPTYBLOCK:
+
 				break;
 			}
 		}
@@ -140,10 +146,12 @@ public class breakBlockScript : MonoBehaviour {
 	}
 
 	public void setHit(bool isHit, int playerLives) {
+		if(boxtype == EMPTYBLOCK)
+		audioManager.EmptyBlockSound();
+
 		this.playerLives = playerLives;
 		if(content != null) { 
 			bumpBox = true;
-			print("Spawn"); 
 			SpawnContent(); 
 			content = null;
 		}
@@ -154,7 +162,6 @@ public class breakBlockScript : MonoBehaviour {
 			this.playerLives = playerLives;
 		}
 	}
-
 	void setAnimation(int i) {
 		if (i == QUESTIONBLOCK)
 			animator.SetBool ("isCoinBox", true);

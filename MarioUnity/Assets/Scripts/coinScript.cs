@@ -8,7 +8,7 @@ public class coinScript : MonoBehaviour {
 	private bool hasCollected = false;
 
 	private Coins coin;
-
+	//private AudioManager audioManager;
 	private int timer = 50;
 
 	// Use this for initialization
@@ -16,9 +16,7 @@ public class coinScript : MonoBehaviour {
 		GameObject e = GameObject.Find("CoinsManager");
 		coin = e.GetComponent<Coins> ();
 
-		//if(isMovable) {
-		//	GetComponent<Rigidbody2D> ().isKinematic = true;
-		//}
+		GameObject.Find ("AudioController").GetComponent<AudioManager> ().underGroundCoin();
 	}
 	
 	// Update is called once per frame
