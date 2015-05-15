@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\EnemyKill.cs" />
      <Compile Include="Assets\Scripts\EnemyKoopa.cs" />
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
+     <Compile Include="Assets\Scripts\ExtraLifeScript.cs" />
      <Compile Include="Assets\Scripts\FinishLine.cs" />
      <Compile Include="Assets\Scripts\FireBallScript.cs" />
      <Compile Include="Assets\Scripts\LoadCoins.cs" />

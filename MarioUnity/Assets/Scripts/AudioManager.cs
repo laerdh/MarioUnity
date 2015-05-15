@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour {
 	AudioSource StarMusic;
 	AudioSource FlagPole;
 	AudioSource Complete;
+	AudioSource Extra;
 
 	private bool startedMusicAfterBadTime = false;
 
@@ -46,8 +47,8 @@ public class AudioManager : MonoBehaviour {
 		StarMusic = audios [15];
 		FlagPole = audios [16];
 		Complete = audios[17];
+		Extra = audios[18];
 
-		//startBackgroundMusic ();
 	}
 
 	public void playSmallMarioJump(){
@@ -122,6 +123,10 @@ public class AudioManager : MonoBehaviour {
 
 	public void PlayComplete() {
 		Complete.Play ();
+	}
+
+	public void PlayExtra() {
+		Extra.Play ();
 	}
 
 	public void PlayStarMusic() {

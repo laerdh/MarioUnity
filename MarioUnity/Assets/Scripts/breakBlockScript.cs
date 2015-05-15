@@ -146,14 +146,12 @@ public class breakBlockScript : MonoBehaviour {
 				}
 				
 			}
-		} else if (content.tag == "powerUp" || content.tag == "SuperStarTag") {
+		} else if (content.tag == "powerUp" || content.tag == "SuperStarTag" || content.tag == "ExtraLife" ) {
 			GameObject e = GameObject.Instantiate (content);
 			powerUpScript ps = e.GetComponent<powerUpScript>();
 			if(ps != null) {
-				print ("player state from Block: " + playerLives);
 				ps.setState(playerLives);
 			}
-			print(content.gameObject.tag);
 			Rigidbody2D re= e.GetComponent<Rigidbody2D>();
 			re.transform.position = new Vector3(transform.position.x, transform.position.y+1, 1);
 			content = null;

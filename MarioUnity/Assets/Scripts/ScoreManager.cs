@@ -13,14 +13,12 @@ public class ScoreManager : MonoBehaviour {
 	private bool badTime = false;
 
 	private bool isFinished = false;
-
-	private Score score;
+	
 
 	void Awake() {
 		//Beholde Verdier
 		audioManager = audioManager.GetComponent<AudioManager> ();
 		DontDestroyOnLoad(this.gameObject);
-		score = GameObject.Find ("Score").GetComponent<Score> ();
 	}
 
 	void Update() {
@@ -28,13 +26,6 @@ public class ScoreManager : MonoBehaviour {
 			audioManager.addPitch();
 		}
 
-		if (isFinished) {
-			if(t > 0) {
-				t--;
-				score.AddScoreAmount(100);
-				audioManager.underGroundCoin();
-			}
-		}
 	}
 	//Coin
 	public void currentCoin(int coin) {
@@ -46,15 +37,14 @@ public class ScoreManager : MonoBehaviour {
 	}
 	//Time
 	public void currentTime(int time){
-		if (!isFinished) {
-			t = time;
+		t = time;
 
 
-			if (time == 100 && !badTime) {
-				audioManager.setHurryUp ();
-				badTime = true;
-			}
+		if (time == 100 && !badTime) {
+			audioManager.setHurryUp ();
+			badTime = true;
 		}
+
 	}
 	public void setComplete() {
 		isFinished = true;
