@@ -8,7 +8,6 @@ public class AudioManager : MonoBehaviour {
 	AudioSource brickSmash;
 	AudioSource marioDie;
 	AudioSource backgroundMusic;
-	AudioSource aSindre;
 	AudioSource UnderGroundCoin;
 	AudioSource Pipe;
 	AudioSource UnderGroundLvl;
@@ -16,11 +15,18 @@ public class AudioManager : MonoBehaviour {
 	AudioSource PwrUpAppears;
 	AudioSource MarioHitsPwrUp;
 	AudioSource MarioHurryUp;
+	AudioSource Kick;
+	AudioSource Stomp;
+	AudioSource FireBall;
+	AudioSource StarMusic;
+	AudioSource FlagPole;
+	AudioSource Complete;
+	AudioSource Extra;
 
 	private bool startedMusicAfterBadTime = false;
 
 	void Start(){
-		DontDestroyOnLoad (this.gameObject);
+		DontDestroyOnLoad (this);
 
 		AudioSource[] audios = GetComponents<AudioSource> ();
 		smallJump = audios [0];
@@ -28,16 +34,21 @@ public class AudioManager : MonoBehaviour {
 		brickSmash = audios [2];
 		marioDie = audios [3];
 		backgroundMusic = audios [4];
-		aSindre = audios [5];
-		UnderGroundCoin = audios [6];
-		Pipe = audios [7];
-		UnderGroundLvl = audios [8];
-		EmptyBlock = audios [9];
-		PwrUpAppears = audios [10];
-		MarioHitsPwrUp = audios [11];
-		MarioHurryUp = audios [12];
+		UnderGroundCoin = audios [5];
+		Pipe = audios [6];
+		UnderGroundLvl = audios [7];
+		EmptyBlock = audios [8];
+		PwrUpAppears = audios [9];
+		MarioHitsPwrUp = audios [10];
+		MarioHurryUp = audios [11];
+		Kick = audios [12];
+		Stomp = audios [13];
+		FireBall = audios [14];
+		StarMusic = audios [15];
+		FlagPole = audios [16];
+		Complete = audios[17];
+		Extra = audios[18];
 
-		//startBackgroundMusic ();
 	}
 
 	public void playSmallMarioJump(){
@@ -57,14 +68,12 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void startBackgroundMusic() {
-		backgroundMusic.Play ();
+		if(backgroundMusic != null)
+			backgroundMusic.Play ();
 	}
 
 	public void stopBackgroundMusic() {
 		backgroundMusic.Stop ();
-	}
-	public void finishLvl(){
-		aSindre.Play ();
 	}
 
 	public void underGroundCoin(){
@@ -90,6 +99,39 @@ public class AudioManager : MonoBehaviour {
 
 	public void MarioPwrUp() {
 		MarioHitsPwrUp.Play ();
+	}
+
+	public void KickPlay() {
+		Kick.Play ();
+	}
+
+	public void StompPlay() {
+		Stomp.Play ();
+	}
+
+	public void FireBallPlay() {
+		FireBall.Play ();
+	}
+
+	public void StopStarMusic() {
+		StarMusic.Stop ();
+	}
+
+	public void PlayFlagPole() {
+		FlagPole.Play ();
+	}
+
+	public void PlayComplete() {
+		Complete.Play ();
+	}
+
+	public void PlayExtra() {
+		Extra.Play ();
+	}
+
+	public void PlayStarMusic() {
+		StarMusic.Play ();
+		StarMusic.loop = true;
 	}
 
 	public void setHurryUp() {

@@ -32,7 +32,6 @@ public class powerUpScript : MonoBehaviour {
 		Debug.DrawRay (transform.position, new Vector2(moveSpeed/3,0), Color.red);
 
 		if (hit) {
-			print (hit.collider.tag);
 			if(hit.collider.tag == "Untagged") {
 				FlipSpeed();
 			}
@@ -45,14 +44,12 @@ public class powerUpScript : MonoBehaviour {
 	}
 
 	void FlipSpeed() {
-		print ("test flip");
 		moveSpeed = -moveSpeed;
 	}
 
 	public void setState(int state) {
 		this.state = state;
-
-		print ("State from powerUp on spawn: " + state);
+		
 		// If mario has more than 2 lives, this powerup will be a flower. This method is called on breakBlock.
 		if (state >= 2) {
 			animator.SetBool("isFlower", true);

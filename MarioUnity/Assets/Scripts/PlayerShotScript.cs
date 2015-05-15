@@ -31,6 +31,7 @@ public class PlayerShotScript : MonoBehaviour {
 				GetComponent<Animator>().Play("SuperBigFire");
 			}
 			GameObject ball = GameObject.Instantiate(fireBall);
+			GameObject.Find ("AudioController").GetComponent<AudioManager> ().FireBallPlay();
 			if(player.getDir()==1)
 				ball.transform.position = new Vector2(player.transform.position.x + 0.5f,player.transform.position.y);
 			else if(player.getDir()==-1)

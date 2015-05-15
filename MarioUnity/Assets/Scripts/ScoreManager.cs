@@ -12,7 +12,8 @@ public class ScoreManager : MonoBehaviour {
 
 	private bool badTime = false;
 
-
+	private bool isFinished = false;
+	
 
 	void Awake() {
 		//Beholde Verdier
@@ -24,6 +25,7 @@ public class ScoreManager : MonoBehaviour {
 		if(t < 100){
 			audioManager.addPitch();
 		}
+
 	}
 	//Coin
 	public void currentCoin(int coin) {
@@ -38,12 +40,16 @@ public class ScoreManager : MonoBehaviour {
 		t = time;
 
 
-		if(time == 100 && !badTime){
-			audioManager.setHurryUp();
+		if (time == 100 && !badTime) {
+			audioManager.setHurryUp ();
 			badTime = true;
 		}
 
 	}
+	public void setComplete() {
+		isFinished = true;
+	}
+
 	public int returnCoin(){
 		return c;
 	}

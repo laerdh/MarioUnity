@@ -24,4 +24,8 @@ public class ScoreLableScript : MonoBehaviour {
 	public void setScore(int score) {
 		GetComponent<TextMesh> ().text = "" + score;
 	}
+
+	public void setScore(string score) {
+		GetComponent<TextMesh> ().text = score;
+	}
 }

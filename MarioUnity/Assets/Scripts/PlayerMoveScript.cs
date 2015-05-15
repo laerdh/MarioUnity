@@ -31,7 +31,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	private int sprintDelay = 10;
 	private int dir = 0;
 	private bool goDownPipe = false;
-	private int goDownPipeCounter = 50;
+	private int goDownPipeCounter = 60;
 
 	// Animator
 	private Animator animator;
@@ -80,6 +80,13 @@ public class PlayerMoveScript : MonoBehaviour {
 	private int superStarCountDown;
 
 	void Start() {
+
+		// Delete One AudioController if multiple are in scene
+		GameObject[] audioControllers = GameObject.FindGameObjectsWithTag ("AudioControlTag");
+		if (audioControllers.Length > 1) {
+			Destroy(audioControllers[audioControllers.Length-1].gameObject);
+		}
+
 		isFinished = false;
 		playerLives = 1;
 		playerLivesCurrent = playerLives;
@@ -96,6 +103,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		//Test
 		GameObject w = GameObject.Find("AudioController");
 		audioManager = w.GetComponent<AudioManager>();
+		audioManager.startBackgroundMusic ();
 	}
 
 	void OnDrawGizmos() {
@@ -130,6 +138,8 @@ public class PlayerMoveScript : MonoBehaviour {
 			if(hasSuperStar) {
 				superStarCountDown--;
 				if(superStarCountDown<0) {
+					audioManager.StopStarMusic();
+					audioManager.startBackgroundMusic();
 					hasSuperStar = false;
 					animator.SetBool("hasSuperStar", false);
 				}
@@ -166,17 +176,17 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	public void goDownPipeCountDown() {
-			Debug.Log (player.GetComponent<BoxCollider2D> ().enabled);
 			if (goDownPipe) {
 				goDownPipeCounter--;
-				//Debug.Log (goDownPipeCounter);
 
 				if (goDownPipeCounter < 5) {
 					audioManager.stopBackgroundMusic ();
 					audioManager.UnderGroundMusic ();
 					player.GetComponent<BoxCollider2D> ().enabled = true;
-					if (player.GetComponent<BoxCollider2D> ().enabled == true)
+					if (player.GetComponent<BoxCollider2D> ().enabled == true) {
 						goDownPipe = false;
+						goDownPipeCounter = 60;
+					}
 				}
 			}
 	}
@@ -210,6 +220,10 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Method for checking keyboard input
 	void keyBoardInput() {
+
+		// Get Mario fall speed;
+		float fallSpeed = player.velocity.y;
+
 		// check keyboard presses
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
 			//Calls method in AudioManager
@@ -248,10 +262,9 @@ public class PlayerMoveScript : MonoBehaviour {
 			mario_state = DUCKING;
 		}
 
-
 		// check keys released
 		if (Input.GetKeyUp (KeyCode.A)) {
-			mario_state = 1;
+			mario_state = IDLE;
 			if(grounded) {
 				player.velocity = new Vector2 (0, 0);
 			}
@@ -268,7 +281,6 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 
 		animatePlayer(dir);
-		//Debug.Log (mario_state);
 	}
 
 	// Triger enter
@@ -288,7 +300,8 @@ public class PlayerMoveScript : MonoBehaviour {
 			}
 			if (other.gameObject.tag == "coinUnderGround") {
 				collectCoin c = other.gameObject.GetComponent<collectCoin> ();
-				c.addCoinUnderGround ();
+				if(c != null)
+					c.addCoinUnderGround ();
 				Destroy (other.gameObject);
 			}
 			if (other.gameObject.tag == "deathDetection") {
@@ -340,16 +353,18 @@ public class PlayerMoveScript : MonoBehaviour {
 			}
 
 			if (other.gameObject.tag == "Flag") {
-				Debug.Log ("flag");
 				isFinished = true;
 				other.collider.enabled = false;
 				player.isKinematic = true;
+				audioManager.stopBackgroundMusic();
+				audioManager.PlayFlagPole();
 				GameObject.Find ("FinishFlag").GetComponent<flagCompleteScript>().activate();
-				//if (!grounded && other.gameObject.tag == "Flag")  
-				//	Debug.Log ("flag");
 			}
 
 			if (other.gameObject.tag == "SuperStarTag") {
+				audioManager.MarioPwrUp ();
+				audioManager.stopBackgroundMusic();
+				audioManager.PlayStarMusic();
 				Destroy(other.gameObject);
 				hasSuperStar = true;
 				superStarCountDown = 500;
@@ -400,7 +415,11 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Move Camera
 	public void moveCamera() {
-		if (transform.position.x > cameraWall.transform.position.x + 12.79394f && facingRight) {
+		Vector3 middleOfScreen = Camera.main.ViewportToWorldPoint (new Vector3(0.5f, 0f, 0));
+		Vector3 leftOfScreen = Camera.main.ViewportToWorldPoint (new Vector3(0f, 0f, 0));
+		float distanceToMid = middleOfScreen.x - leftOfScreen.x;
+		//if (transform.position.x > cameraWall.transform.position.x + 12.79394f && facingRight) {
+		if (transform.position.x > cameraWall.transform.position.x + distanceToMid && facingRight) {
 			moveTheCamera = true;
 		} else if (!facingRight) {
 			moveTheCamera = false;
@@ -440,10 +459,17 @@ public class PlayerMoveScript : MonoBehaviour {
 				animator.Play ("MarioFireOnPole");
 				break;
 			}
-		} else
+		} else {
 			animator.SetBool ("isFinished", true);
 
+		}
+
+		if (finishedCounter == 1) {
+			audioManager.PlayComplete ();
+		}
+
 		if (finishedCounter == 0) {
+
 			if(player.transform.position.x < finishPoint.transform.position.x) {
 				player.transform.position = new Vector2(player.transform.position.x + 0.05f,player.transform.position.y);
 			} else if(player.transform.position.x >= finishPoint.transform.position.x) {

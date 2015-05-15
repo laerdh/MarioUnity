@@ -13,7 +13,6 @@ public class FinishLine : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.tag == "Player"){
 			audiomanager.stopBackgroundMusic();
-			audiomanager.finishLvl();
 		}
 	}
 }
