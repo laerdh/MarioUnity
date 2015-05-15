@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour {
 	AudioSource PwrUpAppears;
 	AudioSource MarioHitsPwrUp;
 	AudioSource MarioHurryUp;
+	AudioSource Kick;
 
 	private bool startedMusicAfterBadTime = false;
 
@@ -35,6 +36,8 @@ public class AudioManager : MonoBehaviour {
 		PwrUpAppears = audios [9];
 		MarioHitsPwrUp = audios [10];
 		MarioHurryUp = audios [11];
+		Kick = audios [12];
+
 
 		//startBackgroundMusic ();
 	}
@@ -87,6 +90,10 @@ public class AudioManager : MonoBehaviour {
 
 	public void MarioPwrUp() {
 		MarioHitsPwrUp.Play ();
+	}
+
+	public void KickPlay() {
+		Kick.Play ();
 	}
 
 	public void setHurryUp() {

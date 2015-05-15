@@ -122,6 +122,8 @@ public class EnemyKoopa : MonoBehaviour {
 
 		} else if (other.gameObject.tag == "deadly" && lives == 1) {
 			if (moveSpeed > 4 || moveSpeed < -4) {
+				print ("Jeg blir kørt");
+				GameObject.Find ("AudioController").GetComponent<AudioManager> ().KickPlay();
 				EnemyKill k = other.gameObject.GetComponent<EnemyKill> ();
 				if (k != null)
 					k.gotShot ();
