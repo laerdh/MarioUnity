@@ -19,6 +19,9 @@ public class EnemyKoopa : MonoBehaviour {
 
 	private int lives = 2;
 
+	public LayerMask theGround;
+	public LayerMask thePlayerLayer;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -48,6 +51,29 @@ public class EnemyKoopa : MonoBehaviour {
 			if (colliding) {
 				transform.localScale = new Vector2 (transform.localScale.x * -1, transform.localScale.y);
 				moveSpeed *= -1;
+			}
+
+			if(lives == 1) {
+				RaycastHit2D hit = Physics2D.Raycast (transform.position, new Vector2(moveSpeed/3,0f), 1f, theGround);
+				Debug.DrawRay (transform.position, new Vector2(moveSpeed/3,0), Color.red);
+			
+				if (hit) {
+					print (hit.collider.tag);
+					if(hit.collider.tag == "Untagged") {
+						moveSpeed = -moveSpeed;
+					}
+				}
+
+				RaycastHit2D hit2 = Physics2D.Raycast (transform.position, new Vector2(moveSpeed/3,0f), 1f, thePlayerLayer);
+				Debug.DrawRay (transform.position, new Vector2(moveSpeed/3,0), Color.green);
+
+				if (hit2) {
+					print (hit2.collider.tag);
+					if(hit2.collider.tag == "Player") {
+						moveSpeed = -moveSpeed;
+						mario.removeLife();
+					}
+				}
 			}
 		}
 	}
@@ -85,15 +111,12 @@ public class EnemyKoopa : MonoBehaviour {
 					}
 				}
 			} else if (lives == 1) {
-				if (moveSpeed > 4 || moveSpeed < -4) {
-				//	mario.removeLife ();
-				}
 
 				float distance = transform.position.x - other.transform.position.x;
 				if (distance >= 0)
-					moveSpeed = 5;//enemy.velocity = new Vector2(7,enemy.velocity.y);
+					moveSpeed = 7;//enemy.velocity = new Vector2(7,enemy.velocity.y);
 				else if (distance < 0)
-					moveSpeed = -5;//enemy.velocity = new Vector2(-7,enemy.velocity.y);
+					moveSpeed = -7;//enemy.velocity = new Vector2(-7,enemy.velocity.y);
 				other.rigidbody.AddForce (new Vector2 (0, 300));
 			}
 
