@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour {
 	AudioSource MarioHurryUp;
 	AudioSource Kick;
 	AudioSource Stomp;
+	AudioSource FireBall;
 
 	private bool startedMusicAfterBadTime = false;
 
@@ -38,7 +39,7 @@ public class AudioManager : MonoBehaviour {
 		MarioHurryUp = audios [11];
 		Kick = audios [12];
 		Stomp = audios [13];
-
+		FireBall = audios [14];
 
 		//startBackgroundMusic ();
 	}
@@ -99,6 +100,10 @@ public class AudioManager : MonoBehaviour {
 
 	public void StompPlay() {
 		Stomp.Play ();
+	}
+
+	public void FireBallPlay() {
+		FireBall.Play ();
 	}
 
 	public void setHurryUp() {
