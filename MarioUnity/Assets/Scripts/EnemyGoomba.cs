@@ -65,6 +65,8 @@ public class EnemyGoomba : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Player") 
 		{
+			GameObject.Find ("AudioController").GetComponent<AudioManager> ().StompPlay();
+
 			bool isSuper = mario.getHasSuperStar();
 			if(!isSuper) {
 				float height = other.contacts[0].point.y - weakness.position.y;

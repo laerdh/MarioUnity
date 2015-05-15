@@ -87,6 +87,7 @@ public class EnemyKoopa : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D other) 
 	{
 		if (other.gameObject.tag == "Player") {
+			GameObject.Find ("AudioController").GetComponent<AudioManager> ().StompPlay();
 			bool isSuper = mario.getHasSuperStar ();
 			if (isSuper) {
 				Dies ();

@@ -8,7 +8,6 @@ public class AudioManager : MonoBehaviour {
 	AudioSource brickSmash;
 	AudioSource marioDie;
 	AudioSource backgroundMusic;
-	AudioSource aSindre;
 	AudioSource UnderGroundCoin;
 	AudioSource Pipe;
 	AudioSource UnderGroundLvl;
@@ -17,6 +16,7 @@ public class AudioManager : MonoBehaviour {
 	AudioSource MarioHitsPwrUp;
 	AudioSource MarioHurryUp;
 	AudioSource Kick;
+	AudioSource Stomp;
 
 	private bool startedMusicAfterBadTime = false;
 
@@ -37,6 +37,7 @@ public class AudioManager : MonoBehaviour {
 		MarioHitsPwrUp = audios [10];
 		MarioHurryUp = audios [11];
 		Kick = audios [12];
+		Stomp = audios [13];
 
 
 		//startBackgroundMusic ();
@@ -94,6 +95,10 @@ public class AudioManager : MonoBehaviour {
 
 	public void KickPlay() {
 		Kick.Play ();
+	}
+
+	public void StompPlay() {
+		Stomp.Play ();
 	}
 
 	public void setHurryUp() {
