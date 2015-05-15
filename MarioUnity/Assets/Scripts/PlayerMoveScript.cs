@@ -31,7 +31,7 @@ public class PlayerMoveScript : MonoBehaviour {
 	private int sprintDelay = 10;
 	private int dir = 0;
 	private bool goDownPipe = false;
-	private int goDownPipeCounter = 50;
+	private int goDownPipeCounter = 60;
 
 	// Animator
 	private Animator animator;
@@ -183,8 +183,10 @@ public class PlayerMoveScript : MonoBehaviour {
 					audioManager.stopBackgroundMusic ();
 					audioManager.UnderGroundMusic ();
 					player.GetComponent<BoxCollider2D> ().enabled = true;
-					if (player.GetComponent<BoxCollider2D> ().enabled == true)
+					if (player.GetComponent<BoxCollider2D> ().enabled == true) {
 						goDownPipe = false;
+						goDownPipeCounter = 60;
+					}
 				}
 			}
 	}
@@ -298,7 +300,8 @@ public class PlayerMoveScript : MonoBehaviour {
 			}
 			if (other.gameObject.tag == "coinUnderGround") {
 				collectCoin c = other.gameObject.GetComponent<collectCoin> ();
-				c.addCoinUnderGround ();
+				if(c != null)
+					c.addCoinUnderGround ();
 				Destroy (other.gameObject);
 			}
 			if (other.gameObject.tag == "deathDetection") {

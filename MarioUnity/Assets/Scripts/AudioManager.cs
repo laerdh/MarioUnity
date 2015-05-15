@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour {
 	private bool startedMusicAfterBadTime = false;
 
 	void Start(){
-		DontDestroyOnLoad (this.gameObject);
+		DontDestroyOnLoad (this);
 
 		AudioSource[] audios = GetComponents<AudioSource> ();
 		smallJump = audios [0];

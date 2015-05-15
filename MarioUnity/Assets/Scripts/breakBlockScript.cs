@@ -168,8 +168,8 @@ public class breakBlockScript : MonoBehaviour {
 	}
 
 	public void setHit(bool isHit, int playerLives) {
-		if(boxtype == EMPTYBLOCK)
-		audioManager.EmptyBlockSound();
+		if (boxtype == EMPTYBLOCK)
+			GameObject.Find ("AudioController").GetComponent<AudioManager> ().EmptyBlockSound ();
 
 		this.playerLives = playerLives;
 		if(content != null) { 
