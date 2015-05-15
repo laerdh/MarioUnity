@@ -258,7 +258,6 @@ public class PlayerMoveScript : MonoBehaviour {
 			mario_state = DUCKING;
 		}
 
-
 		// check keys released
 		if (Input.GetKeyUp (KeyCode.A)) {
 			mario_state = IDLE;
