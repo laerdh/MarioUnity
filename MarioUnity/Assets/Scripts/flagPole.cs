@@ -15,7 +15,6 @@ public class flagPole : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
-		Debug.Log ("flag");
 		if (other.gameObject.tag == "Player") {
 			if (player.transform.position.y > 2 && player.transform.position.y < 3) {
 				score.AddScoreAmount (100);

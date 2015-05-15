@@ -18,6 +18,9 @@ public class AudioManager : MonoBehaviour {
 	AudioSource Kick;
 	AudioSource Stomp;
 	AudioSource FireBall;
+	AudioSource StarMusic;
+	AudioSource FlagPole;
+	AudioSource Complete;
 
 	private bool startedMusicAfterBadTime = false;
 
@@ -40,6 +43,9 @@ public class AudioManager : MonoBehaviour {
 		Kick = audios [12];
 		Stomp = audios [13];
 		FireBall = audios [14];
+		StarMusic = audios [15];
+		FlagPole = audios [16];
+		Complete = audios[17];
 
 		//startBackgroundMusic ();
 	}
@@ -104,6 +110,23 @@ public class AudioManager : MonoBehaviour {
 
 	public void FireBallPlay() {
 		FireBall.Play ();
+	}
+
+	public void StopStarMusic() {
+		StarMusic.Stop ();
+	}
+
+	public void PlayFlagPole() {
+		FlagPole.Play ();
+	}
+
+	public void PlayComplete() {
+		Complete.Play ();
+	}
+
+	public void PlayStarMusic() {
+		StarMusic.Play ();
+		StarMusic.loop = true;
 	}
 
 	public void setHurryUp() {

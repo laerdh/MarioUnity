@@ -138,6 +138,8 @@ public class PlayerMoveScript : MonoBehaviour {
 			if(hasSuperStar) {
 				superStarCountDown--;
 				if(superStarCountDown<0) {
+					audioManager.StopStarMusic();
+					audioManager.startBackgroundMusic();
 					hasSuperStar = false;
 					animator.SetBool("hasSuperStar", false);
 				}
@@ -351,10 +353,15 @@ public class PlayerMoveScript : MonoBehaviour {
 				isFinished = true;
 				other.collider.enabled = false;
 				player.isKinematic = true;
+				audioManager.stopBackgroundMusic();
+				audioManager.PlayFlagPole();
 				GameObject.Find ("FinishFlag").GetComponent<flagCompleteScript>().activate();
 			}
 
 			if (other.gameObject.tag == "SuperStarTag") {
+				audioManager.MarioPwrUp ();
+				audioManager.stopBackgroundMusic();
+				audioManager.PlayStarMusic();
 				Destroy(other.gameObject);
 				hasSuperStar = true;
 				superStarCountDown = 500;
@@ -449,10 +456,17 @@ public class PlayerMoveScript : MonoBehaviour {
 				animator.Play ("MarioFireOnPole");
 				break;
 			}
-		} else
+		} else {
 			animator.SetBool ("isFinished", true);
 
+		}
+
+		if (finishedCounter == 1) {
+			audioManager.PlayComplete ();
+		}
+
 		if (finishedCounter == 0) {
+
 			if(player.transform.position.x < finishPoint.transform.position.x) {
 				player.transform.position = new Vector2(player.transform.position.x + 0.05f,player.transform.position.y);
 			} else if(player.transform.position.x >= finishPoint.transform.position.x) {

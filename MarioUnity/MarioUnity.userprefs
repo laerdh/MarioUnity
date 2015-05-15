@@ -1,18 +1,22 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TimeCounter.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerShotScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/collectCoin.cs" Line="18" Column="1" />
-      <File FileName="Assets/Scripts/AudioManager.cs" Line="109" Column="1" />
-      <File FileName="Assets/Scripts/ScoreManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/coinScript.cs" Line="39" Column="1" />
-      <File FileName="Assets/Scripts/breakBlockScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/blockBreakEffect.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Coins.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="286" Column="1" />
-      <File FileName="Assets/Scripts/TimeCounter.cs" Line="17" Column="18" />
-      <File FileName="Assets/Scripts/hiddenBlockScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/EnemyMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="260" Column="3" />
+      <File FileName="Assets\Scripts\AudioManager.cs" Line="106" Column="20" />
+      <File FileName="Assets\Scripts\ScoreManager.cs" Line="19" Column="61" />
+      <File FileName="Assets\Scripts\coinScript.cs" Line="21" Column="87" />
+      <File FileName="Assets\Scripts\breakBlockScript.cs" Line="37" Column="9" />
+      <File FileName="Assets\Scripts\blockBreakEffect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Coins.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TimeCounter.cs" Line="17" Column="18" />
+      <File FileName="Assets\Scripts\hiddenBlockScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyKoopa.cs" Line="90" Column="4" />
+      <File FileName="Assets\Scripts\FinishLine.cs" Line="19" Column="1" />
+      <File FileName="Assets\Scripts\powerUpScript.cs" Line="31" Column="1" />
+      <File FileName="Assets\Scripts\EnemyGoomba.cs" Line="68" Column="82" />
+      <File FileName="Assets\Scripts\PlayerShotScript.cs" Line="34" Column="78" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

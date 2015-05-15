@@ -59,7 +59,7 @@ public class breakBlockScript : MonoBehaviour {
 					//bump lyd
 				}
 				else if(playerLives >= 2) {
-					audioManager.breakBlocks();
+					GameObject.Find ("AudioController").GetComponent<AudioManager> ().breakBlocks();
 					SpawnExplosion();
 					Destroy(this.gameObject);
 				}
@@ -89,6 +89,7 @@ public class breakBlockScript : MonoBehaviour {
 				if(canBeHit){				
 					bumpBox = true;
 				}
+				bumpBox = true;
 				canBeHit = true;
 				isHit = false;
 				break;

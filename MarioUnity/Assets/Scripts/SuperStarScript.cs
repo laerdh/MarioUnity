@@ -16,6 +16,7 @@ public class SuperStarScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		obj = GetComponent<Rigidbody2D> ();
+		GameObject.Find ("AudioController").GetComponent<AudioManager> ().pwrUpSpawn();
 	}
 	
 	// Update is called once per frame
