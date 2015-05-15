@@ -400,7 +400,11 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Move Camera
 	public void moveCamera() {
-		if (transform.position.x > cameraWall.transform.position.x + 12.79394f && facingRight) {
+		Vector3 middleOfScreen = Camera.main.ViewportToWorldPoint (new Vector3(0.5f, 0f, 0));
+		Vector3 leftOfScreen = Camera.main.ViewportToWorldPoint (new Vector3(0f, 0f, 0));
+		float distanceToMid = middleOfScreen.x - leftOfScreen.x;
+		//if (transform.position.x > cameraWall.transform.position.x + 12.79394f && facingRight) {
+		if (transform.position.x > cameraWall.transform.position.x + distanceToMid && facingRight) {
 			moveTheCamera = true;
 		} else if (!facingRight) {
 			moveTheCamera = false;
