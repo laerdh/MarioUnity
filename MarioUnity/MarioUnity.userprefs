@@ -1,12 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TimeCounter.cs">
     <Files>
       <File FileName="Assets/Scripts/collectCoin.cs" Line="18" Column="1" />
-      <File FileName="Assets/Scripts/AudioManager.cs" Line="109" Column="1" />
+      <File FileName="Assets/Scripts/AudioManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ScoreManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/coinScript.cs" Line="39" Column="1" />
-      <File FileName="Assets/Scripts/breakBlockScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/coinScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/breakBlockScript.cs" Line="25" Column="34" />
       <File FileName="Assets/Scripts/blockBreakEffect.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Coins.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PlayerMoveScript.cs" Line="286" Column="1" />
