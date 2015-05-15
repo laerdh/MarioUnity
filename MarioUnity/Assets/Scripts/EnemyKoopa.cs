@@ -60,7 +60,6 @@ public class EnemyKoopa : MonoBehaviour {
 	
 	void OnCollisionEnter2D(Collision2D other) 
 	{
-		Debug.Log (other.gameObject.tag);
 		if (other.gameObject.tag == "Player") {
 			bool isSuper = mario.getHasSuperStar ();
 			if (isSuper) {

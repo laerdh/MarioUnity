@@ -28,14 +28,13 @@ public class AudioManager : MonoBehaviour {
 		brickSmash = audios [2];
 		marioDie = audios [3];
 		backgroundMusic = audios [4];
-		aSindre = audios [5];
-		UnderGroundCoin = audios [6];
-		Pipe = audios [7];
-		UnderGroundLvl = audios [8];
-		EmptyBlock = audios [9];
-		PwrUpAppears = audios [10];
-		MarioHitsPwrUp = audios [11];
-		MarioHurryUp = audios [12];
+		UnderGroundCoin = audios [5];
+		Pipe = audios [6];
+		UnderGroundLvl = audios [7];
+		EmptyBlock = audios [8];
+		PwrUpAppears = audios [9];
+		MarioHitsPwrUp = audios [10];
+		MarioHurryUp = audios [11];
 
 		//startBackgroundMusic ();
 	}
@@ -62,9 +61,6 @@ public class AudioManager : MonoBehaviour {
 
 	public void stopBackgroundMusic() {
 		backgroundMusic.Stop ();
-	}
-	public void finishLvl(){
-		aSindre.Play ();
 	}
 
 	public void underGroundCoin(){

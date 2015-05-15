@@ -166,10 +166,8 @@ public class PlayerMoveScript : MonoBehaviour {
 	}
 
 	public void goDownPipeCountDown() {
-			Debug.Log (player.GetComponent<BoxCollider2D> ().enabled);
 			if (goDownPipe) {
 				goDownPipeCounter--;
-				//Debug.Log (goDownPipeCounter);
 
 				if (goDownPipeCounter < 5) {
 					audioManager.stopBackgroundMusic ();
@@ -210,6 +208,10 @@ public class PlayerMoveScript : MonoBehaviour {
 
 	// Method for checking keyboard input
 	void keyBoardInput() {
+
+		// Get Mario fall speed;
+		float fallSpeed = player.velocity.y;
+
 		// check keyboard presses
 		if (Input.GetKeyDown (KeyCode.Space) && grounded) {
 			//Calls method in AudioManager
@@ -251,7 +253,7 @@ public class PlayerMoveScript : MonoBehaviour {
 
 		// check keys released
 		if (Input.GetKeyUp (KeyCode.A)) {
-			mario_state = 1;
+			mario_state = IDLE;
 			if(grounded) {
 				player.velocity = new Vector2 (0, 0);
 			}
@@ -268,7 +270,6 @@ public class PlayerMoveScript : MonoBehaviour {
 		}
 
 		animatePlayer(dir);
-		//Debug.Log (mario_state);
 	}
 
 	// Triger enter
@@ -340,13 +341,10 @@ public class PlayerMoveScript : MonoBehaviour {
 			}
 
 			if (other.gameObject.tag == "Flag") {
-				Debug.Log ("flag");
 				isFinished = true;
 				other.collider.enabled = false;
 				player.isKinematic = true;
 				GameObject.Find ("FinishFlag").GetComponent<flagCompleteScript>().activate();
-				//if (!grounded && other.gameObject.tag == "Flag")  
-				//	Debug.Log ("flag");
 			}
 
 			if (other.gameObject.tag == "SuperStarTag") {
