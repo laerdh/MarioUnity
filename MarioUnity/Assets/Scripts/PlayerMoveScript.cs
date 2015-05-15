@@ -80,6 +80,13 @@ public class PlayerMoveScript : MonoBehaviour {
 	private int superStarCountDown;
 
 	void Start() {
+
+		// Delete One AudioController if multiple are in scene
+		GameObject[] audioControllers = GameObject.FindGameObjectsWithTag ("AudioControlTag");
+		if (audioControllers.Length > 1) {
+			Destroy(audioControllers[audioControllers.Length-1].gameObject);
+		}
+
 		isFinished = false;
 		playerLives = 1;
 		playerLivesCurrent = playerLives;
@@ -96,6 +103,7 @@ public class PlayerMoveScript : MonoBehaviour {
 		//Test
 		GameObject w = GameObject.Find("AudioController");
 		audioManager = w.GetComponent<AudioManager>();
+		audioManager.startBackgroundMusic ();
 	}
 
 	void OnDrawGizmos() {

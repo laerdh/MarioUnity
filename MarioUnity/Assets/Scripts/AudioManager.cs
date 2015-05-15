@@ -56,7 +56,8 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	public void startBackgroundMusic() {
-		backgroundMusic.Play ();
+		if(backgroundMusic != null)
+			backgroundMusic.Play ();
 	}
 
 	public void stopBackgroundMusic() {
