@@ -1,18 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SuperStarScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\collectCoin.cs">
     <Files>
-      <File FileName="Assets\Scripts\SuperStarScript.cs" Line="30" Column="53" />
-      <File FileName="Assets\Scripts\ExtraLifeScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FinishLine.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\flagCompleteScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LoadCoins.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\loadnewlvl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LoadScore.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerMoveScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Score.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\startScreen.cs" Line="1" Column="1" />
-      <File FileName="Assets\LoadTime.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\collectCoin.cs" Line="15" Column="31" />
+      <File FileName="Assets\Scripts\coinScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
